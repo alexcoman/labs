@@ -261,7 +261,146 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
     >>>
 
 ---
+#Instrucțiuni condiționale
 
+---
+
+# if - elif - else
+    
+    !python
+    if_stmt ::=  "if" expression ":" suite
+                 ( "elif" expression ":" suite )*
+                 ["else" ":" suite]
+
+-
+
+    !python
+    >>> if numar % 5 == 0 and numar % 3 == 0: 
+    ...     pass
+    ... elif numar % 7 == 0:
+    ...     pass
+    ... else:
+    ...     pass
+    ... 
+
+---
+
+#Instrucțiuni repetitive
+
+---
+
+#For
+
+    !python
+    for_stmt ::=  "for" target_list "in" expression_list ":" suite
+                  ["else" ":" suite]
+
+-
+
+    !python
+    >>> for element in (1, 2, 3, 4, 5):
+    ...     if element % 5 == 0:
+    ...             break
+    ... else:
+    ...     print("Nici un element divizibil cu 5")
+    ... 
+    >>> 
+
+-
+
+    !python
+    >>> for element in (1, 2, 3, 4):
+    ...     if element % 5 == 0:
+    ...             break
+    ... else:
+    ...     print("Nici un element divizibil cu 5")
+    ...
+    Nici un element divizibil cu 5 
+    >>> 
+
+---
+
+#While
+    
+    !python
+    while_stmt ::=  "while" expression ":" suite
+                    ["else" ":" suite]
+
+-
+
+    !python
+    >>> lista = [1, 2, 3, 4]
+    >>> while lista:
+    ...     lista.pop()
+    ... else:
+    ...     print("Am terminat de procesat elementele.")
+    ... 
+    4
+    3
+    2
+    1
+    Am terminat de procesat elementele.
+    >>> 
+
+#Funcții
+
+---
+
+#Funcții
+    
+    !python
+    funcdef        ::=  [decorators] "def" funcname "(" [parameter_list] ")"
+                        ["->" expression] ":" suite
+    decorators     ::=  decorator+
+    decorator      ::=  "@" dotted_name ["(" [parameter_list [","]] ")"]
+                        NEWLINE
+    dotted_name    ::=  identifier ("." identifier)*
+    parameter_list ::=  (defparameter ",")*
+                        | "*" [parameter] ("," defparameter)*
+                          ["," "**" parameter]
+                        | "**" parameter
+                        | defparameter [","] )
+    parameter      ::=  identifier [":" expression]
+    defparameter   ::=  parameter ["=" expression]
+    funcname       ::=  identifier
+
+---
+
+#Funcții
+
+    !python
+    def suma(a, b):
+        return a + b
+
+    def functie1():
+        pass
+
+    def functie2(a, b):
+        pass
+
+    def functie3(a, b, c=10):
+        pass
+
+    def functie4(*args, *kwargs):
+        pass
+
+---
+
+#Exerciții recomandate
+
+##Lucru cu șiruri de caractere
+
+- 1. icao/to_icao și icao/from_icao
+- 2. paranteze
+- 3. caesar
+
+##Lucru cu liste
+
+- 1. unic
+- 2. paint/fill
+- 3. paint/cursor 
+
+---
 #Resurse
 
 - www.python.org
