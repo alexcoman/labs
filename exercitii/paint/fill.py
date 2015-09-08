@@ -1,4 +1,7 @@
-"""Tuxy dorește să împlementeze un nou paint.
+#!/usr/bin/env python
+# *-* coding: UTF-8 *-*
+
+"""Tuxy dorește să împlementeze un nou paint pentru consolă.
 
 În timpul dezvoltării proiectului s-a izbit de o problemă
 pe care nu o poate rezolva singur și a apelat la ajutorul tău.
