@@ -24,19 +24,6 @@
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
 
-
-```
-~ $ pypy
-```
-
-    !python
-    Python 2.7.3 (2.2.1+dfsg-1ubuntu0.2, Dec 02 2014, 23:00:55)
-    [PyPy 2.2.1 with GCC 4.8.2] on linux2
-    Type "help", "copyright", "credits" or "license" for more information.
-    And now for something completely different: ``well, it's wrong but not
-    so "very wrong" as it looked``
-    >>>
-
 ---
 
 #Interpretorul Python
@@ -66,7 +53,7 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
 
 #Numere
 
-##Intreg
+**Intreg**
     
     !python
     >>> 10
@@ -75,7 +62,11 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
     100
     >>> 
 
-##Float
+---
+
+#Numere
+
+**Float**
     
     !python
     >>> 10.0
@@ -83,7 +74,11 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
     >>> float(10)
     10.0
 
-##Long - Python 2.x
+---
+
+#Numere
+
+**Long - Python 2.x**
     
     !python
     >>> sys.maxint + 1
@@ -178,6 +173,7 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
     >>> lista[-1]
     10
     >>> 
+
 ---
 
 #Tuplă
@@ -341,6 +337,8 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
     1
     Am terminat de procesat elementele.
     >>> 
+
+---
 
 #Funcții
 
