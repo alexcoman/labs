@@ -124,7 +124,212 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Structuri de date
+#Tipuri de date
+
+---
+
+#Tipuri de date numerice
+
+**Intreg**
+    
+    !python
+    >>> 10
+    10
+    >>> int(100)
+    100
+    
+    >>> dir(int(10))
+    ['...', 'bit_length', 'conjugate', 'denominator', 'imag',
+     'numerator', 'real']
+    
+    >>> int(10).bit_length()
+    4
+    
+    >>> int(10).conjugate()
+    10
+    
+    >>> int(10).denominator
+    1
+    
+    >>> int(10).numerator
+    10
+
+---
+
+#Tipuri de date numerice
+
+**Float**
+    
+    !python
+    >>> 10.0
+    10.0
+    >>> float(10)
+    10.0
+    
+    >>> dir(float(10))
+    ['...', 'as_integer_ratio', 'conjugate', 'fromhex', 'hex', 'imag',
+     'is_integer', 'real']
+    
+    >>> float(10).as_integer_ratio()
+    (10, 1)
+    
+    >>> float(10).hex()
+    '0x1.4000000000000p+3'
+    
+    >>> float(10).is_integer()
+    True
+
+---
+
+#Tipuri de date numerice
+
+**Long - Python 2.x**
+    
+    !python
+    >>> sys.maxint + 1
+    9223372036854775808L
+    >>> type(_)
+    <type 'long'>
+    >>> long(10)
+    10L
+    
+    >>> dir(long(10))
+    ['...', 'bit_length', 'conjugate', 'denominator', 'imag',
+     'numerator', 'real']
+    
+    >>> (sys.maxint + 1).denominator
+    1L
+    
+    >>> (sys.maxint + 1).imag
+    0L
+    
+    >>> (sys.maxint + 1).real
+    9223372036854775808L
+    
+    >>> (sys.maxint + 1).conjugate()
+    9223372036854775808L
+    >>> (sys.maxint + 1).bit_length()
+    64
+
+---
+
+#Tipuri de date numerice
+
+**Complex**
+    
+    !python
+    >>> a = complex(10, 5)
+    >>> a
+    (10+5j)
+    
+    >>> dir(a)
+    ['...', 'conjugate', 'imag', 'real']
+    
+    >>> a.imag
+    5.0
+
+    >>> a.real
+    10.0
+
+    >>> a.conjugate()
+    (10-5j)
+
+---
+
+#Tipuri de date booleene
+    
+    !python
+    >>> True
+    True
+    >>> False
+    False
+    >>> bool(1)
+    True
+    >>> bool(0)
+    False
+
+    >>> dir(bool(1))
+    ['...', 'bit_length', 'conjugate', 'denominator', 'imag',
+     'numerator', 'real']
+    >>> bool(1).bit_length()
+    1
+
+---
+
+#Șirurile de caractere
+    
+    !python
+    sir1 = 'Acesta este un sir de caractere'
+    sir2 = "Acesta este un sir de caractere"
+    sir3 = """Acesta este un sir de caractere
+    pe mai multe linii."""
+    sir4 = '''Acesta este un sir de caractere
+    pe mai multe linii.'''
+    sir5 = (
+        "Acesta este un sir de caractere foarte"
+        " lung, dar care totusi este pe o singura "
+        " linie."
+    )
+    
+    >>> dir("")
+    ['...', 'capitalize', 'center', 'count', 'decode', 'encode',
+     'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum',
+     'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper',
+     'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind',
+     'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split',
+     'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate',
+     'upper', 'zfill']
+
+---
+
+#Șirurile de caractere
+
+    !python
+    >>> "Ana are mere.".capitalize()
+    'Ana are mere.'
+
+    >>> "ana are mere.".center(62)
+    '                        ana are mere.                         '
+    >>> "ana are mere.".count("a")
+    3
+
+    >>> "ana are mere.".endswith("mere.")
+    True
+
+    >>> "ana are mere.".startswith("ana")
+    True
+
+    >>> "ana are mere.".partition("are")
+    ('ana ', 'are', ' mere.')
+    
+    >>> "ana are mere.".upper()
+    'ANA ARE MERE.'
+    
+    >>> "ana are mere.".title()
+    'Ana Are Mere.'
+    
+    >>> "ana are mere.".split()
+    ['ana', 'are', 'mere.']
+
+---
+
+#Șirurile de caractere
+
+    !python
+    >>> "%s are mere." % "Ana"
+    'Ana are mere.'
+
+    >>> "%s are %s." % ("Ana", "mere")
+    'Ana are mere.'
+
+    >>> "%(nume)s are %(fructe)s." % {"nume": "Ana", "fructe": "mere"}
+    'Ana are mere.'
+
+    >>> "{} are {}.".format("Ana", "mere")
+    'Ana are mere.'
+
+    >>> "{nume} are {fructe}.".format(nume="Ana", fructe="mere")
+    'Ana are mere.'
 
 ---
 
