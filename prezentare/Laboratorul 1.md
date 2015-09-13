@@ -124,6 +124,113 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
+#Operatori
+
+---
+
+#Operatori booleeni
+
+    !python
+    >>> True or False
+    True
+    
+    >>> True and False
+    False
+    
+    >>> not True
+    False
+    
+    >>> not False
+    True
+
+---
+
+#Operatori pentru comparație
+
+    !python
+    >>> x < y
+    False
+    
+    >>> x <= y
+    True
+    
+    >>> x > y
+    False
+    
+    >>> x >= y
+    True
+    
+    >>> x == y
+    True
+    
+    >>> x != y
+    False
+    
+    >>> x is y
+    True
+    
+    >>> x is not y
+    False
+
+---
+
+#Operatori pentru operații matematice
+
+    !python
+    >>> 4 + 5
+    9
+    
+    >>> 4 - 5
+    -1
+    
+    >>> 5 / 2
+    2
+    
+    >>> 5 // 2
+    2
+    
+    >>> 5 % 2
+    1
+    
+    >>> -5
+    -5
+    
+    >>> +5
+    5
+
+În Python 3.x
+
+    !python
+    >>> 5 / 2
+    2.5
+    >>> 5 // 2
+    2
+
+---
+
+#Operatori binari
+
+    !python
+    >>> 2 | 4
+    6
+    
+    >>> 2 ^ 4
+    6
+    
+    >>> 2 & 4
+    0
+    
+    >>> 1 << 3
+    8
+    
+    >>> 8 >> 3
+    1
+    
+    >>> ~8
+    -9
+
+---
+
 #Tipuri de date
 
 ---
@@ -330,10 +437,6 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
     >>> "{nume} are {fructe}.".format(nume="Ana", fructe="mere")
     'Ana are mere.'
-
----
-
-#Operatori
 
 ---
 
