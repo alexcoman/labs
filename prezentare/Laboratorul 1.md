@@ -441,10 +441,111 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 ---
 
 #Comentarii
+    
+    !python
+    """
+    Acesta este un comentariu.
+    """
+
+    # Acesta este un comentariu
+
 
 ---
 
 #Funcții built-in
+
+---
+
+#Funcții built-in
+
+**print** - Scrie un mesaj într-un stream (predefinit este stdout)
+
+```
+print(value, ..., sep=' ', end='\n', file=sys.stdout)
+```
+
+    !python
+    >>>from __future__ import print_function
+
+    >>> print("ana", "are", "mere")
+    ana are mere
+    
+    >>> print("Ana", "are", "mere", end='\n')
+    Ana are mere
+    
+    >>> print("Ana", "are", "mere", sep='\n')
+    Ana
+    are
+    mere
+
+---
+
+#Funcții built-in
+
+**input** și **raw_input** - citesc informații de la tastatură
+
+    !python
+    >>> raw_input("Ana are: ")
+    Ana are: mere
+    'mere'
+    
+    >>> input("Numarul de mere pe care le are ana este: ")
+    Numarul de mere pe care le are ana este: 10
+    10
+    
+    >>> type(_)
+    <type 'int'>
+    
+    >>> raw_input("Numarul de mere pe care le are ana este: ")
+    Numarul de mere pe care le are ana este: 10
+    '10'
+    
+    >>> type(_)
+    <type 'str'>
+
+*raw_input* este prezent doar în Python 2.x
+
+---
+
+#Funcții built-in
+
+**open** deschide un fișier
+
+```
+open(name[, mode[, buffering]])
+```
+
+    !python
+    >>> file_handle = open("test.tuxy", "w")
+    >>> file_handle.write("Tuxy Pinguinescu este cel mai tare.")
+    >>> file_handle.close()
+
+    >>> file_handle = open("test.tuxy", "r")
+    >>> file_handle.read()
+    'Tuxy Pinguinescu este cel mai tare.'
+    >>> file_handle.close()
+
+---
+
+#Funcții built-in
+
+    !python
+    >>> dir(__builtins__)
+    
+    ['...'. 'abs', 'all', 'any', 'apply', 'basestring', 'bin', 'bool',
+     'buffer', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod',
+     'cmp', 'coerce', 'compile', 'complex', 'copyright', 'credits',
+     'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'execfile',
+     'exit', 'file', 'filter', 'float', 'format', 'frozenset', 'getattr',
+     'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int',
+     'intern', 'isinstance', 'issubclass', 'iter', 'len', 'license',
+     'list', 'locals', 'long', 'map', 'max', 'memoryview', 'min',
+     'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',
+     'quit', 'range', 'raw_input', 'reduce', 'reload', 'repr', 'reversed',
+     'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str',
+     'sum', 'super', 'tuple', 'type', 'unichr', 'unicode', 'vars', 'xrange',
+     'zip'
+    ]
 
 ---
 
