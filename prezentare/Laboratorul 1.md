@@ -553,6 +553,26 @@ open(name[, mode[, buffering]])
 
 ---
 
+# if - elif - else
+    
+    !python
+    if_stmt ::=  "if" expression ":" suite
+                 ( "elif" expression ":" suite )*
+                 ["else" ":" suite]
+
+-
+
+    !python
+    >>> if numar % 5 == 0 and numar % 3 == 0: 
+    ...     pass
+    ... elif numar % 7 == 0:
+    ...     pass
+    ... else:
+    ...     pass
+    ... 
+
+---
+
 #Resurse
 
 - www.python.org
