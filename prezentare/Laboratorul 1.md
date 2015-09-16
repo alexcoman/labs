@@ -573,6 +573,97 @@ open(name[, mode[, buffering]])
 
 ---
 
+#Exerciții
+
+    !python
+    #!/usr/bin/env python
+    # *-* coding: UTF-8 *-*
+    """Scrieți o funcție ce să determine dacă numărul primit
+    ca argument este par.
+    
+    Cerințe:
+        - Se va folosi structura condițională if-elif-else
+    """
+    
+    
+    def par(numar):
+        """Funcție ce determină dacă un număr este par."""
+        pass
+        
+    if __name__ == "__main__":
+        assert not par(1)
+        assert par(2)
+        assert not par(3)
+
+---
+
+#Exerciții
+
+    !python
+    #!/usr/bin/env python
+    # *-* coding: UTF-8 *-*
+    """Scrieți o funcție ce să determine maximul dintre două
+    numere primite ca argument.
+    
+    Cerințe:
+        - Se va folosi structura condițională if-elif-else
+        - Nu se va folosi funcția max
+    """
+    
+    
+    def maxim(numar1, numar2):
+        """Funcție ce determină maximul dintre două numere."""
+        pass
+    
+    if __name__ == "__main__":
+        assert maxim(1, 2) == 2
+        assert maxim(5, 6) == 6
+        assert maxim(1, 1) == 1
+
+---
+
+#Exerciții
+
+    !python
+    #!/usr/bin/env python
+    # *-* coding: UTF-8 *-*
+    """Scrieți o funcție ce să determine dacă numărul primit
+    ca argument este o putere a lui 2.
+    """
+    
+    
+    def putere(numar):
+        """Funcție ce determină dacă un număr este putere a lui 2."""
+        pass
+    
+    if __name__ == "__main__":
+        assert putere(2)
+        assert putere(4)
+        assert not putere(10)
+
+---
+
+#Exerciții
+
+    !python
+    #!/usr/bin/env python
+    # *-* coding: UTF-8 *-*
+    """Scrieți o funcție ce să determine dacă șirul de caractere
+    primit ca argument este palindrom.
+    """
+    
+    
+    def palindrom(sir):
+        """Funcție ce determină dacă șirul primit este palindrom."""
+        pass
+    
+    if __name__ == "__main__":
+        assert not palindrom("python")
+        assert palindrom("radar")
+        assert not palindrom("palindrom")
+
+---
+
 #Resurse
 
 - www.python.org
