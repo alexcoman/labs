@@ -13,7 +13,7 @@
     - Funcții built-in (print, input, *raw_input*, open)
     - Instrucțiuni condiționale (if - elif - else)
  
-*Timp estimat: **45** de minute*
+*Timp estimat: **80** de minute*
 
 ---
 
@@ -452,6 +452,335 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
+
+#Liste și Tupluri
+
+**Lista**: Structură de date flexibilă ce poate încapsula date eterogene.
+
+    !python
+    laborator_python = [
+        ["Laboratorul 1",
+            ["interpretor", "CPython", "IronPython", "PyPy"],
+            ["exerciții", "maxim", "palindrom", "par", "putere"],
+            ["note", 10, 5.4, 3.4, 10, 2, 1, 4],
+         ],
+    ]
+    laborator_python[1] = ["Laboratorul 2"] 
+
+
+**Tupluri**: Structură de date inflexibilă ce poate încapsula date eterogene.
+
+    !python
+    laborator_python = (
+        ("Laboratorul 1",
+            ("interpretor", "CPython", "IronPython", "PyPy"),
+            ("exerciții", "maxim", "palindrom", "par", "putere"),
+            ("note", 10, 5.4, 3.4, 10, 2, 1, 4),
+         ),
+    )
+    laborator_python[1] = ["Laboratorul 2"]
+
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    TypeError: 'tuple' object does not support item assignment
+
+---
+
+#Accesarea elementelor
+
+    !python
+    >>> laborator_python = [
+    ...     ["Laboratorul 1",
+    ...         ["interpretor", "CPython", "IronPython", "PyPy"],
+    ...         ["exerciții", "maxim", "palindrom", "par", "putere"],
+    ...         ["note", 10, 5.4, 3.4, 10, 2, 1, 4],
+    ...      ],
+    ... ]
+
+    >>> laborator_python[0]
+    ['Laboratorul 1', ['interpretor', 'CPython', 'IronPython', 'PyPy'],
+    ['exerci\xc8\x9bii', 'maxim', 'palindrom', 'par', 'putere'],
+    ['note', 10, 5.4, 3.4, 10, 2, 1, 4]]
+    
+    >>> laborator_python[0][1]
+    ['interpretor', 'CPython', 'IronPython', 'PyPy']
+    
+    >>> laborator_python[0][1][1]
+    'CPython'
+    
+    >>> laborator_python[0][1][2]
+    'IronPython'
+    
+    >>> laborator_python[0][1][2][3]
+    'n'
+
+---
+
+
+#Indexi negativi
+
+    !python
+    >>> laborator_python = [
+    ...     ["Laboratorul 1",
+    ...         ["interpretor", "CPython", "IronPython", "PyPy"],
+    ...         ["exerciții", "maxim", "palindrom", "par", "putere"],
+    ...         ["note", 10, 5.4, 3.4, 10, 2, 1, 4],
+    ...      ],
+    ... ]
+    >>> laborator_python[-1]
+    ['Laboratorul 1', ['interpretor', 'CPython', 'IronPython', 'PyPy'],
+    ['exerci\xc8\x9bii', 'maxim', 'palindrom', 'par', 'putere'],
+    ['note', 10, 5.4, 3.4, 10, 2, 1, 4]]
+    
+    >>> laborator_python[-1][-1][0]
+    'note'
+    
+    >>> laborator_python[-1][-1][-1]
+    4
+    
+    >>> laborator_python[-1][-1][-2]
+    1
+    
+    >>> laborator_python[-1][-1][-3]
+    2
+    
+    >>> laborator_python[-1][-2][-3]
+    'palindrom'
+
+---
+
+#List slices (lista[început:sfârșit])
+
+    !python
+    >>> lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    >>> lista[0:3]
+    [1, 2, 3]
+    
+    >>> lista[:3]
+    [1, 2, 3]
+    
+    >>> lista[3:6]
+    [4, 5, 6]
+    
+    >>> lista[3:]
+    [4, 5, 6, 7, 8, 9]
+    
+    >>> lista[-1:]
+    [9]
+    
+    >>> lista[-2:]
+    [8, 9]
+    
+    >>> lista[:-1]
+    [1, 2, 3, 4, 5, 6, 7, 8]
+    
+    >>> lista[:-2]
+    [1, 2, 3, 4, 5, 6, 7]
+
+---
+
+#List slices (lista[început:sfârșit:pas])
+
+    !python
+    >>> lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
+    >>> lista[1::2]
+    [2, 4, 6, 8]
+    
+    >>> lista[::2]
+    [1, 3, 5, 7, 9]
+    
+    >>> lista[::-1]
+    [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    
+    >>> lista[-1:-5:-1]
+    [9, 8, 7, 6]
+
+---
+
+#Operații utile
+
+    !python
+    >>> lista = []
+    >>> lista.append(1)
+    >>> lista.append(2)
+    >>> lista.append(3)
+    >>> lista
+    [1, 2, 3]
+    
+    >>> lista.extend([4, 5, 6])
+    >>> lista
+    [1, 2, 3, 4, 5, 6]
+    
+    >>> lista.reverse()
+    >>> lista
+    [6, 5, 4, 3, 2, 1]
+    
+    >>> lista.sort()
+    >>> lista
+    [1, 2, 3, 4, 5, 6]
+
+
+Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)`.
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [1, 2, 3, 4, 5]
+    >>> lista2 = lista
+    >>>
+    >>> lista.append("x")
+    >>> lista2.append("y")
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [1, 2, 3, 4, 5]
+    >>> lista2 = lista
+    >>>
+    >>> lista.append("x")
+    >>> lista2.append("y")
+    >>> 
+    >>> lista
+    [1, 2, 3, 4, 5, 'x', 'y']
+    
+    >>> lista2
+    [1, 2, 3, 4, 5, 'x', 'y']
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [[0]] * 10
+    >>> lista
+    [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
+    
+    >>> lista[0].append(1)
+    >>> lista[0].append(2)
+    >>> lista[0].append(3)
+    >>> lista[0].append(4)
+    >>> lista[0].append(5)
+    >>> lista[0].append(6)
+    >>> 
+    >>> for rand in lista:
+    ...     print(rand)
+    ... 
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [[0]] * 10
+    >>> lista
+    [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
+    
+    >>> lista[0].append(1)
+    >>> lista[0].append(2)
+    >>> lista[0].append(3)
+    >>> lista[0].append(4)
+    >>> lista[0].append(5)
+    >>> lista[0].append(6)
+    >>> 
+    >>> for rand in lista:
+    ...     print(rand)
+    ... 
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    [0, 1, 2, 3, 4, 5, 6]
+    >>> 
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [1, 2, 3, [1, 2, 3]]
+    >>> lista2 = list(lista)
+    >>> 
+    >>> lista.append("x")
+    >>> lista2.append("y")
+    >>>
+    ---
+
+    #Referințe
+
+    >>> lista = [1, 2, 3, [1, 2, 3]]
+    >>> lista2 = list(lista)
+    >>> 
+    >>> lista.append("x")
+    >>> lista2.append("y")
+    >>>
+
+    >>> lista
+    [1, 2, 3, [1, 2, 3], 'x']
+
+    >>> lista2
+    [1, 2, 3, [1, 2, 3], 'y']
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [1, 2, 3, [1, 2, 3]]
+    >>> lista2 = list(lista)
+    >>> 
+    >>> lista.append("x")
+    >>> lista2.append("y")
+    >>> 
+
+    >>> lista
+    [1, 2, 3, [1, 2, 3], 'x']
+
+    >>> lista2
+    [1, 2, 3, [1, 2, 3], 'y']
+
+    >>> lista[3].append(4)
+    >>> lista2[3].append(4) 
+
+---
+
+#Referințe
+
+    !python
+    >>> lista = [1, 2, 3, [1, 2, 3]]
+    >>> lista2 = list(lista)
+    >>> 
+    >>> lista.append("x")
+    >>> lista2.append("y")
+    >>> 
+
+    >>> lista
+    [1, 2, 3, [1, 2, 3], 'x']
+
+    >>> lista2
+    [1, 2, 3, [1, 2, 3], 'y']
+     
+    >>> lista[3].append(4)
+    >>> lista2[3].append(4) 
+
+    >>> lista
+    [1, 2, 3, [1, 2, 3, 4, 4], 'x']
+
+    >>> lista2
+    [1, 2, 3, [1, 2, 3, 4, 4], 'y'] 
+
+---
+
 #Funcții built-in
 
 ---
@@ -573,96 +902,6 @@ open(name[, mode[, buffering]])
 
 ---
 
-#Exerciții
-
-    !python
-    #!/usr/bin/env python
-    # *-* coding: UTF-8 *-*
-    """Scrieți o funcție ce să determine dacă numărul primit
-    ca argument este par.
-    
-    Cerințe:
-        - Se va folosi structura condițională if-elif-else
-    """
-    
-    
-    def par(numar):
-        """Funcție ce determină dacă un număr este par."""
-        pass
-        
-    if __name__ == "__main__":
-        assert not par(1)
-        assert par(2)
-        assert not par(3)
-
----
-
-#Exerciții
-
-    !python
-    #!/usr/bin/env python
-    # *-* coding: UTF-8 *-*
-    """Scrieți o funcție ce să determine maximul dintre două
-    numere primite ca argument.
-    
-    Cerințe:
-        - Se va folosi structura condițională if-elif-else
-        - Nu se va folosi funcția max
-    """
-    
-    
-    def maxim(numar1, numar2):
-        """Funcție ce determină maximul dintre două numere."""
-        pass
-    
-    if __name__ == "__main__":
-        assert maxim(1, 2) == 2
-        assert maxim(5, 6) == 6
-        assert maxim(1, 1) == 1
-
----
-
-#Exerciții
-
-    !python
-    #!/usr/bin/env python
-    # *-* coding: UTF-8 *-*
-    """Scrieți o funcție ce să determine dacă numărul primit
-    ca argument este o putere a lui 2.
-    """
-    
-    
-    def putere(numar):
-        """Funcție ce determină dacă un număr este putere a lui 2."""
-        pass
-    
-    if __name__ == "__main__":
-        assert putere(2)
-        assert putere(4)
-        assert not putere(10)
-
----
-
-#Exerciții
-
-    !python
-    #!/usr/bin/env python
-    # *-* coding: UTF-8 *-*
-    """Scrieți o funcție ce să determine dacă șirul de caractere
-    primit ca argument este palindrom.
-    """
-    
-    
-    def palindrom(sir):
-        """Funcție ce determină dacă șirul primit este palindrom."""
-        pass
-    
-    if __name__ == "__main__":
-        assert not palindrom("python")
-        assert palindrom("radar")
-        assert not palindrom("palindrom")
-
----
 
 #Resurse
 

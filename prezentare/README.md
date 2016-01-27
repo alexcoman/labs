@@ -10,5 +10,5 @@ Lista de prezentări
 	    - Comentarii
 	    - Funcții built-in (print, input, *raw_input*, open)
 	    - Instrucțiuni condiționale (if - elif - else)
-- Structuri de date
-	- [Liste](Liste.md)
+		- Structuri de date
+			- Liste
