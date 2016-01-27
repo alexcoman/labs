@@ -3,7 +3,7 @@ Exemple
 
 Acest director conține exemple folosite în cadrul prezentărilor.
 
-- [Introducere în limbajul Python](prezentare/Introducere.md)
+- [Introducere în limbajul Python](../prezentare/Introducere.md)
 	- [Determinarea maximului](maxim.py)
 	- [Verifică dacă numărul este palindrom](palindrom.py)
 	- [Verifică dacă numărul este par](par.py)
