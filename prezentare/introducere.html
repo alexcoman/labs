@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Limbajul Python</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/local/lib/python3.4/dist-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/local/lib/python3.4/dist-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/local/lib/python3.4/dist-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>Limbajul Python</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Obiective</h1></header>
+            
+            
+            <section><ul>
+<li>Prezentarea limbajului Python</li>
+<li>Pregătirea mediului de lucru</li>
+<li>Familiarizarea cu limbajul<ul>
+<li>Tipuri de date (int, float, <em>long</em>, str)</li>
+<li>Operatori</li>
+<li>Comentarii</li>
+<li>Funcții built-in (print, input, <em>raw_input</em>, open)</li>
+<li>Instrucțiuni condiționale (if - elif - else)</li>
+</ul>
+</li>
+</ul>
+<p><em>Timp estimat: <strong>80</strong> de minute</em></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Limbajul Python</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>Implementări ale limbajului</h1></header>
+            
+            
+            <section><ul>
+<li><strong>CPython - <a href="https://www.python.org/">python.org</a></strong></li>
+<li>Jython - <a href="http://www.jython.org/">jython.org</a></li>
+<li>Python for .NET - <a href="http://pythonnet.sourceforge.net/">pythonnet.sourceforge.net</a></li>
+<li>IronPython - <a href="http://ironpython.net/">ironpython.net</a></li>
+<li>PyPy - <a href="http://pypy.org/">pypy.org</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>Instalarea</h1></header>
+            
+            
+            <section><p>Mai multe detalii pe link-urile de mai jos:</p>
+<ul>
+<li><strong>CPython</strong> - <a href="https://www.python.org/downloads/">python.org/downloads/</a></li>
+<li>Jython - <a href="http://www.jython.org/downloads.html">jython.org/downloads.html</a></li>
+<li>Python for .NET - <a href="http://sourceforge.net/projects/pythonnet/files/">http://sourceforge.net/projects/pythonnet/files/</a></li>
+<li>IronPython - <a href="http://ironpython.net/download/">ironpython.net/download/</a></li>
+<li>PyPy - <a href="http://pypy.org/download.html">pypy.org/download.html</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-6">
+          <div class="inner">
+            
+            <header><h1>Interpretorul</h1></header>
+            
+            
+            <section><p><code>~ $ python3</code></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="n">Python</span> <span class="mf">3.4</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jun</span> <span class="mi">19</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">21</span><span class="p">)</span> 
+<span class="lineno"> 2 </span><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.8</span><span class="o">.</span><span class="mi">2</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="lineno"> 3 </span><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span>
+<span class="lineno"> 5 </span><span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">dir</span><span class="o">&gt;</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span>
+<span class="lineno"> 7 </span><span class="n">Type</span> <span class="n">help</span><span class="p">()</span> <span class="k">for</span> <span class="n">interactive</span> <span class="n">help</span><span class="p">,</span> <span class="ow">or</span> <span class="n">help</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="k">for</span> <span class="n">help</span> <span class="n">about</span> <span class="nb">object</span><span class="o">.</span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+<p>Funcții foarte utile:  <code>dir(...)</code> și <code>help(...)</code>.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-7">
+          <div class="inner">
+            
+            <header><h1>Interpretorul</h1></header>
+            
+            
+            <section><p><code>~ $ python3 search.py "Python România"</code></p>
+<div class="highlight"><pre><span class="lineno">1 </span>Titlu: &lt;b&gt;Python&lt;/b&gt; Weekend @Iași - RoPython
+<span class="lineno">2 </span>    URL:https://conference.ropython.org/
+<span class="lineno">3 </span>Titlu: LocalUserGroups - &lt;b&gt;Python&lt;/b&gt; Wiki
+<span class="lineno">4 </span>    URL:https://wiki.python.org/moin/LocalUserGroups
+<span class="lineno">5 </span>Titlu: &lt;b&gt;Romania&lt;/b&gt; | &lt;b&gt;Python&lt;/b&gt; Data Recovery
+<span class="lineno">6 </span>    URL:http://www.python.ro/romania
+<span class="lineno">7 </span>Titlu: &lt;b&gt;Python&lt;/b&gt; Data Recovery | Recover every bit
+<span class="lineno">8 </span>    URL:http://www.python.ro/
+</pre></div>
+
+<p><code>~ $ cat search.py</code></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="lineno"> 2 </span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+<span class="lineno"> 5 </span>    <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://ajax.googleapis.com/ajax/services/search/web&quot;</span>
+<span class="lineno"> 6 </span>    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;v&quot;</span><span class="p">:</span> <span class="s">&quot;1.0&quot;</span><span class="p">,</span> <span class="s">&quot;q&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+<span class="lineno"> 7 </span>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="lineno"> 8 </span>    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="lineno"> 9 </span>    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s">&quot;responseData&quot;</span><span class="p">][</span><span class="s">&quot;results&quot;</span><span class="p">]:</span>
+<span class="lineno">10 </span>        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Titlu: {}</span><span class="se">\n\t</span><span class="s">URL:{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s">&quot;title&quot;</span><span class="p">],</span>
+<span class="lineno">11 </span>                                           <span class="n">result</span><span class="p">[</span><span class="s">&quot;url&quot;</span><span class="p">]))</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="lineno">14 </span>    <span class="n">search</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h1>Mediul de lucru</h1></header>
+            
+            
+            <section><ul>
+<li>Editor text:<ul>
+<li>Sublime Text</li>
+<li>Notepad++</li>
+<li>Vim</li>
+</ul>
+</li>
+</ul>
+<p>Mai multe exemple aici: <a href="https://en.wikipedia.org/wiki/List_of_text_editors">en.wikipedia.org/wiki/List_of_text_editors</a>.</p>
+<ul>
+<li>IDE-uri pentru Python:<ul>
+<li>Komodo (Windows/Linux/Mac OS X)</li>
+<li>LiClipse (Linux/Mac OS X/Windows)</li>
+<li>PyCharm (Linux/Mac OS X/Windows)</li>
+<li>Wing IDE (Windows, Linux, Mac OS X)</li>
+</ul>
+</li>
+</ul>
+<p>Mai multe exemple aici: <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">wiki.python.org/moin/IntegratedDevelopmentEnvironments</a>.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h1>Operatori</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-10">
+          <div class="inner">
+            
+            <header><h1>Operatori booleeni</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+<span class="lineno"> 2 </span><span class="bp">True</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span>
+<span class="lineno"> 5 </span><span class="bp">False</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="bp">True</span>
+<span class="lineno"> 8 </span><span class="bp">False</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="bp">False</span>
+<span class="lineno">11 </span><span class="bp">True</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-11">
+          <div class="inner">
+            
+            <header><h1>Operatori pentru comparație</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
+<span class="lineno"> 2 </span><span class="bp">False</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>
+<span class="lineno"> 5 </span><span class="bp">True</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+<span class="lineno"> 8 </span><span class="bp">False</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
+<span class="lineno">11 </span><span class="bp">True</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="lineno">14 </span><span class="bp">True</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span>
+<span class="lineno">17 </span><span class="bp">False</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+<span class="lineno">20 </span><span class="bp">True</span>
+<span class="lineno">21 </span>
+<span class="lineno">22 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span>
+<span class="lineno">23 </span><span class="bp">False</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-12">
+          <div class="inner">
+            
+            <header><h1>Operatori pentru operații matematice</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="lineno"> 2 </span><span class="mi">9</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="lineno"> 5 </span><span class="o">-</span><span class="mi">1</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="lineno"> 8 </span><span class="mi">2</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="lineno">11 </span><span class="mi">2</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="lineno">14 </span><span class="mi">1</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">5</span>
+<span class="lineno">17 </span><span class="o">-</span><span class="mi">5</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span><span class="o">&gt;&gt;&gt;</span> <span class="o">+</span><span class="mi">5</span>
+<span class="lineno">20 </span><span class="mi">5</span>
+</pre></div>
+
+<p>În Python 3.x</p>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="lineno">2 </span><span class="mf">2.5</span>
+<span class="lineno">3 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="lineno">4 </span><span class="mi">2</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-13">
+          <div class="inner">
+            
+            <header><h1>Operatori binari</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">4</span>
+<span class="lineno"> 2 </span><span class="mi">6</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">^</span> <span class="mi">4</span>
+<span class="lineno"> 5 </span><span class="mi">6</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&amp;</span> <span class="mi">4</span>
+<span class="lineno"> 8 </span><span class="mi">0</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span>
+<span class="lineno">11 </span><span class="mi">8</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">8</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span>
+<span class="lineno">14 </span><span class="mi">1</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="o">~</span><span class="mi">8</span>
+<span class="lineno">17 </span><span class="o">-</span><span class="mi">9</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-15">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date numerice</h1></header>
+            
+            
+            <section><p><strong>Intreg</strong></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span>
+<span class="lineno"> 2 </span><span class="mi">10</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="lineno"> 4 </span><span class="mi">100</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="lineno"> 7 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;bit_length&#39;</span><span class="p">,</span> <span class="s">&#39;conjugate&#39;</span><span class="p">,</span> <span class="s">&#39;denominator&#39;</span><span class="p">,</span> <span class="s">&#39;imag&#39;</span><span class="p">,</span>
+<span class="lineno"> 8 </span> <span class="s">&#39;numerator&#39;</span><span class="p">,</span> <span class="s">&#39;real&#39;</span><span class="p">]</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+<span class="lineno">11 </span><span class="mi">4</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span>
+<span class="lineno">14 </span><span class="mi">10</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">denominator</span>
+<span class="lineno">17 </span><span class="mi">1</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">numerator</span>
+<span class="lineno">20 </span><span class="mi">10</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-16">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date numerice</h1></header>
+            
+            
+            <section><p><strong>Float</strong></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="mf">10.0</span>
+<span class="lineno"> 2 </span><span class="mf">10.0</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno"> 4 </span><span class="mf">10.0</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="lineno"> 7 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;as_integer_ratio&#39;</span><span class="p">,</span> <span class="s">&#39;conjugate&#39;</span><span class="p">,</span> <span class="s">&#39;fromhex&#39;</span><span class="p">,</span> <span class="s">&#39;hex&#39;</span><span class="p">,</span> <span class="s">&#39;imag&#39;</span><span class="p">,</span>
+<span class="lineno"> 8 </span> <span class="s">&#39;is_integer&#39;</span><span class="p">,</span> <span class="s">&#39;real&#39;</span><span class="p">]</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">as_integer_ratio</span><span class="p">()</span>
+<span class="lineno">11 </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+<span class="lineno">14 </span><span class="s">&#39;0x1.4000000000000p+3&#39;</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">is_integer</span><span class="p">()</span>
+<span class="lineno">17 </span><span class="bp">True</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-17">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date numerice</h1></header>
+            
+            
+            <section><p><strong>Long - Python 2.x</strong></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="lineno"> 2 </span><span class="il">9223372036854775808L</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="lineno"> 4 </span><span class="o">&lt;</span><span class="nb">type</span> <span class="s">&#39;long&#39;</span><span class="o">&gt;</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">long</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="il">10L</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="nb">long</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="lineno"> 9 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;bit_length&#39;</span><span class="p">,</span> <span class="s">&#39;conjugate&#39;</span><span class="p">,</span> <span class="s">&#39;denominator&#39;</span><span class="p">,</span> <span class="s">&#39;imag&#39;</span><span class="p">,</span>
+<span class="lineno">10 </span> <span class="s">&#39;numerator&#39;</span><span class="p">,</span> <span class="s">&#39;real&#39;</span><span class="p">]</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">denominator</span>
+<span class="lineno">13 </span><span class="il">1L</span>
+<span class="lineno">14 </span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">imag</span>
+<span class="lineno">16 </span><span class="il">0L</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">real</span>
+<span class="lineno">19 </span><span class="il">9223372036854775808L</span>
+<span class="lineno">20 </span>
+<span class="lineno">21 </span><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span>
+<span class="lineno">22 </span><span class="il">9223372036854775808L</span>
+<span class="lineno">23 </span><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+<span class="lineno">24 </span><span class="mi">64</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-18">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date numerice</h1></header>
+            
+            
+            <section><p><strong>Complex</strong></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="lineno"> 3 </span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">5j</span><span class="p">)</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;conjugate&#39;</span><span class="p">,</span> <span class="s">&#39;imag&#39;</span><span class="p">,</span> <span class="s">&#39;real&#39;</span><span class="p">]</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">imag</span>
+<span class="lineno"> 9 </span><span class="mf">5.0</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">real</span>
+<span class="lineno">12 </span><span class="mf">10.0</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span>
+<span class="lineno">15 </span><span class="p">(</span><span class="mi">10</span><span class="o">-</span><span class="mi">5j</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-19">
+          <div class="inner">
+            
+            <header><h1>Tipuri de date booleene</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span>
+<span class="lineno"> 2 </span><span class="bp">True</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="bp">False</span>
+<span class="lineno"> 4 </span><span class="bp">False</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="bp">True</span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno"> 8 </span><span class="bp">False</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="lineno">11 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;bit_length&#39;</span><span class="p">,</span> <span class="s">&#39;conjugate&#39;</span><span class="p">,</span> <span class="s">&#39;denominator&#39;</span><span class="p">,</span> <span class="s">&#39;imag&#39;</span><span class="p">,</span>
+<span class="lineno">12 </span> <span class="s">&#39;numerator&#39;</span><span class="p">,</span> <span class="s">&#39;real&#39;</span><span class="p">]</span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+<span class="lineno">14 </span><span class="mi">1</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-20">
+          <div class="inner">
+            
+            <header><h1>Șirurile de caractere</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="n">sir1</span> <span class="o">=</span> <span class="s">&#39;Acesta este un sir de caractere&#39;</span>
+<span class="lineno"> 2 </span><span class="n">sir2</span> <span class="o">=</span> <span class="s">&quot;Acesta este un sir de caractere&quot;</span>
+<span class="lineno"> 3 </span><span class="n">sir3</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;Acesta este un sir de caractere</span>
+<span class="lineno"> 4 </span><span class="s">pe mai multe linii.&quot;&quot;&quot;</span>
+<span class="lineno"> 5 </span><span class="n">sir4</span> <span class="o">=</span> <span class="s">&#39;&#39;&#39;Acesta este un sir de caractere</span>
+<span class="lineno"> 6 </span><span class="s">pe mai multe linii.&#39;&#39;&#39;</span>
+<span class="lineno"> 7 </span><span class="n">sir5</span> <span class="o">=</span> <span class="p">(</span>
+<span class="lineno"> 8 </span>    <span class="s">&quot;Acesta este un sir de caractere foarte&quot;</span>
+<span class="lineno"> 9 </span>    <span class="s">&quot; lung, dar care totusi este pe o singura &quot;</span>
+<span class="lineno">10 </span>    <span class="s">&quot; linie.&quot;</span>
+<span class="lineno">11 </span><span class="p">)</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="lineno">14 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="p">,</span> <span class="s">&#39;capitalize&#39;</span><span class="p">,</span> <span class="s">&#39;center&#39;</span><span class="p">,</span> <span class="s">&#39;count&#39;</span><span class="p">,</span> <span class="s">&#39;decode&#39;</span><span class="p">,</span> <span class="s">&#39;encode&#39;</span><span class="p">,</span>
+<span class="lineno">15 </span> <span class="s">&#39;endswith&#39;</span><span class="p">,</span> <span class="s">&#39;expandtabs&#39;</span><span class="p">,</span> <span class="s">&#39;find&#39;</span><span class="p">,</span> <span class="s">&#39;format&#39;</span><span class="p">,</span> <span class="s">&#39;index&#39;</span><span class="p">,</span> <span class="s">&#39;isalnum&#39;</span><span class="p">,</span>
+<span class="lineno">16 </span> <span class="s">&#39;isalpha&#39;</span><span class="p">,</span> <span class="s">&#39;isdigit&#39;</span><span class="p">,</span> <span class="s">&#39;islower&#39;</span><span class="p">,</span> <span class="s">&#39;isspace&#39;</span><span class="p">,</span> <span class="s">&#39;istitle&#39;</span><span class="p">,</span> <span class="s">&#39;isupper&#39;</span><span class="p">,</span>
+<span class="lineno">17 </span> <span class="s">&#39;join&#39;</span><span class="p">,</span> <span class="s">&#39;ljust&#39;</span><span class="p">,</span> <span class="s">&#39;lower&#39;</span><span class="p">,</span> <span class="s">&#39;lstrip&#39;</span><span class="p">,</span> <span class="s">&#39;partition&#39;</span><span class="p">,</span> <span class="s">&#39;replace&#39;</span><span class="p">,</span> <span class="s">&#39;rfind&#39;</span><span class="p">,</span>
+<span class="lineno">18 </span> <span class="s">&#39;rindex&#39;</span><span class="p">,</span> <span class="s">&#39;rjust&#39;</span><span class="p">,</span> <span class="s">&#39;rpartition&#39;</span><span class="p">,</span> <span class="s">&#39;rsplit&#39;</span><span class="p">,</span> <span class="s">&#39;rstrip&#39;</span><span class="p">,</span> <span class="s">&#39;split&#39;</span><span class="p">,</span>
+<span class="lineno">19 </span> <span class="s">&#39;splitlines&#39;</span><span class="p">,</span> <span class="s">&#39;startswith&#39;</span><span class="p">,</span> <span class="s">&#39;strip&#39;</span><span class="p">,</span> <span class="s">&#39;swapcase&#39;</span><span class="p">,</span> <span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="s">&#39;translate&#39;</span><span class="p">,</span>
+<span class="lineno">20 </span> <span class="s">&#39;upper&#39;</span><span class="p">,</span> <span class="s">&#39;zfill&#39;</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-21">
+          <div class="inner">
+            
+            <header><h1>Șirurile de caractere</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;Ana are mere.&quot;</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="lineno"> 2 </span><span class="s">&#39;Ana are mere.&#39;</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">62</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="s">&#39;                        ana are mere.                         &#39;</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span>
+<span class="lineno"> 7 </span><span class="mi">3</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&quot;mere.&quot;</span><span class="p">)</span>
+<span class="lineno">10 </span><span class="bp">True</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&quot;ana&quot;</span><span class="p">)</span>
+<span class="lineno">13 </span><span class="bp">True</span>
+<span class="lineno">14 </span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="s">&quot;are&quot;</span><span class="p">)</span>
+<span class="lineno">16 </span><span class="p">(</span><span class="s">&#39;ana &#39;</span><span class="p">,</span> <span class="s">&#39;are&#39;</span><span class="p">,</span> <span class="s">&#39; mere.&#39;</span><span class="p">)</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="lineno">19 </span><span class="s">&#39;ANA ARE MERE.&#39;</span>
+<span class="lineno">20 </span>
+<span class="lineno">21 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+<span class="lineno">22 </span><span class="s">&#39;Ana Are Mere.&#39;</span>
+<span class="lineno">23 </span>
+<span class="lineno">24 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;ana are mere.&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="lineno">25 </span><span class="p">[</span><span class="s">&#39;ana&#39;</span><span class="p">,</span> <span class="s">&#39;are&#39;</span><span class="p">,</span> <span class="s">&#39;mere.&#39;</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-22">
+          <div class="inner">
+            
+            <header><h1>Șirurile de caractere</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> are mere.&quot;</span> <span class="o">%</span> <span class="s">&quot;Ana&quot;</span>
+<span class="lineno"> 2 </span><span class="s">&#39;Ana are mere.&#39;</span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> are </span><span class="si">%s</span><span class="s">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="s">&quot;mere&quot;</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="s">&#39;Ana are mere.&#39;</span>
+<span class="lineno"> 6 </span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;</span><span class="si">%(nume)s</span><span class="s"> are </span><span class="si">%(fructe)s</span><span class="s">.&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s">&quot;nume&quot;</span><span class="p">:</span> <span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="s">&quot;fructe&quot;</span><span class="p">:</span> <span class="s">&quot;mere&quot;</span><span class="p">}</span>
+<span class="lineno"> 8 </span><span class="s">&#39;Ana are mere.&#39;</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;{} are {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="s">&quot;mere&quot;</span><span class="p">)</span>
+<span class="lineno">11 </span><span class="s">&#39;Ana are mere.&#39;</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;{nume} are {fructe}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nume</span><span class="o">=</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="n">fructe</span><span class="o">=</span><span class="s">&quot;mere&quot;</span><span class="p">)</span>
+<span class="lineno">14 </span><span class="s">&#39;Ana are mere.&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-23">
+          <div class="inner">
+            
+            <header><h1>Comentarii</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1 </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="lineno">2 </span><span class="sd">Acesta este un comentariu.</span>
+<span class="lineno">3 </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="lineno">4 </span>
+<span class="lineno">5 </span><span class="c"># Acesta este un comentariu</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-24">
+          <div class="inner">
+            
+            <header><h1>Liste și Tupluri</h1></header>
+            
+            
+            <section><p><strong>Lista</strong>: Structură de date flexibilă ce poate încapsula date eterogene.</p>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="n">laborator_python</span> <span class="o">=</span> <span class="p">[</span>
+<span class="lineno">2 </span>    <span class="p">[</span><span class="s">&quot;Laboratorul 1&quot;</span><span class="p">,</span>
+<span class="lineno">3 </span>        <span class="p">[</span><span class="s">&quot;interpretor&quot;</span><span class="p">,</span> <span class="s">&quot;CPython&quot;</span><span class="p">,</span> <span class="s">&quot;IronPython&quot;</span><span class="p">,</span> <span class="s">&quot;PyPy&quot;</span><span class="p">],</span>
+<span class="lineno">4 </span>        <span class="p">[</span><span class="s">&quot;exerciții&quot;</span><span class="p">,</span> <span class="s">&quot;maxim&quot;</span><span class="p">,</span> <span class="s">&quot;palindrom&quot;</span><span class="p">,</span> <span class="s">&quot;par&quot;</span><span class="p">,</span> <span class="s">&quot;putere&quot;</span><span class="p">],</span>
+<span class="lineno">5 </span>        <span class="p">[</span><span class="s">&quot;note&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="lineno">6 </span>     <span class="p">],</span>
+<span class="lineno">7 </span><span class="p">]</span>
+<span class="lineno">8 </span><span class="n">laborator_python</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Laboratorul 2&quot;</span><span class="p">]</span>
+</pre></div>
+
+<p><strong>Tupluri</strong>: Structură de date inflexibilă ce poate încapsula date eterogene.</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="n">laborator_python</span> <span class="o">=</span> <span class="p">(</span>
+<span class="lineno"> 2 </span>    <span class="p">(</span><span class="s">&quot;Laboratorul 1&quot;</span><span class="p">,</span>
+<span class="lineno"> 3 </span>        <span class="p">(</span><span class="s">&quot;interpretor&quot;</span><span class="p">,</span> <span class="s">&quot;CPython&quot;</span><span class="p">,</span> <span class="s">&quot;IronPython&quot;</span><span class="p">,</span> <span class="s">&quot;PyPy&quot;</span><span class="p">),</span>
+<span class="lineno"> 4 </span>        <span class="p">(</span><span class="s">&quot;exerciții&quot;</span><span class="p">,</span> <span class="s">&quot;maxim&quot;</span><span class="p">,</span> <span class="s">&quot;palindrom&quot;</span><span class="p">,</span> <span class="s">&quot;par&quot;</span><span class="p">,</span> <span class="s">&quot;putere&quot;</span><span class="p">),</span>
+<span class="lineno"> 5 </span>        <span class="p">(</span><span class="s">&quot;note&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="lineno"> 6 </span>     <span class="p">),</span>
+<span class="lineno"> 7 </span><span class="p">)</span>
+<span class="lineno"> 8 </span><span class="n">laborator_python</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Laboratorul 2&quot;</span><span class="p">]</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="lineno">11 </span>    <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="lineno">12 </span><span class="ne">TypeError</span><span class="p">:</span> <span class="s">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-25">
+          <div class="inner">
+            
+            <header><h1>Accesarea elementelor</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span> <span class="o">=</span> <span class="p">[</span>
+<span class="lineno"> 2 </span><span class="o">...</span>     <span class="p">[</span><span class="s">&quot;Laboratorul 1&quot;</span><span class="p">,</span>
+<span class="lineno"> 3 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;interpretor&quot;</span><span class="p">,</span> <span class="s">&quot;CPython&quot;</span><span class="p">,</span> <span class="s">&quot;IronPython&quot;</span><span class="p">,</span> <span class="s">&quot;PyPy&quot;</span><span class="p">],</span>
+<span class="lineno"> 4 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;exerciții&quot;</span><span class="p">,</span> <span class="s">&quot;maxim&quot;</span><span class="p">,</span> <span class="s">&quot;palindrom&quot;</span><span class="p">,</span> <span class="s">&quot;par&quot;</span><span class="p">,</span> <span class="s">&quot;putere&quot;</span><span class="p">],</span>
+<span class="lineno"> 5 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;note&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="lineno"> 6 </span><span class="o">...</span>      <span class="p">],</span>
+<span class="lineno"> 7 </span><span class="o">...</span> <span class="p">]</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="lineno">10 </span><span class="p">[</span><span class="s">&#39;Laboratorul 1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;interpretor&#39;</span><span class="p">,</span> <span class="s">&#39;CPython&#39;</span><span class="p">,</span> <span class="s">&#39;IronPython&#39;</span><span class="p">,</span> <span class="s">&#39;PyPy&#39;</span><span class="p">],</span>
+<span class="lineno">11 </span><span class="p">[</span><span class="s">&#39;exerci</span><span class="se">\xc8\x9b</span><span class="s">ii&#39;</span><span class="p">,</span> <span class="s">&#39;maxim&#39;</span><span class="p">,</span> <span class="s">&#39;palindrom&#39;</span><span class="p">,</span> <span class="s">&#39;par&#39;</span><span class="p">,</span> <span class="s">&#39;putere&#39;</span><span class="p">],</span>
+<span class="lineno">12 </span><span class="p">[</span><span class="s">&#39;note&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">15 </span><span class="p">[</span><span class="s">&#39;interpretor&#39;</span><span class="p">,</span> <span class="s">&#39;CPython&#39;</span><span class="p">,</span> <span class="s">&#39;IronPython&#39;</span><span class="p">,</span> <span class="s">&#39;PyPy&#39;</span><span class="p">]</span>
+<span class="lineno">16 </span>
+<span class="lineno">17 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">18 </span><span class="s">&#39;CPython&#39;</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="lineno">21 </span><span class="s">&#39;IronPython&#39;</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno">24 </span><span class="s">&#39;n&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-26">
+          <div class="inner">
+            
+            <header><h1>Indexi negativi</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span> <span class="o">=</span> <span class="p">[</span>
+<span class="lineno"> 2 </span><span class="o">...</span>     <span class="p">[</span><span class="s">&quot;Laboratorul 1&quot;</span><span class="p">,</span>
+<span class="lineno"> 3 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;interpretor&quot;</span><span class="p">,</span> <span class="s">&quot;CPython&quot;</span><span class="p">,</span> <span class="s">&quot;IronPython&quot;</span><span class="p">,</span> <span class="s">&quot;PyPy&quot;</span><span class="p">],</span>
+<span class="lineno"> 4 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;exerciții&quot;</span><span class="p">,</span> <span class="s">&quot;maxim&quot;</span><span class="p">,</span> <span class="s">&quot;palindrom&quot;</span><span class="p">,</span> <span class="s">&quot;par&quot;</span><span class="p">,</span> <span class="s">&quot;putere&quot;</span><span class="p">],</span>
+<span class="lineno"> 5 </span><span class="o">...</span>         <span class="p">[</span><span class="s">&quot;note&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="lineno"> 6 </span><span class="o">...</span>      <span class="p">],</span>
+<span class="lineno"> 7 </span><span class="o">...</span> <span class="p">]</span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno"> 9 </span><span class="p">[</span><span class="s">&#39;Laboratorul 1&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;interpretor&#39;</span><span class="p">,</span> <span class="s">&#39;CPython&#39;</span><span class="p">,</span> <span class="s">&#39;IronPython&#39;</span><span class="p">,</span> <span class="s">&#39;PyPy&#39;</span><span class="p">],</span>
+<span class="lineno">10 </span><span class="p">[</span><span class="s">&#39;exerci</span><span class="se">\xc8\x9b</span><span class="s">ii&#39;</span><span class="p">,</span> <span class="s">&#39;maxim&#39;</span><span class="p">,</span> <span class="s">&#39;palindrom&#39;</span><span class="p">,</span> <span class="s">&#39;par&#39;</span><span class="p">,</span> <span class="s">&#39;putere&#39;</span><span class="p">],</span>
+<span class="lineno">11 </span><span class="p">[</span><span class="s">&#39;note&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="lineno">12 </span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="lineno">14 </span><span class="s">&#39;note&#39;</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">17 </span><span class="mi">4</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="lineno">20 </span><span class="mi">1</span>
+<span class="lineno">21 </span>
+<span class="lineno">22 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno">23 </span><span class="mi">2</span>
+<span class="lineno">24 </span>
+<span class="lineno">25 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">laborator_python</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno">26 </span><span class="s">&#39;palindrom&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-27">
+          <div class="inner">
+            
+            <header><h1>List slices (lista[început:sfârșit])</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno"> 4 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno"> 7 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="lineno">10 </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="lineno">13 </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="lineno">14 </span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+<span class="lineno">16 </span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="lineno">19 </span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="lineno">20 </span>
+<span class="lineno">21 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">22 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="lineno">23 </span>
+<span class="lineno">24 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="lineno">25 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-28">
+          <div class="inner">
+            
+            <header><h1>List slices (lista[început:sfârșit:pas])</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="lineno"> 4 </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="lineno"> 7 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">10 </span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">13 </span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-29">
+          <div class="inner">
+            
+            <header><h1>Operații utile</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 6 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno">10 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno">14 </span><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="lineno">17 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno">18 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+<p>Mai multe metode utile se pot găsi folosind <code>dir(lista)</code> și <code>help(lista.count)</code>.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-30">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="lineno">2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="n">lista</span>
+<span class="lineno">3 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno">4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno">5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-31">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="n">lista</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 8 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span>
+<span class="lineno">11 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-32">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 3 </span><span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">rand</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+<span class="lineno">13 </span><span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">rand</span><span class="p">)</span>
+<span class="lineno">14 </span><span class="o">...</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-33">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 3 </span><span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="lineno"> 7 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="lineno">10 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">rand</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+<span class="lineno">13 </span><span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">rand</span><span class="p">)</span>
+<span class="lineno">14 </span><span class="o">...</span> 
+<span class="lineno">15 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">16 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">17 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">18 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">19 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">20 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">21 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">22 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">23 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">24 </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="lineno">25 </span><span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-34">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno"> 7 </span><span class="o">---</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="c">#Referințe</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="lineno">13 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno">14 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno">17 </span>
+<span class="lineno">18 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno">19 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;x&#39;</span><span class="p">]</span>
+<span class="lineno">20 </span>
+<span class="lineno">21 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span>
+<span class="lineno">22 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-35">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 9 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;x&#39;</span><span class="p">]</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span>
+<span class="lineno">12 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-36">
+          <div class="inner">
+            
+            <header><h1>Referințe</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="lineno"> 2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> 
+<span class="lineno"> 4 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno"> 9 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;x&#39;</span><span class="p">]</span>
+<span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span>
+<span class="lineno">12 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="lineno">15 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="lineno">16 </span>
+<span class="lineno">17 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span>
+<span class="lineno">18 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s">&#39;x&#39;</span><span class="p">]</span>
+<span class="lineno">19 </span>
+<span class="lineno">20 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">lista2</span>
+<span class="lineno">21 </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s">&#39;y&#39;</span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-37">
+          <div class="inner">
+            
+            <header><h1>Funcții built-in</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-38">
+          <div class="inner">
+            
+            <header><h1>Funcții built-in</h1></header>
+            
+            
+            <section><p><strong>print</strong> - Scrie un mesaj într-un stream (predefinit este stdout)</p>
+<p><code>print(value, ..., sep=' ', end='\n', file=sys.stdout)</code></p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;ana&quot;</span><span class="p">,</span> <span class="s">&quot;are&quot;</span><span class="p">,</span> <span class="s">&quot;mere&quot;</span><span class="p">)</span>
+<span class="lineno"> 4 </span><span class="n">ana</span> <span class="n">are</span> <span class="n">mere</span>
+<span class="lineno"> 5 </span>
+<span class="lineno"> 6 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="s">&quot;are&quot;</span><span class="p">,</span> <span class="s">&quot;mere&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="lineno"> 7 </span><span class="n">Ana</span> <span class="n">are</span> <span class="n">mere</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span> <span class="s">&quot;are&quot;</span><span class="p">,</span> <span class="s">&quot;mere&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="lineno">10 </span><span class="n">Ana</span>
+<span class="lineno">11 </span><span class="n">are</span>
+<span class="lineno">12 </span><span class="n">mere</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              38/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-39">
+          <div class="inner">
+            
+            <header><h1>Funcții built-in</h1></header>
+            
+            
+            <section><p><strong>input</strong> și <strong>raw_input</strong> - citesc informații de la tastatură</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Ana are: &quot;</span><span class="p">)</span>
+<span class="lineno"> 2 </span><span class="n">Ana</span> <span class="n">are</span><span class="p">:</span> <span class="n">mere</span>
+<span class="lineno"> 3 </span><span class="s">&#39;mere&#39;</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Numarul de mere pe care le are ana este: &quot;</span><span class="p">)</span>
+<span class="lineno"> 6 </span><span class="n">Numarul</span> <span class="n">de</span> <span class="n">mere</span> <span class="n">pe</span> <span class="n">care</span> <span class="n">le</span> <span class="n">are</span> <span class="n">ana</span> <span class="n">este</span><span class="p">:</span> <span class="mi">10</span>
+<span class="lineno"> 7 </span><span class="mi">10</span>
+<span class="lineno"> 8 </span>
+<span class="lineno"> 9 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="lineno">10 </span><span class="o">&lt;</span><span class="nb">type</span> <span class="s">&#39;int&#39;</span><span class="o">&gt;</span>
+<span class="lineno">11 </span>
+<span class="lineno">12 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Numarul de mere pe care le are ana este: &quot;</span><span class="p">)</span>
+<span class="lineno">13 </span><span class="n">Numarul</span> <span class="n">de</span> <span class="n">mere</span> <span class="n">pe</span> <span class="n">care</span> <span class="n">le</span> <span class="n">are</span> <span class="n">ana</span> <span class="n">este</span><span class="p">:</span> <span class="mi">10</span>
+<span class="lineno">14 </span><span class="s">&#39;10&#39;</span>
+<span class="lineno">15 </span>
+<span class="lineno">16 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="lineno">17 </span><span class="o">&lt;</span><span class="nb">type</span> <span class="s">&#39;str&#39;</span><span class="o">&gt;</span>
+</pre></div>
+
+<p><em>raw_input</em> este prezent doar în Python 2.x</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-40">
+          <div class="inner">
+            
+            <header><h1>Funcții built-in</h1></header>
+            
+            
+            <section><p><strong>open</strong> deschide un fișier</p>
+<p><code>open(name[, mode[, buffering]])</code></p>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.tuxy&quot;</span><span class="p">,</span> <span class="s">&quot;w&quot;</span><span class="p">)</span>
+<span class="lineno">2 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Tuxy Pinguinescu este cel mai tare.&quot;</span><span class="p">)</span>
+<span class="lineno">3 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="lineno">4 </span>
+<span class="lineno">5 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;test.tuxy&quot;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span>
+<span class="lineno">6 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="lineno">7 </span><span class="s">&#39;Tuxy Pinguinescu este cel mai tare.&#39;</span>
+<span class="lineno">8 </span><span class="o">&gt;&gt;&gt;</span> <span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-41">
+          <div class="inner">
+            
+            <header><h1>Funcții built-in</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="p">[</span><span class="s">&#39;...&#39;</span><span class="o">.</span> <span class="s">&#39;abs&#39;</span><span class="p">,</span> <span class="s">&#39;all&#39;</span><span class="p">,</span> <span class="s">&#39;any&#39;</span><span class="p">,</span> <span class="s">&#39;apply&#39;</span><span class="p">,</span> <span class="s">&#39;basestring&#39;</span><span class="p">,</span> <span class="s">&#39;bin&#39;</span><span class="p">,</span> <span class="s">&#39;bool&#39;</span><span class="p">,</span>
+<span class="lineno"> 4 </span> <span class="s">&#39;buffer&#39;</span><span class="p">,</span> <span class="s">&#39;bytearray&#39;</span><span class="p">,</span> <span class="s">&#39;bytes&#39;</span><span class="p">,</span> <span class="s">&#39;callable&#39;</span><span class="p">,</span> <span class="s">&#39;chr&#39;</span><span class="p">,</span> <span class="s">&#39;classmethod&#39;</span><span class="p">,</span>
+<span class="lineno"> 5 </span> <span class="s">&#39;cmp&#39;</span><span class="p">,</span> <span class="s">&#39;coerce&#39;</span><span class="p">,</span> <span class="s">&#39;compile&#39;</span><span class="p">,</span> <span class="s">&#39;complex&#39;</span><span class="p">,</span> <span class="s">&#39;copyright&#39;</span><span class="p">,</span> <span class="s">&#39;credits&#39;</span><span class="p">,</span>
+<span class="lineno"> 6 </span> <span class="s">&#39;delattr&#39;</span><span class="p">,</span> <span class="s">&#39;dict&#39;</span><span class="p">,</span> <span class="s">&#39;dir&#39;</span><span class="p">,</span> <span class="s">&#39;divmod&#39;</span><span class="p">,</span> <span class="s">&#39;enumerate&#39;</span><span class="p">,</span> <span class="s">&#39;eval&#39;</span><span class="p">,</span> <span class="s">&#39;execfile&#39;</span><span class="p">,</span>
+<span class="lineno"> 7 </span> <span class="s">&#39;exit&#39;</span><span class="p">,</span> <span class="s">&#39;file&#39;</span><span class="p">,</span> <span class="s">&#39;filter&#39;</span><span class="p">,</span> <span class="s">&#39;float&#39;</span><span class="p">,</span> <span class="s">&#39;format&#39;</span><span class="p">,</span> <span class="s">&#39;frozenset&#39;</span><span class="p">,</span> <span class="s">&#39;getattr&#39;</span><span class="p">,</span>
+<span class="lineno"> 8 </span> <span class="s">&#39;globals&#39;</span><span class="p">,</span> <span class="s">&#39;hasattr&#39;</span><span class="p">,</span> <span class="s">&#39;hash&#39;</span><span class="p">,</span> <span class="s">&#39;help&#39;</span><span class="p">,</span> <span class="s">&#39;hex&#39;</span><span class="p">,</span> <span class="s">&#39;id&#39;</span><span class="p">,</span> <span class="s">&#39;input&#39;</span><span class="p">,</span> <span class="s">&#39;int&#39;</span><span class="p">,</span>
+<span class="lineno"> 9 </span> <span class="s">&#39;intern&#39;</span><span class="p">,</span> <span class="s">&#39;isinstance&#39;</span><span class="p">,</span> <span class="s">&#39;issubclass&#39;</span><span class="p">,</span> <span class="s">&#39;iter&#39;</span><span class="p">,</span> <span class="s">&#39;len&#39;</span><span class="p">,</span> <span class="s">&#39;license&#39;</span><span class="p">,</span>
+<span class="lineno">10 </span> <span class="s">&#39;list&#39;</span><span class="p">,</span> <span class="s">&#39;locals&#39;</span><span class="p">,</span> <span class="s">&#39;long&#39;</span><span class="p">,</span> <span class="s">&#39;map&#39;</span><span class="p">,</span> <span class="s">&#39;max&#39;</span><span class="p">,</span> <span class="s">&#39;memoryview&#39;</span><span class="p">,</span> <span class="s">&#39;min&#39;</span><span class="p">,</span>
+<span class="lineno">11 </span> <span class="s">&#39;next&#39;</span><span class="p">,</span> <span class="s">&#39;object&#39;</span><span class="p">,</span> <span class="s">&#39;oct&#39;</span><span class="p">,</span> <span class="s">&#39;open&#39;</span><span class="p">,</span> <span class="s">&#39;ord&#39;</span><span class="p">,</span> <span class="s">&#39;pow&#39;</span><span class="p">,</span> <span class="s">&#39;print&#39;</span><span class="p">,</span> <span class="s">&#39;property&#39;</span><span class="p">,</span>
+<span class="lineno">12 </span> <span class="s">&#39;quit&#39;</span><span class="p">,</span> <span class="s">&#39;range&#39;</span><span class="p">,</span> <span class="s">&#39;raw_input&#39;</span><span class="p">,</span> <span class="s">&#39;reduce&#39;</span><span class="p">,</span> <span class="s">&#39;reload&#39;</span><span class="p">,</span> <span class="s">&#39;repr&#39;</span><span class="p">,</span> <span class="s">&#39;reversed&#39;</span><span class="p">,</span>
+<span class="lineno">13 </span> <span class="s">&#39;round&#39;</span><span class="p">,</span> <span class="s">&#39;set&#39;</span><span class="p">,</span> <span class="s">&#39;setattr&#39;</span><span class="p">,</span> <span class="s">&#39;slice&#39;</span><span class="p">,</span> <span class="s">&#39;sorted&#39;</span><span class="p">,</span> <span class="s">&#39;staticmethod&#39;</span><span class="p">,</span> <span class="s">&#39;str&#39;</span><span class="p">,</span>
+<span class="lineno">14 </span> <span class="s">&#39;sum&#39;</span><span class="p">,</span> <span class="s">&#39;super&#39;</span><span class="p">,</span> <span class="s">&#39;tuple&#39;</span><span class="p">,</span> <span class="s">&#39;type&#39;</span><span class="p">,</span> <span class="s">&#39;unichr&#39;</span><span class="p">,</span> <span class="s">&#39;unicode&#39;</span><span class="p">,</span> <span class="s">&#39;vars&#39;</span><span class="p">,</span> <span class="s">&#39;xrange&#39;</span><span class="p">,</span>
+<span class="lineno">15 </span> <span class="s">&#39;zip&#39;</span>
+<span class="lineno">16 </span><span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-42">
+          <div class="inner">
+            
+            <header><h1>Instrucțiuni condiționale</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              42/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-43">
+          <div class="inner">
+            
+            <header><h1>if - elif - else</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1 </span><span class="n">if_stmt</span> <span class="p">::</span><span class="o">=</span>  <span class="s">&quot;if&quot;</span> <span class="n">expression</span> <span class="s">&quot;:&quot;</span> <span class="n">suite</span>
+<span class="lineno">2 </span>             <span class="p">(</span> <span class="s">&quot;elif&quot;</span> <span class="n">expression</span> <span class="s">&quot;:&quot;</span> <span class="n">suite</span> <span class="p">)</span><span class="o">*</span>
+<span class="lineno">3 </span>             <span class="p">[</span><span class="s">&quot;else&quot;</span> <span class="s">&quot;:&quot;</span> <span class="n">suite</span><span class="p">]</span>
+</pre></div>
+
+<p>-</p>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">numar</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numar</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+<span class="lineno">2 </span><span class="o">...</span>     <span class="k">pass</span>
+<span class="lineno">3 </span><span class="o">...</span> <span class="k">elif</span> <span class="n">numar</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="lineno">4 </span><span class="o">...</span>     <span class="k">pass</span>
+<span class="lineno">5 </span><span class="o">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="lineno">6 </span><span class="o">...</span>     <span class="k">pass</span>
+<span class="lineno">7 </span><span class="o">...</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              43/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: Introducere.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-44">
+          <div class="inner">
+            
+            <header><h1>Resurse</h1></header>
+            
+            
+            <section><ul>
+<li>www.python.org</li>
+<li>www.learnpython.org/</li>
+<li>www.learnpythonthehardway.org</li>
+<li>www.corepython.com</li>
+<li>www.codecademy.com/tracks/python</li>
+<li>www.checkio.org</li>
+<li>www.ropython.org</li>
+<li>www.github.com/RoPython</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="Introducere.md">Introducere.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              44/44
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Limbajul Python</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Obiective</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Limbajul Python</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Implementări ale limbajului</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Instalarea</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Interpretorul</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Interpretorul</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Mediul de lucru</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Operatori</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Operatori booleeni</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Operatori pentru comparație</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Operatori pentru operații matematice</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Operatori binari</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Tipuri de date</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">Tipuri de date numerice</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Tipuri de date numerice</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Tipuri de date numerice</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Tipuri de date numerice</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Tipuri de date booleene</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">Șirurile de caractere</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">Șirurile de caractere</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">Șirurile de caractere</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">Comentarii</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">Liste și Tupluri</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">Accesarea elementelor</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">Indexi negativi</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">List slices (lista[început:sfârșit])</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">List slices (lista[început:sfârșit:pas])</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Operații utile</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">Referințe</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">Referințe</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">Referințe</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide33">Referințe</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">Referințe</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide35">Referințe</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide36">Referințe</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">Funcții built-in</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-38">
+        <th><a href="#slide38">Funcții built-in</a></th>
+        <td><a href="#slide38">38</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-39">
+        <th><a href="#slide39">Funcții built-in</a></th>
+        <td><a href="#slide39">39</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-40">
+        <th><a href="#slide40">Funcții built-in</a></th>
+        <td><a href="#slide40">40</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-41">
+        <th><a href="#slide41">Funcții built-in</a></th>
+        <td><a href="#slide41">41</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-42">
+        <th><a href="#slide42">Instrucțiuni condiționale</a></th>
+        <td><a href="#slide42">42</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-43">
+        <th><a href="#slide43">if - elif - else</a></th>
+        <td><a href="#slide43">43</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-44">
+        <th><a href="#slide44">Resurse</a></th>
+        <td><a href="#slide44">44</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
