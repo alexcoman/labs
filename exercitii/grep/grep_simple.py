@@ -7,6 +7,7 @@ Tuxy cauta in fiecare zi cate o problema de matematica complet noua pentru el.
 Rezolvand problema 101, a observat ca are nevoie de cateva formule mai vechi.
 A revenit la fisierul lui de teoreme "teoreme1.txt" pentru ajutor. S-a bucurat 
 ca a reusit sa il gaseasca la timp ,fisierul fiind in /tmp/ciorne. 
+
 Uitandu-se prin el,a observat ca folosea o regula cand scria teoreme noi:
 
     [Index].[Spatiu][Spatiu][Numele Teoremei]
