@@ -22,6 +22,22 @@ def cipher(word):
     word = word.lower()
     return ord(word[0])%97
 
+def decripteaza(mesaj):
+	'''
+	:param mesaj: Mesajul pe care vrem sa il decriptam
+	:return: va return cate un sir de cuvinte decriptat
+	'''
+	words = mesaj.split('.,')
+	key = cipher(words[0])
+	mesaj_decriptat = ' '
+	for i in mesaj.lower():
+		c = ord(' ')
+		if i.isalpha():
+				c = (ord(i)-key)
+		if (not chr(c).isalpha() and chr(c)!=' ') or (chr(c).isupper()):
+				c += 26
+		mesaj_decriptat += chr(c)
+	print (mesaj_decriptat)
 
 def decripteaza(mesaj):
 	'''
