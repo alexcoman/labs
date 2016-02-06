@@ -12,7 +12,9 @@ before_install:
 
 install:
   - pip install pylint
+  - pip install bashate
 
 script:
-  - for script in $(find solutii | grep ".py$"); do pylint $script; done
   - for script in $(find solutii | grep ".sh"); do shellcheck "$script" || exit 1; done
+  - for script in $(find solutii | grep ".py$"); do pylint "$script"; done
+  - for script in $(find solutii | grep ".sh$"); do bashate "$script" || exit 1; done
