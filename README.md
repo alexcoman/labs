@@ -4,7 +4,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Prezentări
 
-- [Prezentare introductivă](prezentare/Introducere.md)
+- [Prezentare introductivă](python/prezentare/Introducere.md)
     - Prezentarea limbajului Python
     - Pregătirea mediului de lucru
     - Familiarizarea cu limbajul
@@ -18,26 +18,25 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Exerciții rezolvate
 
-- [Introducere în limbajul Python](prezentare/Introducere.md)
-    - [Determinarea maximului](exercitii/maxim.py)
-    - [Verifică dacă numărul este palindrom](exercitii/palindrom.py)
-    - [Verifică dacă numărul este par](exercitii/par.py)
-    - [Verifică dacă numărul este putere a lui 2](exercitii/putere.py)
+- [Introducere în limbajul Python](python/prezentare/Introducere.md)
+    - [Determinarea maximului](python/exemple/maxim.py)
+    - [Verifică dacă numărul este palindrom](python/exemple/palindrom.py)
+    - [Verifică dacă numărul este par](python/exemple/par.py)
+    - [Verifică dacă numărul este putere a lui 2](python/exemple/putere.py)
 
 
 ###Exerciții propuse
 
-- [caesar](exercitii/caesar)
-    - Dificultate: scăzută
-- [icao](exercitii/icao)
-    - Dificultate: scăzută
-- [unic](exercitii/unic)
-    - Dificultate: scăzută
-- [paint](exercitii/paint)
-    - Dificultate: medie
-- [paranteze](exercitii/paranteze)
-    - Dificultate: medie
-- [grep](exercitii/grep)
-    - Dificultate: medie
-- [linux](exercitii/linux)
-    - Dificultate: scăzută
+- Python
+    - [caesar](python/exercitii/caesar)
+        - Dificultate: scăzută
+    - [icao](python/exercitii/icao)
+        - Dificultate: scăzută
+    - [unic](python/exercitii/unic)
+        - Dificultate: scăzută
+    - [paint](python/exercitii/paint)
+        - Dificultate: medie
+    - [paranteze](python/exercitii/paranteze)
+        - Dificultate: medie
+    - [grep](python/exercitii/grep)
+        - Dificultate: medie
