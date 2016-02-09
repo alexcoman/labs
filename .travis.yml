@@ -16,7 +16,7 @@ install:
   - pip install flake8
 
 script:
-  - for script in $(find solutii | grep ".py$"); do pylint "$script"; done
-  - for script in $(find solutii | grep ".sh"); do bashate "$script" || exit 1; done
-  - for script in $(find solutii | grep ".py$"); do flake8 "$script"; done
-  - for script in $(find solutii | grep ".sh"); do shellcheck "$script" || exit 1; done
+  - for script in $(find python/solutii -type f | grep ".py$"); do pylint "$script"; done
+  - for script in $(find python/solutii -type f | grep ".py$"); do flake8 "$script"; done
+  - for script in $(find bash/solutii -type f | grep ".sh$"); do bashate "$script" || exit 1; done
+  - for script in $(find bash/solutii -type f | grep ".sh$"); do shellcheck "$script" || exit 1; done
