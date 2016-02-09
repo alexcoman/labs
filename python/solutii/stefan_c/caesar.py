@@ -25,7 +25,8 @@ def decripteaza(mesaj):
         char = ord(' ')
         if i.isalpha():
             char = (ord(i)-key)
-        if (not chr(char).isalpha() and chr(char) != ' ') or (chr(char).isupper()):
+        if (not chr(char).isalpha() and chr(char) != ' ')\
+                or (chr(char).isupper()):
             char += 26
         mesaj_decriptat += chr(char)
     print (mesaj_decriptat)
