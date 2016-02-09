@@ -1,6 +1,4 @@
-"""
-Module implementing the caesar cipher
-"""
+"""Module implementing the caesar cipher"""
 # !/usr/bin/env python
 # *-* coding: UTF-8 *-*
 from __future__ import print_function
@@ -24,12 +22,12 @@ def decripteaza(mesaj):
     key = cipher(words[0])
     mesaj_decriptat = ' '
     for i in mesaj.lower():
-        c = ord(' ')
+        char = ord(' ')
         if i.isalpha():
-            c = (ord(i)-key)
-        if (not chr(c).isalpha() and chr(c) != ' ') or (chr(c).isupper()):
-            c += 26
-        mesaj_decriptat += chr(c)
+            char = (ord(i)-key)
+        if (not chr(char).isalpha() and chr(char) != ' ') or (chr(char).isupper()):
+            char += 26
+        mesaj_decriptat += chr(char)
     print (mesaj_decriptat)
 
 
@@ -43,7 +41,7 @@ def main():
         mesaje = fisier.read()
         fisier.close()
     except IOError:
-        print("Nu am putut obține mesajele.")
+        print("Nu am putut obtine mesajele.")
         return
 
     for mesaj in mesaje.splitlines():
