@@ -30,11 +30,16 @@ def gaseste(istoric):
         1 1 1 2 2 - 1
     """
 
-    for i in range(0, 10):
-        if istoric.count(i) % 2 == 1:
-            print("Cercatatorul numarul %i sta peste program! \n" %i)
-            return i
-    
+    suspect=0
+    for i in range(0, len(istoric)):
+        suspect=istoric[i]^suspect
+    if suspect!=0:
+        print("Cercatatorul numarul %i sta peste program! \n" %suspect)
+        return suspect
+
+    else:
+        print("Nu sta nimeni peste program")
+        return 0
 
 
 if __name__ == "__main__":
