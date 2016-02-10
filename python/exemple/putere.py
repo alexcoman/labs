@@ -5,21 +5,15 @@ ca argument este o putere a lui 2.
 """
 
 
-def putere(numar):
-    """Funcție ce determină dacă un număr este putere a lui 2."""
-    if numar & numar - 1 == 0:
-        return True
-
-    return False
+def putere_eficient(numar):
+    """Functie ce determina daca un numar este putere a lui 2."""
+    return (numar & numar - 1) == 0
 
 
 def putere(numar):
     """Funcție ce determină dacă un număr este putere a lui 2."""
     numar_binar = "{0:b}".format(numar)
-    if numar_binar.count("1") == 1:
-        return True
-    else:
-        return False
+    return numar_binar.count("1") == 1
 
 
 if __name__ == "__main__":
