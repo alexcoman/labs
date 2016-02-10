@@ -22,11 +22,13 @@ Probleme:
     
       # Rezultatul asteptat de Tuxy este: "bar"
 
-4:    $ ./incercare.sh
+4:    $ bash incercare.txt
       0
     # Rezultatul asteptat al scriptului: "1"
 
-5:    $ ./incercare5.sh
+5:    $ bash incercare5.txt
      rm: it is dangerous to operate recursively on ‘/’
      rm: use --no-preserve-root to override this failsafe 
     # Rezultatul asteptat al scriptului este: ""
+
+Adaugati un comentariu la fiecare problema de ce se intampla asta.
