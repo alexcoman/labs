@@ -32,7 +32,7 @@ def distanta():
         positionx, positiony = 0, 0
         istoric.close()
     except IOError:
-        print ("Could not open file.")
+        print("Could not open file.")
         return
     for instruction in instructions:
         commands = instruction.split(' ')

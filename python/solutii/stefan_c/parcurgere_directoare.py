@@ -21,5 +21,13 @@ def find_allfiles(mdirectory, char):
                 print(os.path.abspath(cfile))
 
 
+def main():
+    """
+    :return: the find_allfiles function
+    """
+    thepath = str(raw_input())
+    char = str(raw_input())
+    find_allfiles(thepath, char)
+
 if __name__ == "__main__":
-    find_allfiles("C:\\", "a")
+    main()

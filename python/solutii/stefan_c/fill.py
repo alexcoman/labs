@@ -14,7 +14,7 @@ def matrix_print(rows, columns, image):
     """
     for i in xrange(0, rows):
         for j in xrange(0, columns):
-            print (image[i][j], end="")
+            print(image[i][j], end="")
         print()
 
 

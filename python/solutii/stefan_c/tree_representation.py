@@ -22,5 +22,12 @@ def rtree(mdirectory, depth):
             print('\t' * (depth+1), os.path.basename(cfile))
 
 
+def main():
+    """
+    :return: a directory represented as a tree
+    """
+    thepath = str(raw_input())
+    rtree(thepath, 0)
+
 if __name__ == "__main__":
-    rtree("C:", 0)
+    main()

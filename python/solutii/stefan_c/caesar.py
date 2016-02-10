@@ -1,6 +1,4 @@
 """Module implementing the caesar cipher"""
-# !/usr/bin/env python
-# *-* coding: UTF-8 *-*
 from __future__ import print_function
 
 
@@ -29,7 +27,7 @@ def decripteaza(mesaj):
                 or (chr(char).isupper()):
             char += 26
         mesaj_decriptat += chr(char)
-    print (mesaj_decriptat)
+    print(mesaj_decriptat)
 
 
 def main():
