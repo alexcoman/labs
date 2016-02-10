@@ -39,7 +39,7 @@ def main():
     In main se verifica ca cele doua path-uri nu duc
     catre exact acelasi fisier.
     """
-    while not sys.argv[1] is sys.argv[2]:
+    while sys.argv[1] is not sys.argv[2]:
         sincronizare_functie(sys.argv[1], sys.argv[2])
         sincronizare_functie(sys.argv[2], sys.argv[1])
 
