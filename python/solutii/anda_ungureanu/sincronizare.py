@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
 
@@ -29,7 +28,7 @@ def sincronizare_functie(path1, path2):
                 print("+item : "+item+"\n")
                 copy(item_path1, item_path2)
             if os.path.isdir(item_path1):
-                if not item in os.listdir(path2):
+                if item not in os.listdir(path2):
                     print("+item : "+item+"\n")
                     os.makedirs(item_path2)
                 sincronizare_functie(item_path1, item_path2)

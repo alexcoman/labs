@@ -1,5 +1,4 @@
-﻿
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # *-* coding: UTF-8 *-*
 """
 Programul afiseaza indentat continutul folderului
@@ -25,4 +24,3 @@ def tree(path, numar):
 
 if __name__ == "__main__":
     tree(sys.argv[1], 0)
-

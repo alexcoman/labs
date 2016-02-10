@@ -28,7 +28,8 @@ def decripteaza(mesaj):
     while "ave" not in mess_final:
         for litera in mesaj:
             if litera.isalpha():
-                if (ord(litera)-nr_pasi) >= 97 and (ord(litera)-nr_pasi) <= 122:
+                if (ord(litera) - nr_pasi >= 97 and
+                        ord(litera) - nr_pasi <= 122):
                     litera_m = chr(ord(litera)-nr_pasi)
                 else:
                     litera_m = chr(122-(nr_pasi-(ord(litera)-97)-1))

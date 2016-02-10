@@ -52,7 +52,7 @@ def main():
         ["-", "-", "-", "-", "-", "*", "-", "*", "-", "-", "*", "-"],
     ]
     for linie in imaginea:
-        print (''.join(linie))
+        print(''.join(linie))
     print('\n')
     umple(imaginea, (1, 3))
     umple(imaginea, (5, 11))

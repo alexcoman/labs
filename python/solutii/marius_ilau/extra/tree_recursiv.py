@@ -17,4 +17,3 @@ def tree_recursiv(cale):
 
 if __name__ == "__main__":
     tree_recursiv("/Users/ilaumarius")
-

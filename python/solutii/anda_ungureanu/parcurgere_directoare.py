@@ -1,5 +1,4 @@
-﻿
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # *-* coding: UTF-8 *-*
 """
     Programul afiseaza toate fisierele din path-ul
