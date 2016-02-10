@@ -36,7 +36,6 @@ def este_corect(expresie):
             stiva.pop()
     return not stiva
 
-
 if __name__ == "__main__":
     assert este_corect("[()[]]"), "Probleme la expresia 1"
     assert este_corect("()()[][]"), "Probleme la expresia 2"
