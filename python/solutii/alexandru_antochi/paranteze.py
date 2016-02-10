@@ -21,7 +21,9 @@ Câteva exemple:
 
 
 def este_corect(expresie):
-    """Verifică dacă toate parantezele sunt folosite corespunzător, prin expresie."""
+    """Verifică dacă toate parantezele sunt folosite corespunzător,
+    prin expresie.
+    """
     stiva = []
     stiva.append(expresie[0])
     for i in range(1, len(expresie)):

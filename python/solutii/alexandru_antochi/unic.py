@@ -18,7 +18,7 @@ Cerințe:
     II. Găsește cercetătorul ce stă peste program după o singură
     parcurgere a listei și fără a aloca memorie suplimentară.
 """
-from collections import Counter
+from __future__ import print_function
 
 
 def gaseste(istoric):
@@ -30,11 +30,13 @@ def gaseste(istoric):
         1 1 1 2 2 - 1
     """
 
-    suspect=0
-    for i in range(0, len(istoric)):
-        suspect=istoric[i]^suspect
-    if suspect!=0:
-        print("Cercatatorul numarul %i sta peste program! \n" %suspect)
+    suspect = 0
+    for index in range(0, len(istoric)):
+        suspect = istoric[index] ^ suspect
+
+    if suspect != 0:
+        print("Cercatatorul numarul %index sta peste program! \n" %
+              suspect)
         return suspect
 
     else:

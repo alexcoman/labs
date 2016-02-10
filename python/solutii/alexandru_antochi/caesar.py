@@ -14,24 +14,28 @@ un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
 
+from __future__ import print_function
+
 
 def decripteaza(mesaj):
     """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
     va încearca să îl decripteze.
     """
 
-    n = (ord(mesaj[0]) - ord("a"))
+    cheie = (ord(mesaj[0]) - ord("a"))
     mesaj_decriptat = list(mesaj)
     for i in range(0, len(mesaj)):
         if mesaj_decriptat[i].isalpha():
-            if ord(mesaj_decriptat[i]) - n < 97:
+            if ord(mesaj_decriptat[i]) - cheie < 97:
                 mesaj_decriptat[i] = chr(ord(mesaj_decriptat[i]) + 26)
-            mesaj_decriptat[i] = chr(abs(ord(mesaj_decriptat[i]) - n))
+            mesaj_decriptat[i] = chr(abs(ord(mesaj_decriptat[i]) - cheie))
     mesaj_string = ''.join(mesaj_decriptat)
     print(mesaj_string)
 
 
 def main():
+    """Incercam să descoperim mesajul ascuns."""
+
     try:
         fisier = open("mesaje.secret", "r")
         mesaje = fisier.read()

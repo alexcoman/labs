@@ -29,25 +29,22 @@ ICAO = {
     'z': 'zulu'
 }
 
-ICAO_R = dict ( (v,k) for k, v in ICAO.items() )
+ICAO_R = dict((v, k) for k, v in ICAO.items())
 
 
 def din_icao(nume_fisier):
     """Funcția va primi calea către fișierul ce conține mesajul brut și
     va genera un fișier numit icao_intrare ce va conține mesajul inițial.
     """
-
-    intrare=open(nume_fisier,'r')
-    iesire=open('icao_intrare.icao','w')
-    mesaj=intrare.read()
+    intrare = open(nume_fisier, 'r')
+    iesire = open('icao_intrare.icao', 'w')
+    mesaj = intrare.read()
     for reader in mesaj.splitlines():
         iesire.write(' ')
-        for i in range(0,len(reader.split())):
-            iesire.write(ICAO_R[reader.split()[i]])
+        for index in range(0, len(reader.split())):
+            iesire.write(ICAO_R[reader.split()[index]])
     intrare.close()
     iesire.close()
-    pass
-
 
 
 if __name__ == "__main__":

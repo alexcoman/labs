@@ -23,6 +23,8 @@ umplem formele în care se află "x":
 
 """
 
+from __future__ import print_function
+
 
 def umple(imagine, punct):
     """Funcția primește reprezentarea imaginii și coordonatele unui
@@ -46,6 +48,8 @@ def umple(imagine, punct):
 
 
 def main():
+    """Încercăm să rezolvăm problema fill."""
+
     imaginea = [
         ["-", "-", "-", "-", "-", "*", "-", "-", "-", "-", "-", "-"],
         ["-", "-", "-", "-", "-", "*", "-", "-", "-", "-", "-", "-"],
@@ -57,10 +61,12 @@ def main():
     for i in range(0, len(imaginea)):
         print(imaginea[i])
     print("Filled")
+
     umple(imaginea, (1, 3))
     for i in range(0, len(imaginea)):
         print(imaginea[i])
     print('\n')
+
     imaginea = [
         ["-", "-", "-", "-", "-", "*", "-", "-", "-", "-", "-", "-"],
         ["-", "-", "-", "-", "-", "*", "-", "-", "-", "-", "-", "-"],
@@ -69,6 +75,7 @@ def main():
         ["-", "-", "-", "-", "-", "*", "-", "*", "-", "-", "*", "-"],
         ["-", "-", "-", "-", "-", "*", "-", "*", "-", "-", "*", "-"],
     ]
+
     umple(imaginea, (5, 11))
     for i in range(0, len(imaginea)):
         print(imaginea[i])

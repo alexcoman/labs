@@ -35,15 +35,14 @@ def icao(mesaj):
     mesajul scris folosind alfabetul ICAO.
     """
 
-    iesire=open("icao_iesire.icao",'w')
-    for i in range(0,len(mesaj)):
-        if mesaj[i]==' ':
+    iesire = open("icao_iesire.icao", 'w')
+    for i in range(0, len(mesaj)):
+        if mesaj[i] == ' ':
             iesire.write('\n')
         else:
             iesire.write(ICAO[mesaj.lower()[i]])
             iesire.write(' ')
     iesire.close()
-    pass
 
 
 if __name__ == "__main__":
