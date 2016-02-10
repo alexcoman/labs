@@ -7,10 +7,7 @@ primit ca argument este palindrom.
 
 def palindrom(sir):
     """Funcție ce determină dacă șirul primit este palindrom."""
-    if sir == sir[::-1]:
-        return True
-    else:
-        return False
+    return sir == sir[::-1]
 
 if __name__ == "__main__":
     assert not palindrom("python")
