@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-
 """Tuxy dorește să împlementeze un nou paint pentru consolă.
 
 În timpul dezvoltării proiectului s-a izbit de o problemă
@@ -26,7 +25,10 @@ punctul de origine (0, 0) și poziția curentă a cursorului.
 
 
 def distanta():
-    """Funcția citește conținutul fișierului istoric.tuxy și
+    """
+    Calculează distanța dintre origine și poziția curentă.
+
+    Funcția citește conținutul fișierului istoric.tuxy și
     calculează distanța dintre punctul de origine și poziția
     curentă a cursorului.
     """

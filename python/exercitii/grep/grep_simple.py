@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-
 """
 Tuxy cauta in fiecare zi cate o problema de matematica complet noua pentru el.
 

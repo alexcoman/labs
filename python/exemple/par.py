@@ -10,7 +10,8 @@ Cerințe:
 
 def par(numar):
     """Funcție ce determină dacă un număr este par."""
-    return bool(numar % 2 == 0)
+    return numar % 2 == 0
+
 
 if __name__ == "__main__":
     assert not par(1)

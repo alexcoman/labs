@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-
 """Tuxy dorește să împlementeze un nou paint pentru consolă.
 
 În timpul dezvoltării proiectului s-a izbit de o problemă
@@ -22,9 +21,10 @@ umplem formele în care se află "x":
   |-----*---*-x|          |-----*---*--|         |-----*---***|
 
 """
+# pylint: disable=unused-argument
 
 
-def cb_umple(_imagine, _punct):
+def umple_forma(imagine, punct):
     """Funcția primește reprezentarea imaginii și coordonatele unui
     punct.
 
@@ -44,8 +44,8 @@ def main():
         ["-", "-", "-", "-", "-", "*", "-", "*", "-", "-", "*", "-"],
         ["-", "-", "-", "-", "-", "*", "-", "*", "-", "-", "*", "-"],
     ]
-    cb_umple(imaginea, (1, 3))
-    cb_umple(imaginea, (5, 11))
+    umple_forma(imaginea, (1, 3))
+    umple_forma(imaginea, (5, 11))
 
 
 if __name__ == "__main__":

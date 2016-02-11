@@ -9,6 +9,7 @@ def palindrom(sir):
     """Funcție ce determină dacă șirul primit este palindrom."""
     return sir == sir[::-1]
 
+
 if __name__ == "__main__":
     assert not palindrom("python")
     assert palindrom("radar")

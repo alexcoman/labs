@@ -5,13 +5,11 @@ ca argument este o putere a lui 2.
 """
 
 
-def putere_eficient(numar):
-    """Functie ce determina daca un numar este putere a lui 2."""
-    return (numar & numar - 1) == 0
-
-
 def putere(numar):
     """Funcție ce determină dacă un număr este putere a lui 2."""
+    # O altă manieră de rezolvare ar putea fi:
+    # return (numar & numar - 1) == 0
+
     numar_binar = "{0:b}".format(numar)
     return numar_binar.count("1") == 1
 

@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-
-
 """
 Nu a durat mult pana cand Tuxy nu a fost multumit de utilitarul creat anterior.
 
