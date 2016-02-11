@@ -22,6 +22,7 @@ umplem formele în care se află "x":
   |-----*---*-x|          |-----*---*--|         |-----*---***|
 
 """
+from __future__ import print_function
 
 
 def inrange(imagine, punct):
@@ -64,7 +65,7 @@ def umple(img, punct):
         if inrange(img, dreapta) and img[dreapta[0]][dreapta[1]] == '-':
             que.put(dreapta)
             img[dreapta[0]][dreapta[1]] = '*'
-    print img
+    print(img)
 
 
 def main():

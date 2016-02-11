@@ -23,6 +23,7 @@ ultima poziție.
 El dorește un utilitar care să îi spună care este distanța dintre
 punctul de origine (0, 0) și poziția curentă a cursorului.
 """
+from __future__ import print_function
 
 
 def distanta():
@@ -43,7 +44,7 @@ def distanta():
                 ccx -= int(alfa[1])
             if beta[:2] == 'ST':
                 ccy -= int(alfa[1])
-    print (ccx * ccx + ccy * ccy) ** 0.5
+    print((ccx * ccx + ccy * ccy) ** 0.5)
 
 if __name__ == "__main__":
     distanta()
