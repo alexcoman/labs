@@ -13,20 +13,23 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
+# existau 2 variante de a rezolva problema cu parantezele la print
+# am preferat sa o folosesc pe asta pentru a evita si eventualele probleme
+# cu care ziceai tu ca o sa ne stresezi ;)
 from __future__ import print_function
+
 LETTERS = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
-
-
 # tot timpul se va gasi litera in string-ul "LETTERS"
 # deci circularitatea e suficient
 # reprezentata prin a-z de doua ori
+
+
 def shift_letter(let, number):
     """Shifts a letter by number places in LETTERS"""
     if let.isalpha():
         # procesam doar literele
         return LETTERS[ord(let) - 97 + number]
         # returnam litera de peste n locuri in LETTERS
-
     else:
         return let
         # daca nu e litera, returnam caracterul original
@@ -35,8 +38,8 @@ def shift_letter(let, number):
 def decripteaza(mesaj, number):
     """Decrypts every line in <mesaj>"""
     new_msg = ""
-    for i in enumerate(mesaj):
-        new_msg += shift_letter(mesaj[i], number)
+    for char in mesaj:
+        new_msg += shift_letter(char, number)
     if "ave" in new_msg:
         print(new_msg)
 

@@ -18,15 +18,15 @@ Câteva exemple:
     - (][][)    nu este bine
     - [)]()[(]  nu este bine
 """
+from __future__ import print_function
+# also taking care of print function
 
 
 def este_corect(expresie):
     """Verifică dacă toate parantezele sunt folosite corespunzător."""
     squ = 0
     rou = 0
-    for index in enumerate(expresie):
-        item = expresie[index]
-
+    for index, item in enumerate(expresie):
         if item == "[":
             squ += 1
         elif item == "]":
@@ -35,22 +35,21 @@ def este_corect(expresie):
             rou += 1
         elif item == ")":
             rou -= 1
-
         if squ < 0 or rou < 0:
-            print expresie, "is wrong because of -1 on either squ or rou!"
+            print(expresie, "is wrong because of -1 on either squ or rou!")
             return False
         # from index 1 onwards, check mismatched parantheses
         if index > 0:
             last_item = expresie[index - 1]
             if item == ")" and last_item == "[":
-                print expresie, "is wrong because [)"
+                print(expresie, "is wrong because [)")
                 return False
             if item == "]" and last_item == "(":
-                print item, last_item
-                print expresie, "is wrong because (]"
+                print(item, last_item)
+                print(expresie, "is wrong because (]")
                 return False
 
-    print expresie, "is okay."
+    print(expresie, "is okay.")
     return True
 
 
