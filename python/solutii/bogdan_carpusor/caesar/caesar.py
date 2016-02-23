@@ -12,6 +12,7 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
+# pylint: disable=unused-argument
 
 from __future__ import print_function
 
