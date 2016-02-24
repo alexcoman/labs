@@ -12,7 +12,6 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
-# pylint: disable=unused-argument
 
 from __future__ import print_function
 
@@ -29,16 +28,26 @@ def decripteaza_mesajul(mesaj):
     """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
     va încearca să îl decripteze.
     """
+    key = 0
     dictionary = "abcdefghijklmnopqrstuvwxyz"
-    for displacement in range(1,27):
-        print("Line for displacement %d" % displacement)
-        s = ""
-        for character in mesaj:
-            if dictionary.find(character.lower()) > 0:
-                s += dictionary[(dictionary.find(character.lower()) + displacement)%26]
-            else:
-                s += character
-        print(s)
+    key_phrase = "ave caesar"
+    for displacement in range(1, 13):
+        message_head = list(mesaj[0:len(key_phrase)])
+        for character in message_head:
+            if dictionary.find(character) > 0:
+                if chr(ord(character) + displacement) == \
+                        key_phrase[message_head.index(character)]:
+                    key = displacement
+                elif chr(ord(character)-displacement) == \
+                        key_phrase[message_head.index(character)]:
+                    key = -displacement
+
+    message_list = [generate_message(character, key, dictionary)
+                    for character in mesaj]
+    decoded_message = "".join(message_list)
+    print ("Deciphred message:")
+    print (decoded_message)
+
 
 def main():
     """ Functia citeste un fisier si aplica metoda de
@@ -53,7 +62,6 @@ def main():
         return
 
     for mesaj in mesaje.splitlines():
-        print("Line to be deciphred %s", mesaj)
         decripteaza_mesajul(mesaj)
         print()
 
