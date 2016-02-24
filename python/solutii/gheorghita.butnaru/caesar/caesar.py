@@ -12,7 +12,7 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
-# pylint: disable=unused-argument
+
 
 from __future__ import print_function
 
@@ -21,13 +21,31 @@ def decripteaza_mesajul(mesaj):
     """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
     va încearca să îl decripteze.
     """
-    pass
+    if not mesaj:
+        print("Nu am primit mesaj!")
+        return
+    for i in range(1, 27):
+        result = []
+        for letter in mesaj:
+            if letter.isalpha():
+                a_result = ord(letter)
+                a_result += i
+                if a_result < ord('A'):
+                    a_result += 26
+                elif a_result > ord('z'):
+                    a_result -= 26
+                result.append(chr(a_result))
+            else:
+                result.append(letter)
+            s_result = ''.join(result)
+        if s_result.startswith('ave'):
+            print(s_result)
 
 
 def main():
     """ Main function docstring """
     try:
-        fisier = open("mesaje.secret", "r")
+        fisier = open("../../../date_intrare/mesaje.secret", "r")
         mesaje = fisier.read()
         fisier.close()
     except IOError:
