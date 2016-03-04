@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-
 """
 Tuxy își dorește un sistem care să automatizeze instalării unui proiect
 pe infrastructura din `TuxyLand`.
@@ -22,7 +21,7 @@ toate lucrurile care s-au întâmplat.
 from __future__ import print_function
 import subprocess
 import time
-import urllib
+import urllib2
 import logging
 import os
 import yaml
@@ -43,7 +42,12 @@ COMMAND_DICT = {
 
 TEST = True
 
+
 class Command(object):
+    """
+    Command class - encapsulates all the commands
+    known by the config app
+    """
     def __init__(self, options):
         self.options = options
 
@@ -56,27 +60,42 @@ class Command(object):
     }
 
     def download_file(self):
+        """
+        The method downloads a file to
+         a custom location
+        """
         logging.info('Downloading file')
-        download_file = urllib.URLopener()
         path_list = self.options['destination'].split('/')
         file_name = path_list.pop()
         path_list.insert(0, '/')
         folder_path = os.path.join(*path_list)
-        if not os.path.exists(self.options['destination']):
-            os.mkdir(folder_path)
-            open(os.path.join(folder_path, file_name), 'w+').close()
         try:
-            return download_file.retrieve(
-                self.options['source'], self.options['destination'])
-        except Exception:
-            logging.warning("Error while downloading file")
+            web_file = urllib2.urlopen(self.options['source'])
+            if not os.path.exists(self.options['destination']):
+                os.mkdir(folder_path)
+
+            with open(os.path.join(folder_path, file_name), 'w+') \
+                    as output_file:
+                output_file.write(web_file.read())
+            web_file.close()
+            output_file.close()
+        except urllib2.HTTPError:
+            logging.warning("Error while downloading file %s",
+                            self.options['source'])
             return False
 
     def create_hostname(self):
+        """
+        The method creates a new hostname for the system
+        """
         logging.info('Creating hostname')
         subprocess.call(['hostname', self.options])
 
     def create_user(self):
+        """
+        The method iterates through a user dictionary
+         and creates users based on the properties
+        """
         for user_name, options in self.options.iteritems():
             logging.info('Adding new user')
             command_list = ['useradd']
@@ -94,15 +113,20 @@ class Command(object):
             subprocess.call(command_list)
 
     def write_files(self):
+        """
+        The method iterates through a dictionary of files
+        and creates them at a custom path
+        """
         logging.info('Writing Files:')
         for key, value in self.options.iteritems():
             logging.info('Writing file %s', key)
             file_path = os.path.join(value['path'], str(key))
             if not os.path.exists(file_path):
                 try:
-                    os.mkdir(value['path'])
+                    os.makedirs(value['path'])
                 except OSError:
                     logging.warning('Error creating folder %s', file_path)
+                    return False
             output_file = open(file_path, 'w+')
             output_file.write(
                 value['content']
@@ -112,8 +136,13 @@ class Command(object):
                 subprocess.check_call(['gzip', file_path])
                 file_path = "".join([file_path, '.gz'])
             os.chmod(file_path, int(value['permissions']))
+        return True
 
     def run_script(self):
+        """
+        The method runs a script based on the parameters
+         specified in the config file
+        """
         iterator = 0
         logging.info('Running script')
         env_var = dict(os.environ)
@@ -135,6 +164,9 @@ class Command(object):
         return False
 
     def delete(self):
+        """
+        The method deletes a specified file
+        """
         logging.info('Deleting file %s', self.options['path'])
         if os.path.exists(self.options['path']):
             command_list = ['rm']
@@ -144,11 +176,16 @@ class Command(object):
                 command_list.append('-f')
             command_list.append(self.options['path'])
             subprocess.call(command_list)
+            return True
         else:
             logging.warning("Invalid path: %s", self.options['path'])
             return False
 
     def reboot_command(self):
+        """
+        The method sends a command to reboot
+         the system
+        """
         logging.info('Rebooting system')
         command_list = ['reboot']
         if self.options['method'] == 'force':
@@ -157,6 +194,10 @@ class Command(object):
             subprocess.call(command_list)
 
     def shutdown(self):
+        """
+        The method send a command to shutdown
+        the system
+        """
         logging.info('Running shutdown')
         command_list = ['shutdown']
         if self.options['method'] == 'hard':
@@ -170,6 +211,10 @@ class Command(object):
 
 
 def run_commands(commands):
+    """
+    The function evaluates the yaml
+     file and executes specifi commands
+    """
     logging.info("Running command list.")
     if isinstance(commands, list):
         for command in commands:
