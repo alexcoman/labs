@@ -4,7 +4,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Prezentări
 
-- [Prezentare introductivă](python/prezentare/Introducere.md)
+- [Prezentare introductivă](prezentare/Introducere.md)
 - Prezentarea limbajului Python
 - Pregătirea mediului de lucru
 - Familiarizarea cu limbajul
@@ -22,7 +22,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Exerciții rezolvate
 
-- [Introducere în limbajul Python](python/prezentare/Introducere.md)
+- [Introducere în limbajul Python](prezentare/Introducere.md)
     - [Determinarea maximului](python/exemple/maxim.py)
     - [Verifică dacă numărul este palindrom](python/exemple/palindrom.py)
     - [Verifică dacă numărul este par](python/exemple/par.py)
