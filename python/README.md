@@ -40,3 +40,5 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
         - Dificultate: medie
     - [grep](python/exercitii/grep)
         - Dificultate: medie
+    - [reminder](python/exercitii/reminder)
+        - Dificultate: medie

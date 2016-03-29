@@ -13,3 +13,5 @@ Exerciții propuse
 	- Dificultate: medie
 - [grep](grep)
 	- Dificultate: medie
+- [reminder](reminder)
+	- Dificultate: medie
