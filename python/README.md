@@ -5,16 +5,20 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 ###Prezentări
 
 - [Prezentare introductivă](python/prezentare/Introducere.md)
-    - Prezentarea limbajului Python
-    - Pregătirea mediului de lucru
-    - Familiarizarea cu limbajul
-        - Tipuri de date (int, float, *long*, str)
-        - Operatori
-        - Comentarii
-        - Funcții built-in (print, input, *raw_input*, open)
-        - Instrucțiuni condiționale (if - elif - else)
-        - Structuri de date
-            - Liste
+- Prezentarea limbajului Python
+- Pregătirea mediului de lucru
+- Familiarizarea cu limbajul
+    - Tipuri de date (int, float, *long*, str)
+    - Operatori
+    - Comentarii
+    - Structuri de date
+        - Liste și Tuples
+        - Referințe
+        - Dictionare
+    - Funcții built-in (print, input, *raw_input*, open)
+    - Instrucțiuni condiționale (if - elif - else)
+    - Instrucțiuni repetitive (for, while)
+
 
 ###Exerciții rezolvate
 
