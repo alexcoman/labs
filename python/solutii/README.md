@@ -12,7 +12,14 @@ Soluții propuse
 - [Anda Ungureanu](anda_ungureanu/)
 - [Cristina Ungureanu](cristina_ungureanu/)
 - [Ingrid Stoleru](ingrid_stoleru/)
-- [Iulian Andrei](iulian_andrei)
+- [Iulian Andrei](iulian_andrei/)
 - [Marius Ilău](marius_ilau/)
 - [Micu Matei](micu_matei/)
 - [Ștefan Caraiman](stefan_caraiman/)
+
+##CloudbaseLABS #2
+
+- [Bogdan Carpusor](bogdan_carpusor/)
+- [Gheorghita Butnaru](gheorghita.butnaru)
+- [Iulian Bute](iulian_bute/)
+- [Vlad Cristia Avram](vlad_cristia_avream/)
