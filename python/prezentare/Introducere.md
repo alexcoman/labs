@@ -10,9 +10,14 @@
     - Tipuri de date (int, float, *long*, str)
     - Operatori
     - Comentarii
+    - Structuri de date
+        - Liste și Tuples
+        - Referințe
+        - Dictionare
     - Funcții built-in (print, input, *raw_input*, open)
     - Instrucțiuni condiționale (if - elif - else)
- 
+    - Instrucțiuni repetitive (for, while)
+
 *Timp estimat: **80** de minute*
 
 ---
@@ -124,112 +129,6 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Operatori
-
----
-
-#Operatori booleeni
-
-    !python
-    >>> True or False
-    True
-    
-    >>> True and False
-    False
-    
-    >>> not True
-    False
-    
-    >>> not False
-    True
-
----
-
-#Operatori pentru comparație
-
-    !python
-    >>> x < y
-    False
-    
-    >>> x <= y
-    True
-    
-    >>> x > y
-    False
-    
-    >>> x >= y
-    True
-    
-    >>> x == y
-    True
-    
-    >>> x != y
-    False
-    
-    >>> x is y
-    True
-    
-    >>> x is not y
-    False
-
----
-
-#Operatori pentru operații matematice
-
-    !python
-    >>> 4 + 5
-    9
-    
-    >>> 4 - 5
-    -1
-    
-    >>> 5 / 2
-    2
-    
-    >>> 5 // 2
-    2
-    
-    >>> 5 % 2
-    1
-    
-    >>> -5
-    -5
-    
-    >>> +5
-    5
-
-În Python 3.x
-
-    !python
-    >>> 5 / 2
-    2.5
-    >>> 5 // 2
-    2
-
----
-
-#Operatori binari
-
-    !python
-    >>> 2 | 4
-    6
-    
-    >>> 2 ^ 4
-    6
-    
-    >>> 2 & 4
-    0
-    
-    >>> 1 << 3
-    8
-    
-    >>> 8 >> 3
-    1
-    
-    >>> ~8
-    -9
-
----
 
 #Tipuri de date
 
@@ -440,6 +339,113 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
+#Operatori
+
+---
+
+#Operatori booleeni
+
+    !python
+    >>> True or False
+    True
+    
+    >>> True and False
+    False
+    
+    >>> not True
+    False
+    
+    >>> not False
+    True
+
+---
+
+#Operatori pentru comparație
+
+    !python
+    >>> x < y
+    False
+    
+    >>> x <= y
+    True
+    
+    >>> x > y
+    False
+    
+    >>> x >= y
+    True
+    
+    >>> x == y
+    True
+    
+    >>> x != y
+    False
+    
+    >>> x is y
+    True
+    
+    >>> x is not y
+    False
+
+---
+
+#Operatori pentru operații matematice
+
+    !python
+    >>> 4 + 5
+    9
+    
+    >>> 4 - 5
+    -1
+    
+    >>> 5 / 2
+    2
+    
+    >>> 5 // 2
+    2
+    
+    >>> 5 % 2
+    1
+    
+    >>> -5
+    -5
+    
+    >>> +5
+    5
+
+În Python 3.x
+
+    !python
+    >>> 5 / 2
+    2.5
+    >>> 5 // 2
+    2
+
+---
+
+#Operatori binari
+
+    !python
+    >>> 2 | 4
+    6
+    
+    >>> 2 ^ 4
+    6
+    
+    >>> 2 & 4
+    0
+    
+    >>> 1 << 3
+    8
+    
+    >>> 8 >> 3
+    1
+    
+    >>> ~8
+    -9
+
+---
+
 #Comentarii
     
     !python
@@ -623,6 +629,27 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 
 Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)`.
+
+---
+
+#Dictionar
+
+**Dictionar**: Structură de date de forma **cheie** : **valoare**
+
+    !python
+    laborator_python = {
+        "interpretor": ["CPython", "IronPython", "PyPy"],
+        "exerciții": ("maxim", "palindrom", "par", "putere"),
+        "note": {
+            10 : [10, 10],
+             5 : [5.4],
+             4 : [4],
+             3 : [3.4],
+             2 : [2],
+             1 : [1]
+        },
+    }
+    laborator_python["exerciții"] = ["Laboratorul 2"] 
 
 ---
 
@@ -902,6 +929,46 @@ open(name[, mode[, buffering]])
 
 ---
 
+# for
+    !pyhon
+    >>> numbers = range(1, 10)
+    >>> numbers
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    >>> for number in numbers:
+    ...     print("The number is %d" % number)
+    ... 
+    The number is 1
+    The number is 2
+    The number is 3
+    The number is 4
+    The number is 5
+    The number is 6
+    The number is 7
+    The number is 8
+    The number is 9
+
+--- 
+
+# for
+    !pyhon
+    >>> number = 0
+    >>> while number < 10:
+    ...     print("The number is %d" % number)
+    ...     x += 1
+    ... 
+    The number is 0
+    The number is 1
+    The number is 2
+    The number is 3
+    The number is 4
+    The number is 5
+    The number is 6
+    The number is 7
+    The number is 8
+    The number is 9
+
+
+--- 
 
 #Resurse
 
