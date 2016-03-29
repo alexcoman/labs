@@ -7,6 +7,8 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 - [Prezentare introductivă](bash/prezentare/Introducere.md)
     - Prezentarea limbajului Bash
 
+###Exerciții rezolvate
+    -[Determinarea maximului](bash/exemple/maxim.sh)
 
 ###Exerciții propuse
 
