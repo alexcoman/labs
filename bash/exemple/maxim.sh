@@ -5,20 +5,19 @@
 
 # Cerințe :
 #   - Se va folosi structura if-else
+#   - Se vor valida datele
 
 
 function max {
-    first_argument="$1"
-    second_argument="$2"
+    # check for numbers of arguments
+    if [[ "$#" -lt 2 ]]; then
+        echo "Functia primeste 2 parametri $# given " >&2;
+        return 1;
+    fi
 
-    if [[ "$first_argument" -gt "$second_argument" ]]; then
-        echo "$first_argument"
+    if [[ "$1" -gt "$2" ]]; then
+        echo "$1";
     else
-        echo "$second_argument"
+        echo "$2";
     fi
 }
-
-# Teste
-echo "Maximul dintre 1 și 2 : $(max 1 2)"
-echo "Maximul dintre 5 și 6 : $(max 5 6)"
-echo "Maximul dintre 1 și 1 : $(max 1 1)"
