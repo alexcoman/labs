@@ -12,7 +12,6 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
-# pylint: disable=unused-argument
 
 from __future__ import print_function
 
@@ -30,15 +29,15 @@ def decripteaza_mesajul(mesaj):
     """
     nr_cheie = decriptare(mesaj[0])
     lista = []
-    for i in mesaj:
-        if i >= 'a' and i <= 'z':
-            if (ord(i)-nr_cheie) < ord('a'):
-                nr_cheie2 = ord('a') - ord(i) + nr_cheie - 1
+    for caracter in mesaj:
+        if caracter.isalpha() and caracter.islower():
+            if (ord(caracter)-nr_cheie) < ord('a'):
+                nr_cheie2 = ord('a') - ord(caracter) + nr_cheie - 1
                 lista.append(chr(ord('z')-nr_cheie2))
             else:
-                lista.append(chr(ord(i)-nr_cheie))
+                lista.append(chr(ord(caracter)-nr_cheie))
         else:
-            lista.append(i)
+            lista.append(caracter)
     mesaj_nou = "".join(lista)
     print (mesaj_nou)
 
