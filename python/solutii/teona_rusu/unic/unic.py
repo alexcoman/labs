@@ -18,7 +18,6 @@ Cerințe:
     II. Găsește cercetătorul ce stă peste program după o singură
     parcurgere a listei și fără a aloca memorie suplimentară.
 """
-# pylint: disable=unused-argument
 
 
 def gaseste_unic(istoric):
@@ -30,30 +29,8 @@ def gaseste_unic(istoric):
     Exemple:
         1 2 3 2 1 - 3
         1 1 1 2 2 - 1
-
-    Propunerile mele:
-
-    # varianta 1
-
-    d = {}
-    for i in istoric:
-        if d.has_key(i):
-            d[i] = d[i] + 1
-        else:
-            d[i] = 1
-    for i in d:
-        if d[i]%2==1:
-            return i
-
-    # varianta 2
-
-    x = 0
-    for i in istoric:
-        x = x ^ i
-    return x
     """
 
-    # varianta 3
     rezultat = istoric.pop()
     while istoric:
         rezultat ^= istoric.pop()
