@@ -52,6 +52,10 @@ def din_icao(mesaj):
                 if line[i + 1] in ICAO and line[i + 1]:
                     processed_list.append(line[i + 1])
 
+        for i, obj in enumerate(line):
+            if line[i] in ICAO and line[i - 1] == ' ':
+                processed_list.append(line[i])
+
         processed_list.append('\n')
         current_row = ''.join(processed_list)
 
