@@ -16,7 +16,7 @@ echo $rez
 
 
 multiply(){
-rez="$(($1 * $2 ))"
+rez="$(($1*$2))"
 echo $rez
 }
 
@@ -26,7 +26,7 @@ echo $rez
 }
 
 modulo(){
-rez= "$(($1 % $2))"
+rez="$(($1%$2))"
 echo $rez
 }
 
