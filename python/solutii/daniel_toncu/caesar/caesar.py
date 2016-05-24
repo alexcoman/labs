@@ -25,12 +25,17 @@ def decripteaza_mesajul(mesaj):
     key = ord(mesaj[0]) - ord('a')
 
     new_message = ""
+
     for idx in range(0, len(mesaj)):
+
         if mesaj[idx].isalpha():
             letter_ord = ord(mesaj[idx]) - key
+
             if letter_ord < ord('a'):
                 letter_ord = ord('z') - (ord('a') - letter_ord - 1)
+
             new_message += chr(letter_ord)
+
         else:
             new_message += mesaj[idx]
 
