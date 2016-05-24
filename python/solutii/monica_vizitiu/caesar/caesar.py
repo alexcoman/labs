@@ -21,8 +21,18 @@ def decripteaza_mesajul(mesaj):
     """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
     va încearca să îl decripteze.
     """
-    pass
-
+    cheie = ord(mesaj[0]) - ord('a')
+    mesaj_dec = []
+    for car in mesaj:
+        if car.isalpha():
+            index = ord(car)-cheie
+            if index < ord('a'):
+                mesaj_dec.append(chr(ord('z')-ord('a')+index+1))
+            else:
+                mesaj_dec.append(chr(index))
+        else:
+            mesaj_dec.append(car)
+    print ("".join(mesaj_dec))
 
 def main():
     """ Main function docstring """
