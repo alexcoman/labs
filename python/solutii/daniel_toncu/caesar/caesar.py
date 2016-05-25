@@ -17,6 +17,15 @@ la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 from __future__ import print_function
 
 
+def decrypt_letter(letter, key):
+	if letter.isalpha():
+		letter_ord = ord(letter) - key
+		if letter_ord < ord('a'):
+			letter_ord = ord('z') - (ord('a') - letter_ord - 1)
+		return chr(letter_ord)
+	return letter
+
+
 def decripteaza_mesajul(mesaj):
     """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
     va încearca să îl decripteze.
@@ -24,22 +33,7 @@ def decripteaza_mesajul(mesaj):
 
     key = ord(mesaj[0]) - ord('a')
 
-    new_message = ""
-
-    for idx in range(0, len(mesaj)):
-
-        if mesaj[idx].isalpha():
-            letter_ord = ord(mesaj[idx]) - key
-
-            if letter_ord < ord('a'):
-                letter_ord = ord('z') - (ord('a') - letter_ord - 1)
-
-            new_message += chr(letter_ord)
-
-        else:
-            new_message += mesaj[idx]
-
-    return new_message
+    return "".join(decrypt_letter(letter, key) for letter in mesaj)
 
 
 def main():
