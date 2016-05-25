@@ -26,15 +26,13 @@ def verifica_expresia(paranteze):
     Verifică dacă toate parantezele din expresie
     sunt folosite corespunzător.
     """
-    p_rotunda=0
-    p_patrata=0
-    list = []
+    lista = []
     for paranteza in paranteze:
         if paranteza=='(' or paranteza=='[':
-            list.append(paranteza)
+            lista.append(paranteza)
         else:
-            if len(list)>0:
-                x = list.pop()
+            if len(lista)>0:
+                x = lista.pop()
                 if paranteza==']' and x!='[':
                     return False
                 elif paranteza==')'and x!='(':

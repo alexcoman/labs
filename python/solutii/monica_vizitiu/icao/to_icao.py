@@ -29,13 +29,26 @@ ICAO = {
 }
 
 
-def icao():
+def icao(cale):
     """Funcția va primi calea mesajul ce trebuie transmis și
     va genera un fișier numit mesaj.icao_intrare ce va conține
     mesajul scris folosind alfabetul ICAO.
     """
-    pass
-
+    try:
+        fisier = open(cale, "r")
+        mesaj = fisier.read()
+        fisier.close()
+    except IOError:
+        print("Eroare la citirea din fisier.")
+        return
+    fisier_out = open('mesaj.icao', 'w')
+    for msg in mesaj.splitlines():
+        for litera in msg.split(','):
+            for tuplu in ICAO.items():
+                if tuplu[0]==litera:
+                    fisier_out.write(tuplu[1]+' ')
+                    break
+        fisier_out.write('\n')
 
 if __name__ == "__main__":
-    icao()
+    icao("icao_intrare")

@@ -32,7 +32,7 @@ def decripteaza_mesajul(mesaj):
                 mesaj_dec.append(chr(index))
         else:
             mesaj_dec.append(car)
-    print ("".join(mesaj_dec))
+    print("".join(mesaj_dec))
 
 def main():
     """ Main function docstring """
