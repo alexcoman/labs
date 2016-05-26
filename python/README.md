@@ -46,3 +46,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
         - Dificultate: medie
     - [reminder](python/exercitii/reminder)
         - Dificultate: medie
+    - [tuxy-init](python/exercitii/tuxy-init)
+        - Dificultate: ridicată
+    - [tuxy-sync](python/exercitii/tuxy-sync)
+        - Dificultate: ridicată
