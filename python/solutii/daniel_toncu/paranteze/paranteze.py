@@ -17,16 +17,20 @@ Câteva exemple:
     - (][][)    nu este bine
     - [)]()[(]  nu este bine
 """
-# pylint: disable=unused-argument
 
 
 def paranteza_deschisa(paranteza):
+
+    """
+    Functia returneaza, pentru un tip de paranteza inchisa, acelasi tip
+    de paranteza dar deschisa.
+    Astfel: ')' => '(', ']' => '['.
+    """
+
     if paranteza == ')':
         return '('
-    elif paranteza == ']':
+    if paranteza == ']':
         return '['
-    else:
-        return ''
 
 
 def verifica_expresia(paranteze):
@@ -36,17 +40,21 @@ def verifica_expresia(paranteze):
     sunt folosite corespunzător.
     """
 
-    paranteze_stiva = [];
+    stiva_de_paranteze = []
 
     for idx in range(0, len(paranteze) - 1):
-
         if paranteze[idx] == '(' or paranteze[idx] == '[':
-            paranteze_stiva.append(paranteze[idx])
+            stiva_de_paranteze.append(paranteze[idx])
         elif paranteze[idx] == ')' or paranteze[idx] == ']':
-            if not paranteze_stiva or paranteze_stiva.pop() != paranteza_deschisa(paranteze[idx]):
+            if (not stiva_de_paranteze or
+                    (stiva_de_paranteze.pop() !=
+                     paranteza_deschisa(paranteze[idx]))):
                 return False
 
-    return paranteze_stiva
+    if not stiva_de_paranteze:
+        return False
+
+    return True
 
 
 if __name__ == "__main__":

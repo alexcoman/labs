@@ -17,7 +17,8 @@ Următoarea sarcină ți-a fost asignată:
 
 Mai jos găsiți un dicționar ce conține o versiune a alfabetului ICAO:
 """
-# pylint: disable=unused-argument
+
+import os
 
 ICAO = {
     'a': 'alfa', 'b': 'bravo', 'c': 'charlie', 'd': 'delta', 'e': 'echo',
@@ -29,23 +30,46 @@ ICAO = {
 }
 
 
+def traduce(icao_inv, cuvant):
+
+    """
+    Functia, daca cuvantul primit ca parametru este nenul,
+    returneaza traducerea sa conform dictionarului icao_inv;
+    altfel, returneaza cuvantul nul - ""
+    """
+
+    if cuvant:
+        return icao_inv[cuvant]
+
+    return ""
+
+
 def din_icao(mesaj):
     """Funcția va primi calea către fișierul ce conține mesajul brut și
     va genera un fișier numit icao_intrare ce va conține mesajul inițial.
     """
 
-    ICAO_inv = {v: k for k, v in ICAO.items()}
+    icao_inv = {value: key for key, value in ICAO.items()}
 
-    out_file = open('icao_intrare', 'w')
+    try:
+        fisier = open(os.path.join("..", "..", "..", "date_intrare", mesaj),
+                      "r")
+        mesaj_brut = fisier.read()
+        fisier.close()
+    except IOError:
+        print "Nu am putut obține mesajul brut."
+        return
 
-    with open(mesaj, 'r') as file:
-        for line in file:
-            for word in line.split():
-                out_file.write(ICAO_inv[word] + ', ')
-            out_file.write('\n')
-
-    out_file.close()
+    try:
+        fisier = open("icao_intrare", "w")
+        fisier.write("\n".join(" ".join(traduce(icao_inv, cuvant)
+                                        for cuvant in linie.split(" "))
+                               for linie in mesaj_brut.split("\n")))
+        fisier.close()
+    except IOError:
+        print "Nu am putut genera fișierul icao_intrare."
+        return
 
 
 if __name__ == "__main__":
-    din_icao("..\..\..\date_intrare\mesaj.icao")
+    din_icao("mesaj.icao")

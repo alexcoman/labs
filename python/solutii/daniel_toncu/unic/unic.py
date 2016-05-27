@@ -18,10 +18,10 @@ Cerințe:
     II. Găsește cercetătorul ce stă peste program după o singură
     parcurgere a listei și fără a aloca memorie suplimentară.
 """
-# pylint: disable=unused-argument
 
 
 def gaseste_unic(istoric):
+
     """Găsește elementul unic.
 
     Funcția primește o listă cu elemente numerice și trebuie
@@ -31,12 +31,12 @@ def gaseste_unic(istoric):
         1 2 3 2 1 - 3
         1 1 1 2 2 - 1
     """
-    x = istoric.pop()
 
-    for i in istoric:
-    	x = x ^ i
-    
-    return x
+    element = istoric.pop()
+    while istoric:
+        element ^= istoric.pop()
+
+    return element
 
 
 if __name__ == "__main__":

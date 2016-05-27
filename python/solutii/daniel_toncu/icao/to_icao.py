@@ -17,7 +17,6 @@ Următoarea sarcină ți-a fost asignată:
 
 Mai jos găsiți un dicționar ce conține o versiune a alfabetului ICAO:
 """
-# pylint: disable=unused-argument
 
 ICAO = {
     'a': 'alfa', 'b': 'bravo', 'c': 'charlie', 'd': 'delta', 'e': 'echo',
@@ -29,23 +28,44 @@ ICAO = {
 }
 
 
-def icao(filepath):
+def traduce(cuvant):
+
+    """
+    Functia, daca cuvantul primit ca parametru este nenul,
+    returneaza traducerea sa conform dictionarului ICAO;
+    altfel, returneaza cuvantul nul - ""
+    """
+
+    if cuvant:
+        return ICAO[cuvant]
+
+    return ""
+
+
+def icao():
     """Funcția va primi calea mesajul ce trebuie transmis și
     va genera un fișier numit mesaj.icao_intrare ce va conține
     mesajul scris folosind alfabetul ICAO.
     """
 
-    out_file = open('mesaj.icao', 'w')
+    try:
+        fisier = open("icao_intrare", "r")
+        mesaj_intrare = fisier.read()
+        fisier.close()
+    except IOError:
+        print "Nu am putut obține mesajul ce trebuie transmis."
+        return
 
-    with open(filepath, 'r') as file:
-        for line in file:
-            for word in line.split(', '):
-                if word.isalpha():
-                    out_file.write(ICAO[word] + ' ')
-            out_file.write('\n')
-
-    out_file.close()
+    try:
+        fisier = open("mesaj.icao_intrare", "w")
+        fisier.write("\n".join(" ".join(traduce(cuvant)
+                                        for cuvant in linie.split(" "))
+                               for linie in mesaj_intrare.split("\n")))
+        fisier.close()
+    except IOError:
+        print "Nu am putut genera fișierul mesaj.icao_intrare."
+        return
 
 
 if __name__ == "__main__":
-    icao('icao_intrare')
+    icao()

@@ -12,18 +12,25 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
-# pylint: disable=unused-argument
 
 from __future__ import print_function
+import os
 
 
 def decrypt_letter(letter, key):
-	if letter.isalpha():
-		letter_ord = ord(letter) - key
-		if letter_ord < ord('a'):
-			letter_ord = ord('z') - (ord('a') - letter_ord - 1)
-		return chr(letter_ord)
-	return letter
+
+    """
+    Functia, decripteaza, conform Cifrului lui Caesar,
+    litera letter cu cheia key.
+    """
+
+    if letter.isalpha():
+        letter_ord = ord(letter) - key
+        if letter_ord < ord('a'):
+            letter_ord = ord('z') - (ord('a') - letter_ord - 1)
+        return chr(letter_ord)
+
+    return letter
 
 
 def decripteaza_mesajul(mesaj):
@@ -39,7 +46,8 @@ def decripteaza_mesajul(mesaj):
 def main():
     """ Main function docstring """
     try:
-        fisier = open("..\..\..\date_intrare\mesaje.secret", "r")
+        fisier = open(os.path.join("..", "..", "..", "date_intrare",
+                                   "mesaje.secret"), "r")
         mesaje = fisier.read()
         fisier.close()
     except IOError:
