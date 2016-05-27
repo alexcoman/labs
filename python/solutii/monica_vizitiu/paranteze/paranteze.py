@@ -1,46 +1,26 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-"""Tuxy scrie în fiecare zi foarte multe formule matematice.
+"""Problema Paranteze."""
 
-Pentru că formulele sunt din ce în ce mai complicate trebuie
-să folosească o serie de paranteze și a descoperit că cea
-mai frecventă problemă a lui este că nu toate parantezele
-sunt folosite cum trebuie.
-
-Pentru acest lucru a apelat la ajutorul tău.
-
-Câteva exemple:
-    - []        este bine
-    - []()      este bine
-    - [()()]    este bine
-    - ][        nu este bine
-    - (][][)    nu este bine
-    - [)]()[(]  nu este bine
-"""
-# pylint: disable=unused-argument
+from __future__ import print_function
 
 
 def verifica_expresia(paranteze):
-    """Verifică validitatea expresiei primite.
-
-    Verifică dacă toate parantezele din expresie
-    sunt folosite corespunzător.
-    """
+    """verificare"""
     lista = []
     for paranteza in paranteze:
-        if paranteza=='(' or paranteza=='[':
+        if paranteza == '(' or paranteza == '[':
             lista.append(paranteza)
         else:
-            if len(lista)>0:
-                x = lista.pop()
-                if paranteza==']' and x!='[':
+            if len(lista) > 0:
+                xelement = lista.pop()
+                if paranteza == ']' and xelement != '[':
                     return False
-                elif paranteza==')'and x!='(':
+                elif paranteza == ')' and xelement != '(':
                     return False
             else:
                 return False
     return True
-        
 
 
 if __name__ == "__main__":

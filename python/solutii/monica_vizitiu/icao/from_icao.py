@@ -1,23 +1,7 @@
 #!/usr/bin/env python
 # *-* coding: UTF-8 *-*
-"""
-Organizaţia Internaţională a Aviaţiei Civile propune un alfabet în care
-fiecărei litere îi este asignat un cuvânt pentru a evita problemele în
-înțelegerea mesajelor critice.
-
-Pentru a se păstra un istoric al conversațiilor s-a decis transcrierea lor
-conform următoarelor reguli:
-    - fiecare cuvânt este scris pe o singură linie
-    - literele din alfabet sunt separate de o virgulă
-
-Următoarea sarcină ți-a fost asignată:
-    Scrie un program care să primească un fișier ce conține mesajul
-    brut (scris folosind alfabetul ICAO) și generează un fișier
-    numit icao_intrare ce va conține mesajul inițial.
-
-Mai jos găsiți un dicționar ce conține o versiune a alfabetului ICAO:
-"""
-# pylint: disable=unused-argument
+"""Problema from_icao."""
+from __future__ import print_function
 
 ICAO = {
     'a': 'alfa', 'b': 'bravo', 'c': 'charlie', 'd': 'delta', 'e': 'echo',
@@ -30,9 +14,7 @@ ICAO = {
 
 
 def din_icao(cale):
-    """Funcția va primi calea către fișierul ce conține mesajul brut și
-    va genera un fișier numit icao_intrare ce va conține mesajul inițial.
-    """
+    """Transformare din icao"""
     try:
         fisier = open(cale, "r")
         mesaj_icao = fisier.read()
@@ -44,10 +26,11 @@ def din_icao(cale):
     for mesaj in mesaj_icao.splitlines():
         for msg in mesaj.split(' '):
             for tuplu in ICAO.items():
-                if tuplu[1]==msg:
+                if tuplu[1] == msg:
                     fisier_out.write(tuplu[0]+',')
                     break
         fisier_out.write('\n')
+
 
 if __name__ == "__main__":
     din_icao("mesaj.icao")
