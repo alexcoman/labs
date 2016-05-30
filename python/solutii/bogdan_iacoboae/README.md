@@ -6,6 +6,7 @@ Exercitii rezolvate in cadrul CloudbaseLABS#3
 - [paranteze](paranteze/)
 - [caesar](caesar/)
 - [icao](icao/)
+- [tuxy-init](tuxy-init/)
 
 Exercitii extra
 - [puterea a lui doi](extra/putere/)
