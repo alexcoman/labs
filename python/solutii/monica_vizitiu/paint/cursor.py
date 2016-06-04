@@ -26,6 +26,7 @@ from __future__ import print_function
 
 import math
 
+
 def distanta():
     """
     Calculează distanța dintre origine și poziția curentă.
