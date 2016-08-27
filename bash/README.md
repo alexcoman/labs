@@ -4,7 +4,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Prezentări
 
-- [Prezentare introductivă](bash/prezentare/Introducere.md)
+- [Prezentare introductivă](/bash/prezentare/Introducere.md)
     - Prezentarea limbajului Bash
 
 ###Exerciții rezolvate
@@ -13,17 +13,17 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 ###Exerciții propuse
 
 - Bash
-    - [compare](bash/exercitii/compare.sh)
+    - [compare](/bash/exercitii/compare.sh)
         - Dificultate: scăzută
-    - [compile](bash/exercitii/compile.sh)
+    - [compile](/bash/exercitii/compile.sh)
         - Dificultate: scăzută
-    - [cvs](bash/exercitii/cvs.sh)
+    - [cvs](/bash/exercitii/cvs.sh)
         - Dificultate: scăzută
-    - [man](bash/exercitii/man.sh)
+    - [man](/bash/exercitii/man.sh)
         - Dificultate: scăzută
-    - [math](bash/exercitii/math.sh)
+    - [math](/bash/exercitii/math.sh)
         - Dificultate: scăzută
-    - [up](bash/exercitii/up.sh)
+    - [up](/bash/exercitii/up.sh)
         - Dificultate: scăzută
-    - [need_explicatii](bash/exercitii/need_explicatii.txt)
+    - [need_explicatii](/bash/exercitii/need_explicatii.txt)
         - Dificultate: medie

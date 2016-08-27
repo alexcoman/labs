@@ -4,7 +4,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Prezentări
 
-- [Prezentare introductivă](prezentare/Introducere.md)
+- [Prezentare introductivă](/python/prezentare/Introducere.md)
 - Prezentarea limbajului Python
 - Pregătirea mediului de lucru
 - Familiarizarea cu limbajul
@@ -22,31 +22,31 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
 
 ###Exerciții rezolvate
 
-- [Introducere în limbajul Python](prezentare/Introducere.md)
-    - [Determinarea maximului](python/exemple/maxim.py)
-    - [Verifică dacă numărul este palindrom](python/exemple/palindrom.py)
-    - [Verifică dacă numărul este par](python/exemple/par.py)
-    - [Verifică dacă numărul este putere a lui 2](python/exemple/putere.py)
+- [Introducere în limbajul Python](/prezentare/Introducere.md)
+    - [Determinarea maximului](/python/exemple/maxim.py)
+    - [Verifică dacă numărul este palindrom](/python/exemple/palindrom.py)
+    - [Verifică dacă numărul este par](/python/exemple/par.py)
+    - [Verifică dacă numărul este putere a lui 2](/python/exemple/putere.py)
 
 
 ###Exerciții propuse
 
 - Python
-    - [caesar](python/exercitii/caesar)
+    - [caesar](/python/exercitii/caesar)
         - Dificultate: scăzută
-    - [icao](python/exercitii/icao)
+    - [icao](/python/exercitii/icao)
         - Dificultate: scăzută
-    - [unic](python/exercitii/unic)
+    - [unic](/python/exercitii/unic)
         - Dificultate: scăzută
-    - [paint](python/exercitii/paint)
+    - [paint](/python/exercitii/paint)
         - Dificultate: medie
-    - [paranteze](python/exercitii/paranteze)
+    - [paranteze](/python/exercitii/paranteze)
         - Dificultate: medie
-    - [grep](python/exercitii/grep)
+    - [grep](/python/exercitii/grep)
         - Dificultate: medie
-    - [reminder](python/exercitii/reminder)
+    - [reminder](/python/exercitii/reminder)
         - Dificultate: medie
-    - [tuxy-init](python/exercitii/tuxy-init)
+    - [tuxy-init](/python/exercitii/tuxy-init)
         - Dificultate: ridicată
-    - [tuxy-sync](python/exercitii/tuxy-sync)
+    - [tuxy-sync](/python/exercitii/tuxy-sync)
         - Dificultate: ridicată

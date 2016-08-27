@@ -9,4 +9,4 @@ misterul.
 
 În criptografie, cifrul lui Caesar este o metodă simplă de a cripta
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
-la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
+la n pași de ea în alfabet (unde este n este un număr întreg cunoscut).
