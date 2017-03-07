@@ -1,0 +1,38 @@
+table{
+    width: 500px;
+    height: 500px;
+}
+#chess_board{
+    border: 3px black solid;
+}
+
+tr,td{
+    border: 1px black solid;
+}
+
+tr:nth-child(even) td:nth-child(even){
+    /*impar -> impar */
+    background-color: black;
+
+}
+
+tr:nth-child(2) td:before{
+    content: "p";
+}
+
+
+tr:nth-child(7) td:before{
+    content: "p";
+}
+
+
+tr:nth-child(1) td:nth-child(1):before{
+    content: "T";
+    color: aliceblue;
+}
+
+tr:nth-child(odd) td:nth-child(odd){
+    /*par ->par */
+    background-color: black;
+}
+
