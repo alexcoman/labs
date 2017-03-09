@@ -1,0 +1,36 @@
+
+tr:nth-child(2n-1) td:nth-child(2n-1)
+{
+	background-color: green;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
+
+tr:nth-child(2n) td:nth-child(2n)
+{
+	background-color: green;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
+
+table
+{
+	text-align: center;
+	border: 10px solid black;
+}
+
+.blackpiece
+{
+	color: black;
+	font-size: 30;
+	font-weight: bold;
+}
+
+.whitepiece
+{
+	color: #aaaaaa;
+	font-size: 30;
+	font-weight: bold;
+}
