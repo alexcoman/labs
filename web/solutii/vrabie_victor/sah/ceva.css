@@ -1,0 +1,14 @@
+tr:nth-child(odd) td:nth-child(odd){
+  background : black;
+}
+tr:nth-child(even) td:nth-child(even){
+  background : black;
+}
+
+tr:nth-child(2) p::before {
+	content : "P";
+}
+
+tr:nth-child(7) p::before {
+	content : "P";
+}
