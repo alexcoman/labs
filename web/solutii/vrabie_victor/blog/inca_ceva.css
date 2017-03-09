@@ -1,0 +1,17 @@
+body  {
+  background-color: yellow;
+}
+
+a::before {
+   content : "Pentru a fi redirectionat apasa pe -> ";
+}
+
+html  {
+ font-size : 110%;
+}
+
+p  {
+ font-size : 150%;
+}
+
+
