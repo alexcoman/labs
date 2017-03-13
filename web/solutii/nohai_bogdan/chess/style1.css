@@ -1,0 +1,22 @@
+﻿td{
+   width:30px;
+   height: 30px;
+}
+
+tr:nth-child(odd)>td:nth-child(odd)
+{
+	background: blue;
+}
+
+tr:nth-child(even)>td:nth-child(even)
+{
+	background: red;
+}
+
+tr:nth-child(2)>td::before{
+	content: '♙';
+}
+
+tr:nth-last-child(2)>td::before{
+	content: '♙';
+}
