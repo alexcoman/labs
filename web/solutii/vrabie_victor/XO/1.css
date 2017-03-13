@@ -1,0 +1,15 @@
+html {
+
+}
+
+td {
+width : 40pt; 
+height : 40pt;
+text-align: center;
+border : 1pt solid black;
+font-size: 30px;
+}
+
+table {
+ border : 1pt solid black;
+}
