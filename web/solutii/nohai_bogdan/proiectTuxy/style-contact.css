@@ -1,0 +1,19 @@
+
+.form-container {
+	float:left;
+	width: 70%;
+	padding-left: 50px;
+	padding-top: 50px;
+}
+
+form input {
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+#contact-main-footer {
+	padding-left: 50px;
+	position:absolute;
+	bottom: 0;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+/*Paleta culori
+  #FEDC3D
+  #000000
+  #01ABAA
+  #FEA680
+ */
+
+
+
+body {
+	width: 100%;
+	margin:0;
+	padding: 0;
+	background-color:  #FEDC3D;
+}
+
+
+
+.main-header {
+	margin-top: 0px;
+	background: #FEDC3D;
+	padding-top: 10px;
+}
+
+.main-header h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 64px;
+	color: black;
+	margin:0;
+	text-align: center;
+}
+
+
+nav {
+	background: #FEDC3D;
+	width: 100%;
+	float: right;
+	margin-top: 0px;
+	padding-top: 40px;
+
+
+}
+
+nav ul {
+	float: right;
+	padding-right: 30px;
+	height: 100%;
+  margin-top: 0;
+  width: 50%;
+
+	
+}
+
+nav li {
+	font-size: 16px;
+	display: inline;
+	margin: 5px;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom-color: black;
+	border-width: 0px;
+	border-bottom-width: 1.5px;
+  border-style: solid;
+  padding-right: 50px;
+
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover {
+	color: white;
+}
+
+
+.second-header {
+	margin:0;
+	padding: 0;
+	background: black;
+	width: 100%;
+}
+
+.second-header h2 {
+	color: #FEDC3D;
+	font-size: 40px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-family: 'Merriweather', serif;
+	margin-bottom: 5px;
+}
+
+section {
+	float:left;
+	background:  #01ABAA;
+	width: 70%;
+}
+
+section article {
+	color: white;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-size: 20px;
+	text-align: left;
+}
+
+
+aside {
+	width: 30%;
+	background: #FEA680;
+	float:right;
+}
+
+aside #aside-container {
+	padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+.clear-float {
+	clear: both;
+}
+
+
+
+footer.main-footer {
+	padding-left: 50px;
+	position:relative;
+	bottom: 0;
+}
