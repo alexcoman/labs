@@ -1,0 +1,26 @@
+table {
+  margin: 0 auto;
+  font-family: Verdana, serif;
+}
+
+tr {
+  background: black; height: 70px;
+}
+
+td {
+  background: black; width: 70px;
+}
+
+h1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+
+
+
+
+
+ 
