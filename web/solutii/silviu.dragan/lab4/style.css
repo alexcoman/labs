@@ -1,0 +1,43 @@
+table {
+    width: 50%;
+    height: 550px;
+    border: 1px solid black;
+    align-self:center;
+    text-decoration-color: rgba(192,192,192,0.3);
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+    border: 1px solid black;
+    text-decoration-color: rgba(192,192,192,0.3);
+}
+
+ 
+        th {
+	border: 1px solid black;
+	width: 100px;
+    height: 100px;
+    padding-top: 0.5;
+    padding-top: 0.5;
+    padding-left: 0.5;
+    text-decoration-color: rgba(192,192,192,0.3);
+
+} 
+
+.navigation{
+	padding:15px 105px;
+	background: #282924;
+	width:550px;
+}
+
+.navigation ul li{
+	padding:0px 10px;
+	display:inline;
+	font-size:17px;
+	margin-left:30px;
+}
+.navigation ul li a{
+	color:#d9dfd1;
+	text-decoration:none;
+}
