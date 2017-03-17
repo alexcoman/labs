@@ -1,0 +1,22 @@
+table, th, td {
+   border: 2px solid black;
+   border-collapse: collapse;
+}
+
+td {
+	height: 50px;
+	width : 50px;
+	font-size: 40px;
+	text-align:center;
+}
+
+table{
+	background-color : #ffffe6;
+}
+body {
+    background-color: #cccccc;
+}
+
+p {
+	font-family : Georgia;
+}
