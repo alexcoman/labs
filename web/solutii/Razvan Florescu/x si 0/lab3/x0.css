@@ -1,0 +1,13 @@
+table{
+	width: 15%;
+	background: red;
+}
+td {
+
+	border: 1px solid black;
+    color: white;
+    height: 40px;
+    content:bold;
+    text-align: center;
+   
+}
