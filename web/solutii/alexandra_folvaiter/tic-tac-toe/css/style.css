@@ -1,0 +1,52 @@
+table{
+	margin-top: 100px;
+	border: solid 5px #990033;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+td {
+	width:50px;
+	height:50px;
+	text-align: center;
+	border: solid 2px #990033;
+}
+
+.random_1>td:nth-child(2n):after{
+	content: '0';
+}
+.random_1>td:nth-child(2n+1):after{
+	content: 'X';
+}
+.random_2>td:nth-child(2n):after{
+	content: 'X';
+}
+.random_2>td:nth-child(2n+1):after{
+	content: '0';
+}
+.winerX>td:after{
+	content: 'X';
+
+}
+.notWinerX>td:nth-child(1):after{
+	content: '0';
+
+}
+.winerX{
+	text-decoration: line-through;
+
+}
+
+.winer0>td:after{
+	content: '0';
+
+}
+.notWiner0>td:nth-child(1):after{
+	content: 'X';
+
+}
+.winer0{
+	text-decoration: line-through;
+
+}
