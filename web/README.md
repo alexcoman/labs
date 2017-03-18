@@ -2,16 +2,11 @@
 
 Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadrul laboratoarelor destinate tehnologiilor web.
 
-###Prezentări
-
-- [HTML5 în XXX de minute][0]
-
-
-###Exerciții rezolvate
+Exerciții rezolvate
 
 ---
 
-###Exerciții propuse
+### Exerciții propuse
 
 - HTML
     - [blog](/web/exercitii/blog)

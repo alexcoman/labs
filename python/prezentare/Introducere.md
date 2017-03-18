@@ -2,7 +2,7 @@
 
 ---
 
-#Obiective
+# Obiective
 
 - Prezentarea limbajului Python
 - Pregătirea mediului de lucru
@@ -22,11 +22,11 @@
 
 ---
 
-#Limbajul Python
+# Limbajul Python
 
 ---
 
-#Implementări ale limbajului
+# Implementări ale limbajului
 
 - **CPython - [python.org](https://www.python.org/)**
 - Jython - [jython.org](http://www.jython.org/)
@@ -36,7 +36,7 @@
 
 ---
 
-#Instalarea
+# Instalarea
 
 Mai multe detalii pe link-urile de mai jos:
 
@@ -49,14 +49,14 @@ Mai multe detalii pe link-urile de mai jos:
 
 ---
 
-#Interpretorul
+# Interpretorul
 
 ```
 ~ $ python3
 ```
 
     !python
-    Python 3.4.0 (default, Jun 19 2015, 14:20:21) 
+    Python 3.4.0 (default, Jun 19 2015, 14:20:21)
     [GCC 4.8.2] on linux
     Type "help", "copyright", "credits" or "license" for more information.
     >>> dir
@@ -65,18 +65,18 @@ Mai multe detalii pe link-urile de mai jos:
     Type help() for interactive help, or help(object) for help about object.
     >>> help(dir)
 
-    >>> 
+    >>>
 
 Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
 
 ---
 
-#Interpretorul
+# Interpretorul
 
 ```
 ~ $ python3 search.py "Python România"
 ```
-    
+
     !text
     Titlu: <b>Python</b> Weekend @Iași - RoPython
         URL:https://conference.ropython.org/
@@ -110,7 +110,7 @@ Funcții foarte utile:  ```dir(...)``` și ```help(...)```.
 
 ---
 
-#Mediul de lucru
+# Mediul de lucru
 
 - Editor text:
     - Sublime Text
@@ -130,67 +130,67 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 ---
 
 
-#Tipuri de date
+# Tipuri de date
 
 ---
 
-#Tipuri de date numerice
+# Tipuri de date numerice
 
 **Intreg**
-    
+
     !python
     >>> 10
     10
     >>> int(100)
     100
-    
+
     >>> dir(int(10))
     ['...', 'bit_length', 'conjugate', 'denominator', 'imag',
      'numerator', 'real']
-    
+
     >>> int(10).bit_length()
     4
-    
+
     >>> int(10).conjugate()
     10
-    
+
     >>> int(10).denominator
     1
-    
+
     >>> int(10).numerator
     10
 
 ---
 
-#Tipuri de date numerice
+# Tipuri de date numerice
 
 **Float**
-    
+
     !python
     >>> 10.0
     10.0
     >>> float(10)
     10.0
-    
+
     >>> dir(float(10))
     ['...', 'as_integer_ratio', 'conjugate', 'fromhex', 'hex', 'imag',
      'is_integer', 'real']
-    
+
     >>> float(10).as_integer_ratio()
     (10, 1)
-    
+
     >>> float(10).hex()
     '0x1.4000000000000p+3'
-    
+
     >>> float(10).is_integer()
     True
 
 ---
 
-#Tipuri de date numerice
+# Tipuri de date numerice
 
 **Long - Python 2.x**
-    
+
     !python
     >>> sys.maxint + 1
     9223372036854775808L
@@ -198,20 +198,20 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
     <type 'long'>
     >>> long(10)
     10L
-    
+
     >>> dir(long(10))
     ['...', 'bit_length', 'conjugate', 'denominator', 'imag',
      'numerator', 'real']
-    
+
     >>> (sys.maxint + 1).denominator
     1L
-    
+
     >>> (sys.maxint + 1).imag
     0L
-    
+
     >>> (sys.maxint + 1).real
     9223372036854775808L
-    
+
     >>> (sys.maxint + 1).conjugate()
     9223372036854775808L
     >>> (sys.maxint + 1).bit_length()
@@ -219,18 +219,18 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Tipuri de date numerice
+# Tipuri de date numerice
 
 **Complex**
-    
+
     !python
     >>> a = complex(10, 5)
     >>> a
     (10+5j)
-    
+
     >>> dir(a)
     ['...', 'conjugate', 'imag', 'real']
-    
+
     >>> a.imag
     5.0
 
@@ -242,8 +242,8 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Tipuri de date booleene
-    
+# Tipuri de date booleene
+
     !python
     >>> True
     True
@@ -262,8 +262,8 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Șirurile de caractere
-    
+# Șirurile de caractere
+
     !python
     sir1 = 'Acesta este un sir de caractere'
     sir2 = "Acesta este un sir de caractere"
@@ -276,7 +276,7 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
         " lung, dar care totusi este pe o singura "
         " linie."
     )
-    
+
     >>> dir("")
     ['...', 'capitalize', 'center', 'count', 'decode', 'encode',
      'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum',
@@ -288,7 +288,7 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Șirurile de caractere
+# Șirurile de caractere
 
     !python
     >>> "Ana are mere.".capitalize()
@@ -307,19 +307,19 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
     >>> "ana are mere.".partition("are")
     ('ana ', 'are', ' mere.')
-    
+
     >>> "ana are mere.".upper()
     'ANA ARE MERE.'
-    
+
     >>> "ana are mere.".title()
     'Ana Are Mere.'
-    
+
     >>> "ana are mere.".split()
     ['ana', 'are', 'mere.']
 
 ---
 
-#Șirurile de caractere
+# Șirurile de caractere
 
     !python
     >>> "%s are mere." % "Ana"
@@ -339,77 +339,77 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Operatori
+# Operatori
 
 ---
 
-#Operatori booleeni
+# Operatori booleeni
 
     !python
     >>> True or False
     True
-    
+
     >>> True and False
     False
-    
+
     >>> not True
     False
-    
+
     >>> not False
     True
 
 ---
 
-#Operatori pentru comparație
+# Operatori pentru comparație
 
     !python
     >>> x < y
     False
-    
+
     >>> x <= y
     True
-    
+
     >>> x > y
     False
-    
+
     >>> x >= y
     True
-    
+
     >>> x == y
     True
-    
+
     >>> x != y
     False
-    
+
     >>> x is y
     True
-    
+
     >>> x is not y
     False
 
 ---
 
-#Operatori pentru operații matematice
+# Operatori pentru operații matematice
 
     !python
     >>> 4 + 5
     9
-    
+
     >>> 4 - 5
     -1
-    
+
     >>> 5 / 2
     2
-    
+
     >>> 5 // 2
     2
-    
+
     >>> 5 % 2
     1
-    
+
     >>> -5
     -5
-    
+
     >>> +5
     5
 
@@ -423,31 +423,31 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Operatori binari
+# Operatori binari
 
     !python
     >>> 2 | 4
     6
-    
+
     >>> 2 ^ 4
     6
-    
+
     >>> 2 & 4
     0
-    
+
     >>> 1 << 3
     8
-    
+
     >>> 8 >> 3
     1
-    
+
     >>> ~8
     -9
 
 ---
 
-#Comentarii
-    
+# Comentarii
+
     !python
     """
     Acesta este un comentariu.
@@ -459,7 +459,7 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 ---
 
 
-#Liste și Tupluri
+# Liste și Tupluri
 
 **Lista**: Structură de date flexibilă ce poate încapsula date eterogene.
 
@@ -471,7 +471,7 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
             ["note", 10, 5.4, 3.4, 10, 2, 1, 4],
          ],
     ]
-    laborator_python[1] = ["Laboratorul 2"] 
+    laborator_python[1] = ["Laboratorul 2"]
 
 
 **Tupluri**: Structură de date inflexibilă ce poate încapsula date eterogene.
@@ -492,7 +492,7 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
 
 ---
 
-#Accesarea elementelor
+# Accesarea elementelor
 
     !python
     >>> laborator_python = [
@@ -507,23 +507,23 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
     ['Laboratorul 1', ['interpretor', 'CPython', 'IronPython', 'PyPy'],
     ['exerci\xc8\x9bii', 'maxim', 'palindrom', 'par', 'putere'],
     ['note', 10, 5.4, 3.4, 10, 2, 1, 4]]
-    
+
     >>> laborator_python[0][1]
     ['interpretor', 'CPython', 'IronPython', 'PyPy']
-    
+
     >>> laborator_python[0][1][1]
     'CPython'
-    
+
     >>> laborator_python[0][1][2]
     'IronPython'
-    
+
     >>> laborator_python[0][1][2][3]
     'n'
 
 ---
 
 
-#Indexi negativi
+# Indexi negativi
 
     !python
     >>> laborator_python = [
@@ -537,75 +537,75 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
     ['Laboratorul 1', ['interpretor', 'CPython', 'IronPython', 'PyPy'],
     ['exerci\xc8\x9bii', 'maxim', 'palindrom', 'par', 'putere'],
     ['note', 10, 5.4, 3.4, 10, 2, 1, 4]]
-    
+
     >>> laborator_python[-1][-1][0]
     'note'
-    
+
     >>> laborator_python[-1][-1][-1]
     4
-    
+
     >>> laborator_python[-1][-1][-2]
     1
-    
+
     >>> laborator_python[-1][-1][-3]
     2
-    
+
     >>> laborator_python[-1][-2][-3]
     'palindrom'
 
 ---
 
-#List slices (lista[început:sfârșit])
+# List slices (lista[început:sfârșit])
 
     !python
     >>> lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    
+
     >>> lista[0:3]
     [1, 2, 3]
-    
+
     >>> lista[:3]
     [1, 2, 3]
-    
+
     >>> lista[3:6]
     [4, 5, 6]
-    
+
     >>> lista[3:]
     [4, 5, 6, 7, 8, 9]
-    
+
     >>> lista[-1:]
     [9]
-    
+
     >>> lista[-2:]
     [8, 9]
-    
+
     >>> lista[:-1]
     [1, 2, 3, 4, 5, 6, 7, 8]
-    
+
     >>> lista[:-2]
     [1, 2, 3, 4, 5, 6, 7]
 
 ---
 
-#List slices (lista[început:sfârșit:pas])
+# List slices (lista[început:sfârșit:pas])
 
     !python
     >>> lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    
+
     >>> lista[1::2]
     [2, 4, 6, 8]
-    
+
     >>> lista[::2]
     [1, 3, 5, 7, 9]
-    
+
     >>> lista[::-1]
     [9, 8, 7, 6, 5, 4, 3, 2, 1]
-    
+
     >>> lista[-1:-5:-1]
     [9, 8, 7, 6]
 
 ---
 
-#Operații utile
+# Operații utile
 
     !python
     >>> lista = []
@@ -614,15 +614,15 @@ Mai multe exemple aici: [wiki.python.org/moin/IntegratedDevelopmentEnvironments]
     >>> lista.append(3)
     >>> lista
     [1, 2, 3]
-    
+
     >>> lista.extend([4, 5, 6])
     >>> lista
     [1, 2, 3, 4, 5, 6]
-    
+
     >>> lista.reverse()
     >>> lista
     [6, 5, 4, 3, 2, 1]
-    
+
     >>> lista.sort()
     >>> lista
     [1, 2, 3, 4, 5, 6]
@@ -632,7 +632,7 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
 
 ---
 
-#Dictionar
+# Dictionar
 
 **Dictionar**: Structură de date de forma **cheie** : **valoare**
 
@@ -649,11 +649,11 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
              1 : [1]
         },
     }
-    laborator_python["exerciții"] = ["Laboratorul 2"] 
+    laborator_python["exerciții"] = ["Laboratorul 2"]
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [1, 2, 3, 4, 5]
@@ -664,7 +664,7 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [1, 2, 3, 4, 5]
@@ -672,52 +672,52 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
     >>>
     >>> lista.append("x")
     >>> lista2.append("y")
-    >>> 
+    >>>
     >>> lista
     [1, 2, 3, 4, 5, 'x', 'y']
-    
+
     >>> lista2
     [1, 2, 3, 4, 5, 'x', 'y']
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [[0]] * 10
     >>> lista
     [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
-    
+
     >>> lista[0].append(1)
     >>> lista[0].append(2)
     >>> lista[0].append(3)
     >>> lista[0].append(4)
     >>> lista[0].append(5)
     >>> lista[0].append(6)
-    >>> 
+    >>>
     >>> for rand in lista:
     ...     print(rand)
-    ... 
+    ...
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [[0]] * 10
     >>> lista
     [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
-    
+
     >>> lista[0].append(1)
     >>> lista[0].append(2)
     >>> lista[0].append(3)
     >>> lista[0].append(4)
     >>> lista[0].append(5)
     >>> lista[0].append(6)
-    >>> 
+    >>>
     >>> for rand in lista:
     ...     print(rand)
-    ... 
+    ...
     [0, 1, 2, 3, 4, 5, 6]
     [0, 1, 2, 3, 4, 5, 6]
     [0, 1, 2, 3, 4, 5, 6]
@@ -728,16 +728,16 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
     [0, 1, 2, 3, 4, 5, 6]
     [0, 1, 2, 3, 4, 5, 6]
     [0, 1, 2, 3, 4, 5, 6]
-    >>> 
+    >>>
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [1, 2, 3, [1, 2, 3]]
     >>> lista2 = list(lista)
-    >>> 
+    >>>
     >>> lista.append("x")
     >>> lista2.append("y")
     >>>
@@ -747,7 +747,7 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
 
     >>> lista = [1, 2, 3, [1, 2, 3]]
     >>> lista2 = list(lista)
-    >>> 
+    >>>
     >>> lista.append("x")
     >>> lista2.append("y")
     >>>
@@ -760,15 +760,15 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [1, 2, 3, [1, 2, 3]]
     >>> lista2 = list(lista)
-    >>> 
+    >>>
     >>> lista.append("x")
     >>> lista2.append("y")
-    >>> 
+    >>>
 
     >>> lista
     [1, 2, 3, [1, 2, 3], 'x']
@@ -777,42 +777,42 @@ Mai multe metode utile se pot găsi folosind `dir(lista)` și `help(lista.count)
     [1, 2, 3, [1, 2, 3], 'y']
 
     >>> lista[3].append(4)
-    >>> lista2[3].append(4) 
+    >>> lista2[3].append(4)
 
 ---
 
-#Referințe
+# Referințe
 
     !python
     >>> lista = [1, 2, 3, [1, 2, 3]]
     >>> lista2 = list(lista)
-    >>> 
+    >>>
     >>> lista.append("x")
     >>> lista2.append("y")
-    >>> 
+    >>>
 
     >>> lista
     [1, 2, 3, [1, 2, 3], 'x']
 
     >>> lista2
     [1, 2, 3, [1, 2, 3], 'y']
-     
+
     >>> lista[3].append(4)
-    >>> lista2[3].append(4) 
+    >>> lista2[3].append(4)
 
     >>> lista
     [1, 2, 3, [1, 2, 3, 4, 4], 'x']
 
     >>> lista2
-    [1, 2, 3, [1, 2, 3, 4, 4], 'y'] 
+    [1, 2, 3, [1, 2, 3, 4, 4], 'y']
 
 ---
 
-#Funcții built-in
+# Funcții built-in
 
 ---
 
-#Funcții built-in
+# Funcții built-in
 
 **print** - Scrie un mesaj într-un stream (predefinit este stdout)
 
@@ -825,10 +825,10 @@ print(value, ..., sep=' ', end='\n', file=sys.stdout)
 
     >>> print("ana", "are", "mere")
     ana are mere
-    
+
     >>> print("Ana", "are", "mere", end='\n')
     Ana are mere
-    
+
     >>> print("Ana", "are", "mere", sep='\n')
     Ana
     are
@@ -836,7 +836,7 @@ print(value, ..., sep=' ', end='\n', file=sys.stdout)
 
 ---
 
-#Funcții built-in
+# Funcții built-in
 
 **input** și **raw_input** - citesc informații de la tastatură
 
@@ -844,18 +844,18 @@ print(value, ..., sep=' ', end='\n', file=sys.stdout)
     >>> raw_input("Ana are: ")
     Ana are: mere
     'mere'
-    
+
     >>> input("Numarul de mere pe care le are ana este: ")
     Numarul de mere pe care le are ana este: 10
     10
-    
+
     >>> type(_)
     <type 'int'>
-    
+
     >>> raw_input("Numarul de mere pe care le are ana este: ")
     Numarul de mere pe care le are ana este: 10
     '10'
-    
+
     >>> type(_)
     <type 'str'>
 
@@ -863,7 +863,7 @@ print(value, ..., sep=' ', end='\n', file=sys.stdout)
 
 ---
 
-#Funcții built-in
+# Funcții built-in
 
 **open** deschide un fișier
 
@@ -883,11 +883,11 @@ open(name[, mode[, buffering]])
 
 ---
 
-#Funcții built-in
+# Funcții built-in
 
     !python
     >>> dir(__builtins__)
-    
+
     ['...'. 'abs', 'all', 'any', 'apply', 'basestring', 'bin', 'bool',
      'buffer', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod',
      'cmp', 'coerce', 'compile', 'complex', 'copyright', 'credits',
@@ -905,12 +905,12 @@ open(name[, mode[, buffering]])
 
 ---
 
-#Instrucțiuni condiționale
+# Instrucțiuni condiționale
 
 ---
 
 # if - elif - else
-    
+
     !python
     if_stmt ::=  "if" expression ":" suite
                  ( "elif" expression ":" suite )*
@@ -919,13 +919,13 @@ open(name[, mode[, buffering]])
 -
 
     !python
-    >>> if numar % 5 == 0 and numar % 3 == 0: 
+    >>> if numar % 5 == 0 and numar % 3 == 0:
     ...     pass
     ... elif numar % 7 == 0:
     ...     pass
     ... else:
     ...     pass
-    ... 
+    ...
 
 ---
 
@@ -936,7 +936,7 @@ open(name[, mode[, buffering]])
     [1, 2, 3, 4, 5, 6, 7, 8, 9]
     >>> for number in numbers:
     ...     print("The number is %d" % number)
-    ... 
+    ...
     The number is 1
     The number is 2
     The number is 3
@@ -947,7 +947,7 @@ open(name[, mode[, buffering]])
     The number is 8
     The number is 9
 
---- 
+---
 
 # for
     !pyhon
@@ -955,7 +955,7 @@ open(name[, mode[, buffering]])
     >>> while number < 10:
     ...     print("The number is %d" % number)
     ...     x += 1
-    ... 
+    ...
     The number is 0
     The number is 1
     The number is 2
@@ -968,9 +968,9 @@ open(name[, mode[, buffering]])
     The number is 9
 
 
---- 
+---
 
-#Resurse
+# Resurse
 
 - www.python.org
 - www.learnpython.org/

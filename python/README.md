@@ -2,7 +2,7 @@
 
 Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadrul unui curs introductiv destinat limbajului Python.
 
-###Prezentări
+### Prezentări
 
 - [Prezentare introductivă](/python/prezentare/Introducere.md)
 - Prezentarea limbajului Python
@@ -20,7 +20,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
     - Instrucțiuni repetitive (for, while)
 
 
-###Exerciții rezolvate
+### Exerciții rezolvate
 
 - [Introducere în limbajul Python](/prezentare/Introducere.md)
     - [Determinarea maximului](/python/exemple/maxim.py)
@@ -29,7 +29,7 @@ Acest depozit de cod conține o serie de exerciții ce pot fi folosite în cadru
     - [Verifică dacă numărul este putere a lui 2](/python/exemple/putere.py)
 
 
-###Exerciții propuse
+### Exerciții propuse
 
 - Python
     - [caesar](/python/exercitii/caesar)
