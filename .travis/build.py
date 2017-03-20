@@ -12,7 +12,7 @@ ATTEMPTS = 3
 RETRY_INTERVAL = 0.1
 CHECKS = {
     ".py": (["pylint", "-rn"], "flake8", "pep8"),
-    ".sh": ("shellcheck", "bashate"),
+    ".sh": (["shellcheck", "-x"], "bashate"),
 }
 CONFIG = {"whitelist": set()}
 CONFIG_PATH = os.path.expanduser("~/.cache/build/config.yml")
