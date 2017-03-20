@@ -56,5 +56,6 @@ def procesare_fisier(nume):
     except IOError:
         print "Nu am putut obtine mesajele."
 
+
 if __name__ == "__main__":
     procesare_fisier("mesaj.icao")

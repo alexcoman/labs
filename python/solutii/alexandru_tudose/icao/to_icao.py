@@ -45,5 +45,6 @@ def icao(mesaj):
     out.write("".join(mesajdecriptat))
     out.close()
 
+
 if __name__ == "__main__":
     icao("Mesajul ce trebuie transmis")

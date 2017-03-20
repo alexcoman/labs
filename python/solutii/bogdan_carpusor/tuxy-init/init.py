@@ -24,6 +24,7 @@ import time
 import urllib2
 import logging
 import os
+# pylint: disable=import-error
 import yaml
 
 
@@ -146,7 +147,7 @@ class Command(object):
         iterator = 0
         logging.info('Running script')
         env_var = dict(os.environ)
-        for key, value in self.options['env_variables'].iteritems():
+        for _, value in self.options['env_variables'].iteritems():
             env_var = dict(env_var, key=value)
 
         while iterator < self.options['attempts']:
@@ -261,6 +262,7 @@ def main(path):
     else:
         logging.info('Instalation incomplete')
         run_commands(config['install_failed'])
+
 
 if __name__ == "__main__":
     main("../../../date_intrare/tuxy.config")

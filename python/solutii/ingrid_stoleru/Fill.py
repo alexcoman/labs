@@ -37,5 +37,6 @@ def main():
     punct = (1, 3)
     print umple(imaginea, punct)
 
+
 if __name__ == "__main__":
     main()

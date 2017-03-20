@@ -17,3 +17,4 @@
 # executabilul);
 #   e) iesire din script.
 echo "Nu ma executa"
+

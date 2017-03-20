@@ -1,4 +1,5 @@
 """Rezolvare pentru problema fill"""
+from __future__ import print_function
 
 
 def afiseaza_imagine(imagine):
@@ -32,8 +33,9 @@ def continuare(imagine, punct):
 
 
 def umple_forma(imagine, punct):
-    """Functia care verifica acuratetea datelor si da acces\
-la functia de umplere"""
+    """Functia care verifica acuratetea datelor si da acces la functia de umplere.
+
+    """
     x_point = punct[0]
     y_point = punct[1]
     lines = len(imagine)

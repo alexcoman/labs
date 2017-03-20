@@ -17,5 +17,6 @@ def tree(path, tabs):
         if os.path.isdir(pathabs):
             tree(pathabs, tabs+1)
 
+
 if __name__ == "__main__":
     tree(sys.argv[1], 0)

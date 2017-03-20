@@ -48,5 +48,6 @@ def icao(mesaj):
         text = []
     output.close()
 
+
 if __name__ == "__main__":
     icao("Mesajul ce trebuie transmis")

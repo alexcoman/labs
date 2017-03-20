@@ -17,5 +17,6 @@ def list_files(locatie):
         for fisier in files:
             print '[FILE]|%s%s' % (spatiu2, fisier)
 
+
 if __name__ == "__main__":
     list_files(tkFileDialog.askdirectory())

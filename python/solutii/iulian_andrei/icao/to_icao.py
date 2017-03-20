@@ -45,5 +45,6 @@ def icao(mesaj):
 
     out_file.write(line)
 
+
 if __name__ == "__main__":
     icao("Mesajul ce trebuie transmis")

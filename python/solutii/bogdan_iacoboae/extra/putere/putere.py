@@ -13,5 +13,6 @@ def power(number):
     else:
         print "Nu este putere a lui doi"
 
+
 if __name__ == "__main__":
     power(int(raw_input("Gimme the number: ")))

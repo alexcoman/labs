@@ -22,7 +22,7 @@
         echo "Options not found"
         exit 1
     else
-        . options.sh
+        .options.sh
     fi
 
     menu ()
@@ -37,7 +37,7 @@
     echo -e '\t' 4.Run
     echo -e '\t' 5.Exit
 
-    read -p 'Option ' opt
+    read -rp 'Option ' opt
 
     case "$opt" in
     5)

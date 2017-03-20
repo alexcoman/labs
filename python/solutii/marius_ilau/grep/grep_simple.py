@@ -135,5 +135,6 @@ def num_ap(mes):
     point = str(lista).count(mes)
     return point
 
+
 c_inl("Law", "hector")
 # print numarare_aparitii("th")

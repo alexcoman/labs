@@ -21,7 +21,7 @@ fi
 
 g++ "$1" -o "${1::-2}" 2>"${1::-2}".err #compilam -eliminam ultimele 2 char. (fara .c)
 
-if [[ $(stat -c%s "${1::-2}".err) <=0 ]]; then #daca fisierul cu erori este gol , il stergem
+if [[ $(stat -c%s "${1::-2}".err) -lt 0 ]]; then #daca fisierul cu erori este gol , il stergem
 rm "${1::-2}".err
 fi
 

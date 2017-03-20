@@ -75,5 +75,6 @@ def scheduler():
     task_manager.list_tasks()
     task_manager.persist_tasks()
 
+
 if __name__ == "__main__":
     scheduler()

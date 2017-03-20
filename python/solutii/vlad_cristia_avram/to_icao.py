@@ -1,4 +1,5 @@
 """Solutie la problema to_icao"""
+from __future__ import print_function
 
 import sys
 

@@ -33,13 +33,14 @@ def gaseste_unic(istoric):
 
 
 def gaseste(istoric):
-    '''
+    """Găsește elementul unic.
+
     :param istoric: istoric is the list of elements
     :return: the unique element from the list
-    '''
-    unic = istoric[0]
-    for i in xrange(1,len(istoric)):
-        unic ^= istoric[i]
+    """
+    unic = istoric.pop(0)
+    for item in istoric:
+        unic ^= item
     return unic
 
 

@@ -45,5 +45,6 @@ def din_icao(mesaj):
                 lista.append(ICAO[cuvant])
     print lista
 
+
 if __name__ == "__main__":
     din_icao("mesaj.icao")

@@ -25,7 +25,7 @@ print_menu() {
     echo " d - run program"
     echo " e -  exit program"
 
-    read option
+    read -r option
 }
 
 
@@ -74,7 +74,7 @@ run_program() {
 
 if [ "$1" == '' ] || ! [ -e "$1" ];then
     echo "Insert an file name"
-    read filename
+    read -r filename
     if [ "$filename" == '' ];then
         echo "We need an filename"
         exit

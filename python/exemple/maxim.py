@@ -21,6 +21,7 @@ def maxim(numar1, numar2):
         # Numerele sunt egale
         return numar1
 
+
 if __name__ == "__main__":
     assert maxim(1, 2) == 2
     assert maxim(5, 6) == 6

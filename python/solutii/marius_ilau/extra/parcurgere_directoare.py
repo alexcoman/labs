@@ -15,5 +15,6 @@ def parcurgere_directoare(start_path, mesaj):
         if os.path.isdir(path):
             parcurgere_directoare(path, mesaj)
 
+
 if __name__ == "__main__":
     parcurgere_directoare("/Users/ilaumarius", "gg")

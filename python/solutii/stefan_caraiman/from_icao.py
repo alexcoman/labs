@@ -45,5 +45,6 @@ def main():
         if mesaj.strip():
             din_icao(mesaj, output)
 
+
 if __name__ == "__main__":
     main()

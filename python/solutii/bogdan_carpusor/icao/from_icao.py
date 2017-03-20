@@ -66,5 +66,6 @@ def din_icao(mesaj):
     file_output.write(decoded_message)
     file_output.close()
 
+
 if __name__ == "__main__":
     din_icao("../../../date_intrare/mesaj.icao")

@@ -59,5 +59,6 @@ def main():
     """ Main function docstring """
     icao("../../date_intrare/mesaj.icao.necodat")
 
+
 if __name__ == "__main__":
     main()

@@ -17,6 +17,7 @@ from __future__ import print_function
 
 
 def generate_message(character, key, dictionary):
+    """Generate Message."""
     index = dictionary.find(character)
     if index > 0:
         return dictionary[index + key]
@@ -64,6 +65,7 @@ def main():
     for mesaj in mesaje.splitlines():
         decripteaza_mesajul(mesaj)
         print()
+
 
 if __name__ == "__main__":
     main()

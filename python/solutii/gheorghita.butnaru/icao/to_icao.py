@@ -52,5 +52,6 @@ def icao(cale):
     mesaj_icao_intrare.write(' '.join(mesaj_icao))
     mesaj_icao_intrare.close()
 
+
 if __name__ == "__main__":
     icao("mesaj.to.icao")

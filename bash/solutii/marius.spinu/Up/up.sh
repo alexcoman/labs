@@ -6,7 +6,7 @@
 Up ()
 {
     for ((i=1;i<="$1";i++)); do
-        cd ../
+        cd ../ || exit
     done
     exec /bin/bash
 }

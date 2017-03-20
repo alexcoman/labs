@@ -12,7 +12,8 @@ if [[ ! -f script.sh  ]]; then
     echo "Fisierul cu functii nu exista"
     exit 1
 else
-    . script.sh
+    # shellcheck disable=SC1091
+    . ./script.sh
 fi
 
 meniu(){
@@ -24,7 +25,7 @@ meniu(){
     echo -e '\t' 5:Modulo
     echo -e '\t' 0:Exit
 
-    read -p 'Option: ' opt
+    read -rp 'Option: ' opt
 
     case "$opt" in
     0)

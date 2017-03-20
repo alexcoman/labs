@@ -24,5 +24,6 @@ def executor():
     task_manager.delete_task(0)
     task_manager.persist_tasks()
 
+
 if __name__ == "__main__":
     executor()

@@ -12,7 +12,7 @@
         echo "File not found"
         exit 1
     else
-        . script.sh
+        .script.sh
     fi
 
     meniu ()
@@ -24,7 +24,7 @@
     echo -e '\t' 4:Divide
     echo -e '\t' 5:Modulo
 
-    read -p 'Option ' opt
+    read -rp 'Option ' opt
 
     case "$opt" in
     0)

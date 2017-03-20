@@ -33,5 +33,6 @@ def main():
     rezultat = (pozitie[0]**2 + pozitie[1]**2) ** 0.5
     print rezultat
 
+
 if __name__ == "__main__":
     main()
