@@ -36,5 +36,6 @@ def din_icao(mesaj):
                 return
         print()
 
+
 if __name__ == "__main__":
     din_icao("mesaj.icao")

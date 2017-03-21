@@ -23,7 +23,7 @@ if  ! [ -e "$1" ] || ! [ -e "$2" ];then
     exit
 fi
 
-while read line;do
+while read -r line;do
     line_in=(${line//,/ })
     hostname=${line_in[2]}
     mac=${line_in[1]}

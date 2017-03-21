@@ -124,5 +124,6 @@ def manager():
 
     task_manager.persist_tasks()
 
+
 if __name__ == "__main__":
     manager()

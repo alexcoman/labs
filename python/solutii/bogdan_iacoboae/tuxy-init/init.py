@@ -16,6 +16,7 @@ import os
 import subprocess
 import glob
 import logging
+# pylint: disable=import-error
 import yaml
 
 
@@ -289,9 +290,10 @@ def restart_server(config):
     if str(subprocess.check_output("ls; exit 0;",
                                    stderr=subprocess.STDOUT,
                                    shell=True)).strip() in source:
-        folder_name = str(subprocess.check_output("ls; exit 0;",
-                          stderr=subprocess.STDOUT,
-                          shell=True)).strip()
+        folder_name = str(
+            subprocess.check_output("ls; exit 0;",
+                                    stderr=subprocess.STDOUT,
+                                    shell=True)).strip()
         new_path = path + "/" + folder_name
         os.chdir(new_path)
         start_command = "./ts3server_startscript.sh restart"
@@ -351,6 +353,7 @@ def main(path):
             not args.delete):
         print "usage: init.py [-h] [--install] [--start]" \
             " [--stop] [--restart] [--delete] [--version]"
+
 
 if __name__ == "__main__":
     main("tuxy.config")

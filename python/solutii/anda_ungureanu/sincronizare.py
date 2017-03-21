@@ -43,5 +43,6 @@ def main():
         sincronizare_functie(sys.argv[1], sys.argv[2])
         sincronizare_functie(sys.argv[2], sys.argv[1])
 
+
 if __name__ == "__main__":
     main()

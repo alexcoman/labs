@@ -26,5 +26,6 @@ def main():
     director = raw_input()
     tree(director, 0)
 
+
 if __name__ == "__main__":
     main()

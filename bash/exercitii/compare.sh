@@ -5,3 +5,4 @@
 # directoare se considera ca sunt egale daca contin aceleasi subdirectoare si fisiere.
 # Se utilizeaza comanda diff.
 echo "Nu ma executa"
+

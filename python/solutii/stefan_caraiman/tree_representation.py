@@ -29,5 +29,6 @@ def main():
     thepath = str(raw_input())
     rtree(thepath, 0)
 
+
 if __name__ == "__main__":
     main()

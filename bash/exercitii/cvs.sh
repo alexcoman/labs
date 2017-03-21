@@ -18,3 +18,4 @@
 #   <fisier_intrare>.csv
 #   <fisier_iesire>.txt
 echo "Nu ma executa"
+

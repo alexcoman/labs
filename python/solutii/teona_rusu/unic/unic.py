@@ -36,6 +36,7 @@ def gaseste_unic(istoric):
         rezultat ^= istoric.pop()
     return rezultat
 
+
 if __name__ == "__main__":
     assert gaseste_unic([1, 2, 3, 2, 1]) == 3
     assert gaseste_unic([1, 1, 1, 2, 2]) == 1

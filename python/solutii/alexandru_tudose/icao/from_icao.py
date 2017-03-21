@@ -35,5 +35,6 @@ def din_icao(fisier_intrare):
     out.write("".join(mesajdecriptat))
     out.close()
 
+
 if __name__ == "__main__":
     din_icao("mesaj.icao")

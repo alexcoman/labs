@@ -15,5 +15,6 @@ def tree_recursiv(cale):
         elif os.path.isfile(cale2):
             print(cale2)
 
+
 if __name__ == "__main__":
     tree_recursiv("/Users/ilaumarius")

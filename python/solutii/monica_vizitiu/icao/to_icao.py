@@ -32,5 +32,6 @@ def icao(cale):
                     break
         fisier_out.write('\n')
 
+
 if __name__ == "__main__":
     icao("icao_intrare")

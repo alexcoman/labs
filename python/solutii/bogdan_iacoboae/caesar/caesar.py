@@ -63,5 +63,6 @@ def main():
     for mesaj in mesaje.splitlines():
         decripteaza_mesajul(mesaj, towrite)
 
+
 if __name__ == "__main__":
     main()

@@ -57,5 +57,6 @@ def distanta():
             return
     return math.sqrt(location[0]**2 + location[1]**2)
 
+
 if __name__ == "__main__":
     print distanta()

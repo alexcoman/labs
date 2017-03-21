@@ -50,5 +50,6 @@ def din_icao(fisier_intrare):
         final_message += ' '
     print final_message
 
+
 if __name__ == "__main__":
     din_icao("mesaj.icao")

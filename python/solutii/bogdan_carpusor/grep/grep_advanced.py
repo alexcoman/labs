@@ -56,5 +56,6 @@ def grep(options):
     else:
         config.help_function(NAME, OPTIONS)
 
+
 if __name__ == "__main__":
     grep(sys.argv)

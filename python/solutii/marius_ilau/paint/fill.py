@@ -60,5 +60,6 @@ def main():
     umple(imaginea, (1, 3))
     umple(imaginea, (5, 11))
 
+
 if __name__ == "__main__":
     main()

@@ -67,5 +67,6 @@ def distanta():
     dist = math.sqrt(coordonata_x**2+coordonata_y**2)
     return dist
 
+
 if __name__ == "__main__":
     distanta()

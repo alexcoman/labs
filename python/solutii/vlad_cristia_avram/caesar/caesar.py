@@ -6,7 +6,7 @@ from __future__ import print_function
 def gaseste_cheia(mesaj):
     """Aflam cheia mesajului"""
     prima_litera = mesaj[0]
-    cheie = (ord('z') + 1 - ord(prima_litera))%26
+    cheie = (ord('z') + 1 - ord(prima_litera)) % 26
     return cheie
 
 

@@ -12,30 +12,41 @@ Informații:
 un mesaj prin înlocuirea fiecărei litere cu litera de pe poziția aflată
 la un n pași de ea în alfabet (unde este n este un număr întreg cunoscut
 """
-# pylint: disable=unused-argument
-
 from __future__ import print_function
 
 
-def decripteaza_mesajul(mesaj):
-    """Funcția va primi un mesaj criptat folosind cifrul lui Caesar și
-    va încearca să îl decripteze.
+def cipher(word):
+    """Cipher.
+
+    :param word: the word to decipher to "ave"
+    :return: the number used for encryption
     """
-    cheie = ord(mesaj[0]) - ord('a')
-    msj = ""
-    for curent in mesaj:
-        if ord('a') <= ord(curent) <= ord('z'):
-            copie = chr((ord(curent) - cheie))
-            if ord(copie) < ord('a'):
-                curent = chr(26 + ord(copie) + cheie)
-            msj += chr((ord(curent) - cheie))
-        else:
-            msj += curent
-    print(msj)
+    word = word.lower()
+    return ord(word[0]) % 97
+
+
+def decripteaza(mesaj):
+    """Decripteaza.
+
+    :param mesaj: Mesajul pe care vrem sa il decriptam
+    :return: va return cate un sir de cuvinte decriptat
+    """
+    words = mesaj.split('.,')
+    key = cipher(words[0])
+    mesaj_decriptat = ' '
+    for i in mesaj.lower():
+        char = ord(' ')
+        if i.isalpha():
+            char = (ord(i)-key)
+        if (not chr(char).isalpha() and chr(char) != ' ') or (
+                chr(char).isupper()):
+            char += 26
+        mesaj_decriptat += chr(char)
+    print (mesaj_decriptat)
 
 
 def main():
-    """ Main function docstring """
+    """Main."""
     try:
         fisier = open("mesaje.secret", "r")
         mesaje = fisier.read()
@@ -45,7 +56,7 @@ def main():
         return
 
     for mesaj in mesaje.splitlines():
-        decripteaza_mesajul(mesaj)
+        decripteaza(mesaj)
 
 
 if __name__ == "__main__":

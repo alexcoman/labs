@@ -19,6 +19,7 @@ Câteva exemple:
 """
 
 
+# pylint: disable=too-many-branches
 def verifica_expresia(paranteze):
     """Verifică validitatea expresiei primite.
 

@@ -1,4 +1,5 @@
 """Solutie la problema unic"""
+from __future__ import print_function
 
 
 def gaseste_unic(istoric):

@@ -1,24 +1,27 @@
-sudo: false
 language: python
 python: 2.7
+
+sudo: false
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - shellcheck
 
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
 
 cache:
+  edge: true
   directories:
+    - $HOME/.build
     - $HOME/.cache/pip
-    - $HOME/.cache/build/
-
-before_cache:
-  - rm -f $HOME/.cache/pip/log/debug.log
 
 virtualenv:
   system_site_packages: true
 
 before_install:
-  - wget "$shellcheck_url$filename"
-  - sudo dpkg -i "$shellcheck_filename"
   - pip install pip --upgrade
 
 install:

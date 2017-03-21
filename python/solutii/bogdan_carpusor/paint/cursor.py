@@ -83,5 +83,6 @@ def distanta():
                 (origin["y"] - current_position["y"])**2) ** 0.5
     print ("Distance between points: %d" % distance)
 
+
 if __name__ == "__main__":
     distanta()

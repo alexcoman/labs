@@ -15,7 +15,8 @@
 # - maxim 2 fisiere (scriptul principal si fisierul de functii matematice)
 
 if [ -e ./functions_math.src ]; then
-    source ./functions_math.src
+    # shellcheck disable=SC1091
+    . ./functions_math.src
 else
     echo "Nu am putut deschide fisierul de functii"
     exit
@@ -29,7 +30,7 @@ echo "3 = *"
 echo "4 = /"
 echo "5 = %"
 
-read select
+read -r select
 
 case "$select" in
     1)

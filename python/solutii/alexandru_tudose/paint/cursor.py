@@ -46,5 +46,6 @@ def distanta():
                 ccy -= int(alfa[1])
     print((ccx * ccx + ccy * ccy) ** 0.5)
 
+
 if __name__ == "__main__":
     distanta()

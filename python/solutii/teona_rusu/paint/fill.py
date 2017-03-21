@@ -72,5 +72,6 @@ def main():
     umple_forma(imaginea, (5, 11))
     afisare(imaginea)
 
+
 if __name__ == "__main__":
     main()

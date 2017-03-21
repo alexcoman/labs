@@ -51,6 +51,7 @@ def este_corect(expresie):
 
     return True
 
+
 if __name__ == "__main__":
     assert este_corect("[()[]]"), "Probleme la expresia 1"
     assert este_corect("()()[][]"), "Probleme la expresia 2"

@@ -41,6 +41,7 @@ def din_icao(nedecodat, decoded):
         decoded.write('\n')
     decoded.close()
 
+
 if __name__ == "__main__":
     INTRARE = '../../../../date_intrare/mesaj.icao'
     IESIRE = '../../../../date_iesire/decodat.icao'

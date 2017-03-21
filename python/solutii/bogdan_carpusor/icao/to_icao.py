@@ -44,5 +44,6 @@ def icao():
             coded_message += character
     print(coded_message)
 
+
 if __name__ == "__main__":
     icao()

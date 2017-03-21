@@ -47,6 +47,7 @@ def verifica_expresia(paranteze):
 
     return True
 
+
 if __name__ == "__main__":
     assert verifica_expresia("[()[]]"), "Probleme la expresia 1"
     assert verifica_expresia("()()[][]"), "Probleme la expresia 2"

@@ -64,5 +64,6 @@ def distanta():
     # am folosit functia hypot din libraria math pentru formula distantei
     # dintre 2 pct A,B
 
+
 if __name__ == "__main__":
     distanta()

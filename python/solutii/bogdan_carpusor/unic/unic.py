@@ -32,11 +32,12 @@ def gaseste_unic(istoric):
             return key
     """
 
-    """Parcurgere fara alocare de memorie  """
+    # Parcurgere fara alocare de memorie
     result = istoric[0]
     for index in range(1, len(istoric)):
         result = result ^ istoric[index]
     return result
+
 
 if __name__ == "__main__":
     assert gaseste_unic([1, 2, 3, 2, 1]) == 3

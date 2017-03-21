@@ -33,6 +33,7 @@ def print_tree(dirpath, indentation):
         else:
             print new_indentation + '[U] ' + filename
 
+
 if __name__ == "__main__":
     print
     if len(sys.argv) != 2:

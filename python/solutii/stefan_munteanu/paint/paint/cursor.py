@@ -60,5 +60,6 @@ def distanta():
             return 0
     print math.sqrt(pow(0 - pozitie_pctx, 2) + pow(0 - pozitie_pcty, 2))
 
+
 if __name__ == "__main__":
     distanta()

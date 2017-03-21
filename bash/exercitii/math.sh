@@ -14,3 +14,4 @@
 # case.
 # - maxim 2 fisiere (scriptul principal si fisierul de functii matematice)
 echo "Nu ma executa"
+
