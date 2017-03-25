@@ -1,6 +1,7 @@
 """Update conda packages on binstars with latest versions"""
 from __future__ import print_function
 
+import argparse
 import hashlib
 import json
 import os
@@ -145,15 +146,30 @@ def scripts(root):
                 files_queue.append(file_path)
 
 
+def get_argparser():
+    """Get the arguments from the CLI."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--file_type", default=None, choices=CHECKS.keys(),
+                        dest="file_type", help="What file type to check.")
+    return parser
+
+
 def main():
     """Check if all the scripts meet the requirements."""
     exit_code = 0
     whitelist = []
     _load()
+    parser = get_argparser()
+    args = parser.parse_args()
+    checks = CHECKS
+    if args.file_type in CHECKS:
+        checks = {
+            args.file_type: CHECKS[args.file_type]
+        }
 
     for script in scripts(os.path.curdir):
         script_type = script[-3:]
-        if script_type not in CHECKS:
+        if script_type not in checks:
             continue
 
         file_hash = _sha1(script)
@@ -161,7 +177,7 @@ def main():
             whitelist.append(file_hash)
             continue
 
-        for checker in CHECKS[script_type]:
+        for checker in checks[script_type]:
             if isinstance(checker, list):
                 command = [argument for argument in checker]
             else:
