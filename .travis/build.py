@@ -1,4 +1,6 @@
-"""Update conda packages on binstars with latest versions"""
+"""
+Linter for diferite script types.
+"""
 from __future__ import print_function
 
 import argparse
@@ -15,6 +17,7 @@ CHECKS = {
     ".py": (["pylint", "-rn"], "flake8", "pep8"),
     ".sh": (["shellcheck", "-x"], "bashate"),
 }
+EXCLUDE = ('.', '..', '.venv', '.git', '.tox', 'dist', 'doc')
 CONFIG = {"whitelist": set()}
 CONFIG_PATH = os.path.expanduser("~/.cache/build/config.yml")
 
@@ -137,7 +140,7 @@ def scripts(root):
     while files_queue:
         root = files_queue.pop()
         for files in os.listdir(root):
-            if files in ('.', '..'):
+            if files in EXCLUDE:
                 continue
             file_path = os.path.join(root, files)
             if os.path.isfile(file_path):
@@ -151,6 +154,8 @@ def get_argparser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--file_type", default=None, choices=CHECKS.keys(),
                         dest="file_type", help="What file type to check.")
+    parser.add_argument("--root", default=os.getenv("TRAVIS_BUILD_DIR"),
+                        dest="root", help="The root directory.")
     return parser
 
 
@@ -167,7 +172,7 @@ def main():
             args.file_type: CHECKS[args.file_type]
         }
 
-    for script in scripts(os.path.curdir):
+    for script in scripts(args.root):
         script_type = script[-3:]
         if script_type not in checks:
             continue
