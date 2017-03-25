@@ -172,6 +172,17 @@ def get_argparser():
     return parser
 
 
+def get_script_type(path):
+    """Get the script type of a path."""
+    try:
+        _, extension = os.path.basename(path).rsplit(".", 1)
+    except (TypeError, ValueError) as ex:
+        print("[Debug] {} for :{}".format(ex, path))
+        return None
+    else:
+        return extension
+
+
 def main():
     """Check if all the scripts meet the requirements."""
     exit_code = 0
@@ -186,7 +197,7 @@ def main():
         }
 
     for script in scripts(args.root):
-        script_type = script[-3:]
+        script_type = get_script_type(script)
         if script_type not in checks:
             continue
 
