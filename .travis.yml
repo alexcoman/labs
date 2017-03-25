@@ -24,11 +24,17 @@ virtualenv:
 before_install:
   - pip install pip --upgrade
 
+env:
+  matrix:
+    - TOXENV=python
+    - TOXENV=bash
+
 install:
+  - pip install tox
   - pip install pep8
   - pip install pylint
   - pip install bashate
   - pip install flake8
 
 script:
-  - python .travis/build.py
+  - tox
