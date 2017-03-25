@@ -11,13 +11,26 @@ import subprocess
 import time
 import six
 
+
+def format_html5_linter(script):
+    """Return CLI arguments for validenting the html.
+
+    :param script: Path to the script we want to validate
+    """
+    command = ["html5validator", "--show-warnings"]
+    command.extend(['--root', os.path.dirname(script)])
+    command.extend(['--match', os.path.basename(script)])
+    return command
+
+
 ATTEMPTS = 3
 RETRY_INTERVAL = 0.1
 CHECKS = {
-    ".py": (["pylint", "-rn"], "flake8", "pep8"),
-    ".sh": (["shellcheck", "-x"], "bashate"),
+    "py": (["pylint", "-rn"], "flake8", "pep8"),
+    "sh": (["shellcheck", "-x"], "bashate"),
+    "html": (format_html5_linter, ),
 }
-EXCLUDE = ('.', '..', '.venv', '.git', '.tox', 'dist', 'doc')
+_EXCLUDE = ('.', '..', '.venv', '.git', '.tox', 'dist', 'doc')
 CONFIG = {"whitelist": set()}
 CONFIG_PATH = os.path.expanduser("~/.cache/build/config.yml")
 
@@ -140,7 +153,7 @@ def scripts(root):
     while files_queue:
         root = files_queue.pop()
         for files in os.listdir(root):
-            if files in EXCLUDE:
+            if files in _EXCLUDE:
                 continue
             file_path = os.path.join(root, files)
             if os.path.isfile(file_path):
@@ -185,9 +198,12 @@ def main():
         for checker in checks[script_type]:
             if isinstance(checker, list):
                 command = [argument for argument in checker]
-            else:
+                command.append(script)
+            elif isinstance(checker, six.string_types):
                 command = [checker]
-            command.append(script)
+                command.append(script)
+            else:
+                command = checker(script)
 
             print("Running: ", " ".join(command), sep="", end="")
             try:
