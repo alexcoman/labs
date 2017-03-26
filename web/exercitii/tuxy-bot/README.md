@@ -1,5 +1,3 @@
-##Tuxy-Bot
-
 Tuxy Pinguinescu are nevoie de o unealtă web care să îi ușureze munca de zi cu zi.
 Pentru că nimeni din echipa lui Tuxy nu este suficient de pregătit pentru a dezvolta **Tuxy Bot** această sarcină îți revine ție.
 
@@ -23,10 +21,10 @@ Am învățat termenul `acasă`.
 /reține expresie 20 + 4 - 3 * 8
 Am învățat termenul `expresie`.
 
-/evaluează expresie
+/evaluează $expresie
 Rezultatul expresiei: '20 + 4 - 3 * 8' este 0
 
-/palindrom acasa
+/palindrom $acasa
 Șirul 'Iași' nu este palindrom.
 
 /curăță
