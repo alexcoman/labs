@@ -1,6 +1,9 @@
-"""Update conda packages on binstars with latest versions"""
+"""
+Linter for diferite script types.
+"""
 from __future__ import print_function
 
+import argparse
 import hashlib
 import json
 import os
@@ -8,12 +11,26 @@ import subprocess
 import time
 import six
 
+
+def format_html5_linter(script):
+    """Return CLI arguments for validenting the html.
+
+    :param script: Path to the script we want to validate
+    """
+    command = ["html5validator", "--show-warnings"]
+    command.extend(['--root', os.path.dirname(script)])
+    command.extend(['--match', os.path.basename(script)])
+    return command
+
+
 ATTEMPTS = 3
 RETRY_INTERVAL = 0.1
 CHECKS = {
-    ".py": (["pylint", "-rn"], "flake8", "pep8"),
-    ".sh": (["shellcheck", "-x"], "bashate"),
+    "py": (["pylint", "-rn"], "flake8", "pep8"),
+    "sh": (["shellcheck", "-x"], "bashate"),
+    "html": (format_html5_linter, ),
 }
+_EXCLUDE = ('.', '..', '.venv', '.git', '.tox', 'dist', 'doc')
 CONFIG = {"whitelist": set()}
 CONFIG_PATH = os.path.expanduser("~/.cache/build/config.yml")
 
@@ -136,7 +153,7 @@ def scripts(root):
     while files_queue:
         root = files_queue.pop()
         for files in os.listdir(root):
-            if files in ('.', '..'):
+            if files in _EXCLUDE:
                 continue
             file_path = os.path.join(root, files)
             if os.path.isfile(file_path):
@@ -145,15 +162,43 @@ def scripts(root):
                 files_queue.append(file_path)
 
 
+def get_argparser():
+    """Get the arguments from the CLI."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--file_type", default=None, choices=CHECKS.keys(),
+                        dest="file_type", help="What file type to check.")
+    parser.add_argument("--root", default=os.getenv("TRAVIS_BUILD_DIR"),
+                        dest="root", help="The root directory.")
+    return parser
+
+
+def get_script_type(path):
+    """Get the script type of a path."""
+    try:
+        _, extension = os.path.basename(path).rsplit(".", 1)
+    except (TypeError, ValueError) as ex:
+        print("[Debug] {} for :{}".format(ex, path))
+        return None
+    else:
+        return extension
+
+
 def main():
     """Check if all the scripts meet the requirements."""
     exit_code = 0
     whitelist = []
     _load()
+    parser = get_argparser()
+    args = parser.parse_args()
+    checks = CHECKS
+    if args.file_type in CHECKS:
+        checks = {
+            args.file_type: CHECKS[args.file_type]
+        }
 
-    for script in scripts(os.path.curdir):
-        script_type = script[-3:]
-        if script_type not in CHECKS:
+    for script in scripts(args.root):
+        script_type = get_script_type(script)
+        if script_type not in checks:
             continue
 
         file_hash = _sha1(script)
@@ -161,12 +206,15 @@ def main():
             whitelist.append(file_hash)
             continue
 
-        for checker in CHECKS[script_type]:
+        for checker in checks[script_type]:
             if isinstance(checker, list):
                 command = [argument for argument in checker]
-            else:
+                command.append(script)
+            elif isinstance(checker, six.string_types):
                 command = [checker]
-            command.append(script)
+                command.append(script)
+            else:
+                command = checker(script)
 
             print("Running: ", " ".join(command), sep="", end="")
             try:
