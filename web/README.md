@@ -8,9 +8,9 @@ Exerciții rezolvate
 
 ### Exerciții propuse
 
-- HTML
-    - [blog](/web/exercitii/blog)
-        - Dificultate: scăzută
-
-
-[0]: https://www.slideshare.net/busaco/html5-in-xxx-de-minute
+- [blog](/web/exercitii/blog)
+    - Dificultate: scăzută
+- [tuxy-captcha](/web/exercitii/tuxy-captcha)
+    - Dificultate: scăzută
+- [tuxy-bot](/web/exercitii/tuxy-captcha)
+    - Dificultate: medie
