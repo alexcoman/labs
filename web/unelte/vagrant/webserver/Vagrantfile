@@ -1,0 +1,32 @@
+api_version = '2'
+provider    = 'virtualbox'
+box         = 'hashicorp/precise64'
+hostname    = 'webserver'
+ip_address  = '192.168.50.210'
+ram         = '1024'
+cpus        = '2'
+
+Vagrant.configure(api_version) do |config|
+    config.vm.define "webserver" do |webserver|
+    end
+
+    config.vm.box = box
+    config.vm.host_name = hostname
+    config.vm.network :private_network, ip: ip_address
+
+    config.vm.provider :virtualbox do |virtualbox|
+        virtualbox.name = hostname
+        virtualbox.memory = ram
+        virtualbox.cpus = cpus
+    end
+
+    config.vm.provision "shell" do |setup|
+        setup.path = "provision/vagrant.sh"
+        setup.privileged = true
+    end
+
+    config.vm.provision "shell" ,run: "always" do |setup|
+        setup.path = "provision/nginx.sh"
+        setup.privileged = true
+    end
+end
