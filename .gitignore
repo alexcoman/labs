@@ -87,3 +87,8 @@ python/solutii/irina_bejan/Icao/mesaj.icao
 *.flv
 *.ogg
 *.webm
+
+# Vagrant
+.www
+.vagrant
+.log
